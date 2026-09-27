@@ -27,12 +27,12 @@ jobs:
         run: python ferramentas/vendor_audited_sources.py
       - name: Commit imported snapshots
         run: |
-          if [ -z "$(git status --porcelain -- vendor/community/)" ]; then
+          if [ -z "$(git status --porcelain -- vendor/community/ site/data/vendor-summary.json)" ]; then
             echo "Nenhuma mudança."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A vendor/community/
+          git add -A vendor/community/ site/data/vendor-summary.json
           git commit -m "vendor: adiciona fontes comunitárias licenciadas"
           git push
