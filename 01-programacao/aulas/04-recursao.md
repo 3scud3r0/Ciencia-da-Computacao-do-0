@@ -8,79 +8,84 @@ Recursão reduz um problema a instâncias menores até um caso base. Cada chamad
 
 ## Modelo mental
 
-Programar é modelar estado e transformação. Este módulo conecta sintaxe a conceitos duráveis: valores, controle, funções, abstração, composição e tratamento explícito de falhas.
+Imagine uma pilha de tarefas pendentes. Para calcular a soma de 1 até 4, a função precisa saber o resultado da soma até 3; esta precisa da soma até 2; e assim por diante. A chamada com zero devolve zero. Só então cada chamada pendente consegue terminar.
 
-Neste capítulo identifique estado, invariante, operação e custo. Se houver uma abstração, pergunte qual problema ela resolve, que garantias oferece e o que acontece uma camada abaixo.
+O caso base encerra a cadeia. A chamada recursiva reduz o tamanho do problema. Se o argumento nunca se aproximar do caso base, a execução não termina normalmente.
 
 ## Mecanismo passo a passo
 
-1. Represente a entrada: quais objetos, bits, nós, mensagens, registros ou estados existem antes da operação.
-2. Aplique a regra de transição: qual informação é lida, qual condição é testada e qual estado é modificado.
-3. Preserve a invariante: qual propriedade precisa continuar verdadeira após cada passo.
-4. Produza uma observação: resultado, saída, novo estado, mensagem ou efeito persistido precisa ser verificável.
-5. Analise crescimento e falha: o que muda com escala, interrupção no meio e entrada adversa.
+Para `soma_recursiva(4)`, as chamadas descem com os argumentos `4 → 3 → 2 → 1 → 0`. A última devolve `0`. Na volta, as respostas são `1`, `3`, `6` e `10`.
 
-Esse procedimento transforma a definição de Recursão em uma máquina mental simulável, testável e depurável.
+Em cada chamada, a relação que deve permanecer verdadeira é: resultado para `n` = `n` + resultado para `n - 1`. Essa é a propriedade que permite provar a correção por indução: o caso `n = 0` vale, e cada caso maior depende de um caso menor já correto.
 
 ## Código real do módulo
 
-Leia o arquivo principal [projetos/virtual-fs/virtual_fs.py](../projetos/virtual-fs/virtual_fs.py). Ele faz parte da suíte executável do curso.
+O arquivo [recursao.py](../exemplos/recursao.py) contém as duas versões abaixo. Leia cada linha antes de executar:
 
-Para validar o laboratório:
+~~~python
+def soma_recursiva(n: int) -> int:
+    if n < 0:
+        raise ValueError("n deve ser não negativo")
+    if n == 0:
+        return 0
+    return n + soma_recursiva(n - 1)
 
-~~~bash
-cd 01-programacao/projetos/virtual-fs
-python -m unittest -v
+
+def soma_iterativa(n: int) -> int:
+    if n < 0:
+        raise ValueError("n deve ser não negativo")
+    total = 0
+    for valor in range(1, n + 1):
+        total += valor
+    return total
 ~~~
 
-Faça uma leitura em três passagens: primeiro encontre entrada, saída e estado persistente; depois marque onde a invariante é criada e atualizada; por fim encontre o caminho de erro e um caso extremo coberto por teste.
+Na primeira função, a assinatura aceita um inteiro e promete devolver um inteiro. O primeiro `if` rejeita negativos: sem isso, a recursão afastaria o argumento de zero. O segundo `if` é o caso base. A última linha guarda `n` enquanto calcula a soma menor e depois adiciona os resultados.
+
+Na versão iterativa, `total` começa em zero. `range(1, n + 1)` percorre todos os números de 1 até `n`, inclusive. Cada repetição acrescenta um valor; o `return` devolve o acumulado. O tratamento para negativos é igual para que as duas funções tenham o mesmo contrato.
+
+Para executar os testes [test_recursao.py](../exemplos/test_recursao.py) a partir da raiz do repositório:
+
+~~~bash
+python -m unittest discover -s 01-programacao/exemplos -p 'test_*.py' -v
+~~~
+
+Os testes verificam entradas de zero a 99 pela fórmula `n × (n + 1) ÷ 2` e confirmam que as duas funções rejeitam números negativos.
 
 ## Trade-offs
 
-Abstração reduz carga mental, mas pode esconder custo e estado. A interface deve ser simples sem apagar invariantes importantes nem tornar efeitos colaterais imprevisíveis.
-
-Para Recursão, separe custo assintótico de custo concreto. CPU, memória, I/O, coordenação e complexidade operacional são recursos diferentes; melhorar um pode piorar outro.
+As duas funções fazem `n` adições, portanto têm tempo O(n). A versão recursiva mantém até `n + 1` chamadas pendentes: usa O(n) espaço na pilha e pode atingir o limite de recursão do Python. A versão iterativa mantém um acumulador e usa O(1) espaço extra. Uma fórmula aritmética calcula a mesma soma em O(1), mas serve menos para demonstrar o mecanismo de recursão.
 
 ## Erros comuns
 
-Procure ativamente por: estado oculto, mutação inesperada, caso base ausente, exceção engolida e interface que expõe detalhes internos.
-
-Um bom teste não cobre apenas o caso feliz. Escreva ao menos um teste que viole uma pré-condição e outro que pressione um limite de tamanho, ordem, concorrência ou persistência.
+Se o caso base faltar, a função continua chamando a si mesma até produzir `RecursionError`. Se a chamada for `soma_recursiva(n + 1)`, o problema cresce e o caso base nunca é alcançado. Se o caso base devolver `1`, todos os resultados ficam uma unidade acima do esperado. Testar somente `n = 1` não demonstra que a cadeia funciona para vários níveis.
 
 ## Experimento guiado
 
-1. Escolha uma entrada pequena simulável à mão.
-2. Registre o estado relevante antes de cada passo.
-3. Preveja o resultado e só então execute o laboratório.
-4. Instrumente uma variável, contador, endereço, fila, árvore ou mensagem.
-5. Crie um caso extremo: vazio, limite, repetido, inválido, desordenado ou grande.
-6. Reduza divergências até localizar a primeira transição inesperada.
-7. Transforme a descoberta em teste automatizado.
+1. Desenhe uma linha por chamada de `soma_recursiva(4)` e anote o `n` recebido.
+2. Preveja a ordem das respostas antes de executar o código.
+3. Adicione um `print(n)` antes do caso base e outro imediatamente antes do retorno final. Compare entrada e saída das chamadas.
+4. Altere temporariamente o caso base para devolver `1`; observe qual teste falha e por quê. Depois desfaça a alteração.
+5. Execute `soma_recursiva(900)` e `soma_iterativa(900)`; em seguida aumente o argumento gradualmente. A versão recursiva pode esgotar a pilha, dependendo do ambiente.
 
 ## Conexões
 
-Este capítulo vem depois de Funções e escopo e prepara Abstração e modularidade. Identifique qual conceito anterior fornece a representação usada aqui e qual conceito seguinte depende da garantia produzida por este mecanismo.
+Funções e escopo explicam por que cada chamada tem seus próprios parâmetros e estado local. A recursão reaparece em árvores, busca em profundidade, divisão e conquista e parsers; nesses casos, a estrutura do problema costuma ser naturalmente recursiva.
 
 ## Perguntas de domínio
 
-- Qual é a definição operacional de Recursão?
-- Que invariante ou garantia é essencial?
-- Qual é a entrada e qual estado é modificado?
-- Que custo de tempo, espaço, coordenação ou I/O cresce com a entrada?
-- O que a abstração esconde da camada inferior?
-- Que falha aparece se uma hipótese central deixar de valer?
-- Como demonstrar a propriedade com teste e, quando necessário, com prova?
+- Qual condição garante que `soma_recursiva` termine para qualquer inteiro não negativo?
+- Em que ordem `soma_recursiva(3)` recebe os argumentos e devolve os resultados?
+- Por que as duas implementações têm a mesma complexidade de tempo, mas custos de memória diferentes?
+- Como provar que a função devolve `n × (n + 1) ÷ 2`?
 
 ## Exercícios
 
-1. Explique o conceito em cinco frases sem consultar a aula.
-2. Crie um exemplo correto e um contraexemplo.
-3. Desenhe o estado antes e depois de uma operação.
-4. Torne o conceito observável no laboratório.
-5. Escreva um teste de caso extremo ainda inexistente.
-6. Compare duas alternativas e explicite qual recurso cada uma otimiza.
-7. Conecte este capítulo ao anterior e ao próximo.
+1. Implemente `fatorial(n)` com caso base e validação de entrada. Teste `0`, `1`, `5` e `-1`.
+2. Implemente a versão iterativa de `fatorial` e compare o espaço usado pelas duas.
+3. Escreva uma função recursiva que conte os itens de uma lista sem usar `len`. Qual é o custo de copiar fatias da lista em cada chamada?
+4. Escreva um teste que detecte a ausência do caso base e explique a limitação de testar recursão infinita diretamente.
 
 ## Critério de conclusão
 
-Você concluiu quando consegue prever um caso novo, explicar o mecanismo abaixo da API, localizar a invariante no código, escrever um teste que detecte sua quebra e justificar pelo menos um trade-off.
+Você concluiu quando consegue desenhar as chamadas e os retornos de uma entrada nova, implementar um caso base correto, testar uma entrada inválida e justificar quando escolher recursão ou iteração.

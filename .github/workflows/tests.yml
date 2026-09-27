@@ -72,3 +72,7 @@ jobs:
           python-version: "3.12"
       - name: Validate curriculum completeness
         run: python ferramentas/validate_course.py
+      - name: Build all lesson pages
+        run: python ferramentas/build_site.py
+      - name: Test teaching examples
+        run: python -m unittest discover -s 01-programacao/exemplos -p 'test_*.py' -v
