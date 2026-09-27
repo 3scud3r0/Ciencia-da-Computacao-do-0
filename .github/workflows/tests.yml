@@ -1,0 +1,43 @@
+name: Test original course code
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "vendor/**"
+      - "site/data/projects.json"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - 04-estruturas-de-dados/projetos/hashmap-python
+          - 05-algoritmos/projetos/roteador-dijkstra
+          - 06-arquitetura-de-computadores/projetos/alu16
+          - 08-redes/projetos/http-server
+          - 10-linguagens-e-compiladores/projetos/mini-lang
+          - 12-concorrencia-e-paralelismo/projetos/thread-pool
+          - 13-sistemas-distribuidos/projetos/consistent-hashing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run unittest
+        working-directory: ${{ matrix.project }}
+        run: python -m unittest -v
+
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and test dynamic vector
+        working-directory: 02-c-e-memoria/projetos/vetor-dinamico
+        run: make test

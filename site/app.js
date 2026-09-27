@@ -56,7 +56,8 @@ function renderCurriculum() {
       '<p>' + module.chapters.length + ' capítulos · ' + escapeHtml(module.hours) + '</p>' +
       '<ul>' + sampleChapters + '</ul>' +
       '<div class="card-footer"><small>' + escapeHtml(module.projects.join(' · ')) + '</small>' +
-      '<button class="complete-toggle ' + (done ? 'done' : '') + '" data-module="' + module.id + '">' + (done ? 'Concluído ✓' : 'Marcar concluído') + '</button></div>' +
+      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/' + encodeURIComponent(module.slug) + '" target="_blank" rel="noreferrer">Abrir módulo ↗</a> ' +
+      '<button class="complete-toggle ' + (done ? 'done' : '') + '" data-module="' + module.id + '">' + (done ? 'Concluído ✓' : 'Concluir') + '</button></span></div>' +
       '</article>';
   }).join('');
 
