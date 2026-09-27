@@ -1,0 +1,96 @@
+name: Vendor licensed learning sources
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/vendor-sources.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  vendor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout destination
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare snapshot workspace
+        run: |
+          rm -rf .vendor-tmp
+          mkdir -p .vendor-tmp vendor
+
+      - name: Clone licensed sources without history
+        run: |
+          git clone --depth 1 https://github.com/TheAlgorithms/Python.git .vendor-tmp/thealgorithms-python
+          git clone --depth 1 https://github.com/TheAlgorithms/Algorithms-Explanation.git .vendor-tmp/algorithms-explanation
+          git clone --depth 1 https://github.com/practical-tutorials/project-based-learning.git .vendor-tmp/project-based-learning
+          git clone --depth 1 https://github.com/davecom/ComputerScienceFromScratch.git .vendor-tmp/computer-science-from-scratch
+          git clone --depth 1 https://github.com/jwasham/coding-interview-university.git .vendor-tmp/coding-interview-university
+
+      - name: Record upstream revisions
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          sources = {
+              "thealgorithms-python": {
+                  "url": "https://github.com/TheAlgorithms/Python",
+                  "license": "MIT",
+              },
+              "algorithms-explanation": {
+                  "url": "https://github.com/TheAlgorithms/Algorithms-Explanation",
+                  "license": "MIT",
+              },
+              "project-based-learning": {
+                  "url": "https://github.com/practical-tutorials/project-based-learning",
+                  "license": "MIT",
+              },
+              "computer-science-from-scratch": {
+                  "url": "https://github.com/davecom/ComputerScienceFromScratch",
+                  "license": "Apache-2.0",
+              },
+              "coding-interview-university": {
+                  "url": "https://github.com/jwasham/coding-interview-university",
+                  "license": "CC-BY-SA-4.0",
+              },
+          }
+
+          for name, info in sources.items():
+              info["commit"] = subprocess.check_output(
+                  ["git", "-C", f".vendor-tmp/{name}", "rev-parse", "HEAD"],
+                  text=True,
+              ).strip()
+
+          Path("vendor/manifest.json").write_text(
+              json.dumps(sources, indent=2, ensure_ascii=False) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Copy snapshots while preserving source licenses
+        run: |
+          for name in thealgorithms-python algorithms-explanation project-based-learning computer-science-from-scratch coding-interview-university; do
+            rm -rf "vendor/$name"
+            mkdir -p "vendor/$name"
+            rsync -a --delete --exclude=".git" --safe-links ".vendor-tmp/$name/" "vendor/$name/"
+          done
+          rm -rf .vendor-tmp
+
+      - name: Commit snapshot
+        run: |
+          if git diff --quiet -- vendor/; then
+            echo "Snapshots já estão atualizados."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vendor/
+          git commit -m "vendor: adiciona snapshots de fontes licenciadas"
+          git push
