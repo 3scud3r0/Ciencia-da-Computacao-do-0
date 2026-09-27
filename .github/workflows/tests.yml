@@ -36,6 +36,16 @@ jobs:
           - 16-teoria-da-computacao/projetos/automatos
           - 17-topicos-avancados/projetos/raytracer
           - 18-projetos-finais/projetos/kv-http-service
+          - 18-projetos-finais/projetos/01-mini-computador
+          - 18-projetos-finais/projetos/02-mini-so
+          - 18-projetos-finais/projetos/03-banco-de-dados
+          - 18-projetos-finais/projetos/04-redis-like
+          - 18-projetos-finais/projetos/05-git-like
+          - 18-projetos-finais/projetos/06-container-runtime
+          - 18-projetos-finais/projetos/07-linguagem
+          - 18-projetos-finais/projetos/08-distributed-kv
+          - 18-projetos-finais/projetos/09-search-engine
+          - 18-projetos-finais/projetos/10-stack-web
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -52,3 +62,13 @@ jobs:
       - name: Compile and test dynamic vector
         working-directory: 02-c-e-memoria/projetos/vetor-dinamico
         run: make test
+
+  course-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate curriculum completeness
+        run: python ferramentas/validate_course.py
