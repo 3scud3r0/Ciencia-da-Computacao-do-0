@@ -1,0 +1,451 @@
+[
+  {
+    "id": "00",
+    "slug": "00-como-estudar",
+    "title": "Ambiente, ferramentas e método",
+    "level": "Essencial",
+    "hours": "6–10h",
+    "chapters": [
+      "Como um computador executa um programa",
+      "Terminal e shell",
+      "Git e GitHub",
+      "Debugger, profiler, build e CI"
+    ],
+    "projects": [
+      "Mini shell conceitual",
+      "Mini Git simplificado"
+    ]
+  },
+  {
+    "id": "01",
+    "slug": "01-programacao",
+    "title": "Programação e pensamento computacional",
+    "level": "Essencial",
+    "hours": "12–18h",
+    "chapters": [
+      "Valores, tipos e representação",
+      "Controle de fluxo",
+      "Funções e escopo",
+      "Recursão",
+      "Abstração e modularidade",
+      "Orientação a objetos",
+      "Programação funcional",
+      "Erros e depuração"
+    ],
+    "projects": [
+      "Interpretador de expressões",
+      "Sistema de arquivos virtual"
+    ]
+  },
+  {
+    "id": "02",
+    "slug": "02-c-e-memoria",
+    "title": "C, memória e representação",
+    "level": "Essencial",
+    "hours": "18–28h",
+    "chapters": [
+      "Bits, bytes e bases",
+      "Inteiros e IEEE 754",
+      "C do zero",
+      "Ponteiros",
+      "Stack e heap",
+      "Layout de memória",
+      "Alocação dinâmica",
+      "Segurança de memória"
+    ],
+    "projects": [
+      "Vetor dinâmico",
+      "Hashmap em C",
+      "Mini malloc"
+    ]
+  },
+  {
+    "id": "03",
+    "slug": "03-matematica-discreta",
+    "title": "Matemática discreta",
+    "level": "Essencial",
+    "hours": "12–20h",
+    "chapters": [
+      "Lógica",
+      "Provas",
+      "Conjuntos e relações",
+      "Funções e cardinalidade",
+      "Combinatória",
+      "Probabilidade discreta",
+      "Grafos",
+      "Recorrências"
+    ],
+    "projects": [
+      "Laboratório de grafos e combinatória"
+    ]
+  },
+  {
+    "id": "04",
+    "slug": "04-estruturas-de-dados",
+    "title": "Estruturas de dados",
+    "level": "Essencial",
+    "hours": "20–30h",
+    "chapters": [
+      "Arrays",
+      "Linked lists",
+      "Stack, queue e deque",
+      "Hash tables",
+      "Árvores",
+      "BST",
+      "AVL e Red-Black",
+      "Heaps",
+      "Tries",
+      "Union-Find",
+      "Grafos",
+      "B/B+ Trees"
+    ],
+    "projects": [
+      "Biblioteca de estruturas",
+      "Visualizador de árvores",
+      "B+ Tree persistente"
+    ]
+  },
+  {
+    "id": "05",
+    "slug": "05-algoritmos",
+    "title": "Algoritmos",
+    "level": "Essencial",
+    "hours": "24–36h",
+    "chapters": [
+      "Análise assintótica",
+      "Busca",
+      "Ordenação",
+      "Divide and conquer",
+      "Greedy",
+      "Programação dinâmica",
+      "Backtracking",
+      "BFS/DFS",
+      "Caminhos mínimos",
+      "MST",
+      "Strings",
+      "Randomizados"
+    ],
+    "projects": [
+      "Biblioteca com benchmarks",
+      "Roteador de caminhos",
+      "Visualizador de algoritmos"
+    ]
+  },
+  {
+    "id": "06",
+    "slug": "06-arquitetura-de-computadores",
+    "title": "Arquitetura de computadores",
+    "level": "Profundo",
+    "hours": "20–32h",
+    "chapters": [
+      "Portas lógicas",
+      "Álgebra booleana",
+      "Somadores e ALU",
+      "Clock e registradores",
+      "CPU",
+      "ISA",
+      "Assembly x86-64",
+      "Cache",
+      "Pipeline",
+      "Virtualização"
+    ],
+    "projects": [
+      "ALU",
+      "CPU educacional",
+      "Assembler",
+      "Emulador CHIP-8",
+      "Cache simulator"
+    ]
+  },
+  {
+    "id": "07",
+    "slug": "07-sistemas-operacionais",
+    "title": "Sistemas operacionais",
+    "level": "Profundo",
+    "hours": "26–40h",
+    "chapters": [
+      "Kernel e user space",
+      "Processos",
+      "Threads",
+      "Scheduling",
+      "Concorrência",
+      "Deadlocks",
+      "Memória virtual",
+      "Alocação",
+      "Filesystems",
+      "I/O",
+      "Syscalls",
+      "Containers"
+    ],
+    "projects": [
+      "Scheduler simulator",
+      "Shell POSIX",
+      "Filesystem",
+      "Container mínimo"
+    ]
+  },
+  {
+    "id": "08",
+    "slug": "08-redes",
+    "title": "Redes de computadores",
+    "level": "Essencial",
+    "hours": "20–32h",
+    "chapters": [
+      "Camadas",
+      "Ethernet",
+      "IP",
+      "ARP/ND",
+      "ICMP",
+      "UDP",
+      "TCP",
+      "DNS",
+      "HTTP",
+      "TLS",
+      "Sockets",
+      "NAT e proxies"
+    ],
+    "projects": [
+      "DNS client",
+      "Servidor HTTP",
+      "Proxy",
+      "Chat TCP",
+      "Traceroute"
+    ]
+  },
+  {
+    "id": "09",
+    "slug": "09-bancos-de-dados",
+    "title": "Bancos de dados",
+    "level": "Profundo",
+    "hours": "22–36h",
+    "chapters": [
+      "Modelo relacional",
+      "SQL",
+      "Álgebra relacional",
+      "Storage pages",
+      "Índices",
+      "Query processing",
+      "Optimizer",
+      "Transações",
+      "MVCC e locks",
+      "Recovery/WAL",
+      "NoSQL"
+    ],
+    "projects": [
+      "Parser SQL",
+      "Storage engine",
+      "B+ Tree",
+      "Mini banco relacional"
+    ]
+  },
+  {
+    "id": "10",
+    "slug": "10-linguagens-e-compiladores",
+    "title": "Linguagens e compiladores",
+    "level": "Profundo",
+    "hours": "24–40h",
+    "chapters": [
+      "Implementação de linguagens",
+      "Lexer",
+      "Parser",
+      "AST",
+      "Interpretadores",
+      "Escopo",
+      "Tipos",
+      "Bytecode e VM",
+      "Compilação",
+      "Garbage collection",
+      "Otimizações"
+    ],
+    "projects": [
+      "Linguagem própria",
+      "Bytecode VM",
+      "Garbage collector",
+      "Compilador"
+    ]
+  },
+  {
+    "id": "11",
+    "slug": "11-engenharia-de-software",
+    "title": "Engenharia de software",
+    "level": "Essencial",
+    "hours": "14–22h",
+    "chapters": [
+      "APIs e contratos",
+      "Testes",
+      "Design e modularidade",
+      "Refatoração",
+      "Observabilidade",
+      "Performance",
+      "Build e dependências",
+      "CI/CD",
+      "Versionamento",
+      "Arquitetura"
+    ],
+    "projects": [
+      "Serviço completo instrumentado"
+    ]
+  },
+  {
+    "id": "12",
+    "slug": "12-concorrencia-e-paralelismo",
+    "title": "Concorrência e paralelismo",
+    "level": "Profundo",
+    "hours": "14–24h",
+    "chapters": [
+      "Concorrência vs paralelismo",
+      "Threads",
+      "Locks e atomics",
+      "Semáforos",
+      "Lock-free",
+      "Async/await",
+      "Multiprocessing",
+      "SIMD"
+    ],
+    "projects": [
+      "Thread pool",
+      "Producer/consumer",
+      "Event loop"
+    ]
+  },
+  {
+    "id": "13",
+    "slug": "13-sistemas-distribuidos",
+    "title": "Sistemas distribuídos",
+    "level": "Avançado",
+    "hours": "26–44h",
+    "chapters": [
+      "Modelos de falha",
+      "Relógios",
+      "Replicação",
+      "Sharding",
+      "Consistência",
+      "CAP/PACELC",
+      "Consensus",
+      "Leader election",
+      "Transações distribuídas",
+      "Queues e logs",
+      "MapReduce"
+    ],
+    "projects": [
+      "KV store replicado",
+      "Consistent hashing",
+      "Raft educacional",
+      "Mini MapReduce"
+    ]
+  },
+  {
+    "id": "14",
+    "slug": "14-seguranca",
+    "title": "Segurança de computadores",
+    "level": "Essencial",
+    "hours": "18–30h",
+    "chapters": [
+      "Threat modeling",
+      "Criptografia simétrica",
+      "Hashes/MAC/KDF",
+      "Assimétrica",
+      "Assinaturas",
+      "PKI",
+      "TLS",
+      "AuthN/AuthZ",
+      "Web security",
+      "Memory safety",
+      "Sandboxing",
+      "Secure coding"
+    ],
+    "projects": [
+      "Password vault educacional",
+      "Auth segura",
+      "Laboratório local de vulnerabilidades"
+    ]
+  },
+  {
+    "id": "15",
+    "slug": "15-web-e-internet",
+    "title": "Web e Internet",
+    "level": "Essencial",
+    "hours": "14–24h",
+    "chapters": [
+      "Do URL ao pixel",
+      "HTML e DOM",
+      "CSS",
+      "JavaScript e event loop",
+      "Backend",
+      "REST/RPC/GraphQL",
+      "Caching e CDNs",
+      "WebSockets"
+    ],
+    "projects": [
+      "Aplicação full-stack"
+    ]
+  },
+  {
+    "id": "16",
+    "slug": "16-teoria-da-computacao",
+    "title": "Teoria da computação",
+    "level": "Profundo",
+    "hours": "16–28h",
+    "chapters": [
+      "Linguagens formais",
+      "Autômatos",
+      "Regex",
+      "CFGs",
+      "Máquinas de Turing",
+      "Computabilidade",
+      "Problema da parada",
+      "P/NP",
+      "Reduções"
+    ],
+    "projects": [
+      "DFA/NFA simulator",
+      "Regex → autômato",
+      "Máquina de Turing"
+    ]
+  },
+  {
+    "id": "17",
+    "slug": "17-topicos-avancados",
+    "title": "Tópicos avançados",
+    "level": "Opcional",
+    "hours": "aberto",
+    "chapters": [
+      "Computação gráfica",
+      "IA clássica",
+      "ML por dentro",
+      "Storage avançado",
+      "Cloud",
+      "Rust",
+      "Information retrieval",
+      "Compressão"
+    ],
+    "projects": [
+      "Ray tracer",
+      "Agente de jogos",
+      "Rede neural do zero",
+      "Search engine"
+    ]
+  },
+  {
+    "id": "18",
+    "slug": "18-projetos-finais",
+    "title": "Projetos finais integradores",
+    "level": "Capstone",
+    "hours": "aberto",
+    "chapters": [
+      "Mini computador",
+      "Mini SO",
+      "Banco de dados",
+      "Redis-like",
+      "Git-like",
+      "Container runtime",
+      "Linguagem",
+      "Distributed KV store",
+      "Search engine",
+      "Stack web completo"
+    ],
+    "projects": [
+      "10 capstones integradores"
+    ]
+  }
+]

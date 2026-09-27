@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Ciência da Computação do 0: currículo aberto, orientado a código e projetos.">
+  <title>Ciência da Computação do 0</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#inicio" aria-label="Início">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span><strong>Ciência da Computação</strong><small>do 0</small></span>
+      </a>
+
+      <label class="sidebar-search">
+        <span>⌕</span>
+        <input id="globalSearch" type="search" placeholder="Buscar módulos e projetos…" autocomplete="off">
+      </label>
+
+      <nav class="main-nav" aria-label="Principal">
+        <a class="active" href="#inicio">⌂ <span>Início</span></a>
+        <a href="#ementa">▦ <span>Ementa</span></a>
+        <a href="#projetos">⌘ <span>Projetos</span></a>
+        <a href="#recursos">◇ <span>Recursos</span></a>
+        <a href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/blob/main/guia.md">▤ <span>Guia mestre</span></a>
+      </nav>
+
+      <div class="sidebar-block">
+        <div class="eyebrow">TRILHA PRINCIPAL</div>
+        <div id="sidebarModules" class="module-links"></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <span id="progressText">0% concluído</span>
+        <div class="progress"><i id="progressBar"></i></div>
+      </div>
+    </aside>
+
+    <main>
+      <section id="inicio" class="hero section">
+        <div class="hero-copy">
+          <div class="badge">currículo aberto · código · sistemas · teoria</div>
+          <h1>Ciência da Computação<br><span>do 0, por dentro.</span></h1>
+          <p>Uma formação condensada para entender o computador da lógica binária aos sistemas distribuídos — implementando as abstrações importantes em vez de apenas usá-las.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#ementa">Começar pela ementa</a>
+            <a class="btn ghost" href="#projetos">Explorar projetos</a>
+          </div>
+        </div>
+        <div class="code-window" aria-label="Exemplo de progressão">
+          <div class="window-top"><span></span><span></span><span></span><b>como_as_camadas_se_conectam.txt</b></div>
+          <pre><code>Python
+  ↓ objetos e referências
+C
+  ↓ ponteiros e memória
+Assembly
+  ↓ instruções
+CPU
+  ↓ processos e syscalls
+Sistema Operacional
+  ↓ sockets
+Redes
+  ↓ protocolos
+Sistemas Distribuídos</code></pre>
+        </div>
+      </section>
+
+      <section class="stats">
+        <article><strong id="moduleCount">19</strong><span>módulos</span></article>
+        <article><strong id="chapterCount">100+</strong><span>capítulos</span></article>
+        <article><strong id="projectCount">—</strong><span>projetos catalogados</span></article>
+        <article><strong>10</strong><span>capstones</span></article>
+      </section>
+
+      <section class="section principles">
+        <div class="section-heading">
+          <div><span class="eyebrow">MÉTODO</span><h2>Aprender construindo</h2></div>
+          <p>O repositório separa teoria, implementação, testes e laboratórios, mas liga tudo por uma sequência única.</p>
+        </div>
+        <div class="feature-grid">
+          <article><span>01</span><h3>Entenda a abstração</h3><p>Comece pelo problema que ela resolve e pelo modelo mental correto.</p></article>
+          <article><span>02</span><h3>Implemente do zero</h3><p>Estruturas, protocolos e sistemas ganham versões pedagógicas executáveis.</p></article>
+          <article><span>03</span><h3>Quebre e meça</h3><p>Use testes, debugger, profiling, benchmarks e casos extremos.</p></article>
+          <article><span>04</span><h3>Integre as camadas</h3><p>Os projetos finais conectam CPU, SO, rede, banco e linguagem.</p></article>
+        </div>
+      </section>
+
+      <section id="ementa" class="section">
+        <div class="section-heading">
+          <div><span class="eyebrow">SUPER EMENTA</span><h2>Mapa curricular</h2></div>
+          <div class="filters" id="levelFilters">
+            <button class="filter active" data-level="all">Todos</button>
+            <button class="filter" data-level="Essencial">Essencial</button>
+            <button class="filter" data-level="Profundo">Profundo</button>
+            <button class="filter" data-level="Avançado">Avançado</button>
+          </div>
+        </div>
+        <div id="curriculumGrid" class="curriculum-grid"></div>
+      </section>
+
+      <section id="projetos" class="section">
+        <div class="section-heading">
+          <div><span class="eyebrow">BUILD FROM SCRATCH</span><h2>Catálogo de projetos</h2></div>
+          <p>Inclui todas as entradas importadas das listas Build Your Own X e Project Based Learning. Os tutoriais continuam hospedados em suas fontes.</p>
+        </div>
+        <div class="project-toolbar">
+          <input id="projectSearch" type="search" placeholder="Ex.: database, compiler, shell, C++, Python…">
+          <select id="sourceFilter" aria-label="Filtrar por fonte">
+            <option value="all">Todas as fontes</option>
+            <option value="Build Your Own X">Build Your Own X</option>
+            <option value="Project Based Learning">Project Based Learning</option>
+          </select>
+          <select id="categoryFilter" aria-label="Filtrar por categoria">
+            <option value="all">Todas as categorias</option>
+          </select>
+        </div>
+        <div class="project-meta"><span id="projectMeta">Carregando catálogo…</span></div>
+        <div id="projectGrid" class="project-grid"></div>
+        <button id="loadMore" class="btn ghost load-more" type="button">Mostrar mais</button>
+      </section>
+
+      <section id="recursos" class="section">
+        <div class="section-heading"><div><span class="eyebrow">ECOSSISTEMA</span><h2>Fontes complementares</h2></div></div>
+        <div class="resource-grid">
+          <a href="https://github.com/ossu/computer-science" target="_blank" rel="noreferrer"><strong>OSSU</strong><span>Referência curricular de graduação.</span></a>
+          <a href="https://teachyourselfcs.com/" target="_blank" rel="noreferrer"><strong>Teach Yourself CS</strong><span>Fundamentos concentrados.</span></a>
+          <a href="https://github.com/TheAlgorithms/Python" target="_blank" rel="noreferrer"><strong>The Algorithms</strong><span>Implementações de algoritmos.</span></a>
+          <a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noreferrer"><strong>Build Your Own X</strong><span>Tecnologias reconstruídas do zero.</span></a>
+          <a href="https://github.com/practical-tutorials/project-based-learning" target="_blank" rel="noreferrer"><strong>Project Based Learning</strong><span>Projetos organizados por linguagem.</span></a>
+          <a href="https://github.com/jwasham/coding-interview-university" target="_blank" rel="noreferrer"><strong>Coding Interview University</strong><span>Checklist amplo de fundamentos.</span></a>
+          <a href="https://www.nand2tetris.org/" target="_blank" rel="noreferrer"><strong>Nand2Tetris</strong><span>Do hardware à linguagem.</span></a>
+          <a href="https://craftinginterpreters.com/" target="_blank" rel="noreferrer"><strong>Crafting Interpreters</strong><span>Interpretadores e VMs em profundidade.</span></a>
+        </div>
+      </section>
+
+      <footer>
+        <span>Ciência da Computação do 0</span>
+        <a href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0">GitHub ↗</a>
+      </footer>
+    </main>
+  </div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
