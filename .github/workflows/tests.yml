@@ -18,13 +18,17 @@ jobs:
       fail-fast: false
       matrix:
         project:
+          - 00-como-estudar/projetos/mini-git
           - 04-estruturas-de-dados/projetos/hashmap-python
           - 05-algoritmos/projetos/roteador-dijkstra
           - 06-arquitetura-de-computadores/projetos/alu16
+          - 07-sistemas-operacionais/projetos/scheduler-simulator
           - 08-redes/projetos/http-server
+          - 09-bancos-de-dados/projetos/bplus-tree
           - 10-linguagens-e-compiladores/projetos/mini-lang
           - 12-concorrencia-e-paralelismo/projetos/thread-pool
           - 13-sistemas-distribuidos/projetos/consistent-hashing
+          - 16-teoria-da-computacao/projetos/automatos
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
