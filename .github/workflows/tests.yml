@@ -19,6 +19,8 @@ jobs:
       matrix:
         project:
           - 00-como-estudar/projetos/mini-git
+          - 01-programacao/projetos/virtual-fs
+          - 03-matematica-discreta/projetos/discrete-lab
           - 04-estruturas-de-dados/projetos/hashmap-python
           - 05-algoritmos/projetos/roteador-dijkstra
           - 06-arquitetura-de-computadores/projetos/alu16
@@ -26,9 +28,14 @@ jobs:
           - 08-redes/projetos/http-server
           - 09-bancos-de-dados/projetos/bplus-tree
           - 10-linguagens-e-compiladores/projetos/mini-lang
+          - 11-engenharia-de-software/projetos/instrumented-service
           - 12-concorrencia-e-paralelismo/projetos/thread-pool
           - 13-sistemas-distribuidos/projetos/consistent-hashing
+          - 14-seguranca/projetos/password-store
+          - 15-web-e-internet/projetos/mini-web
           - 16-teoria-da-computacao/projetos/automatos
+          - 17-topicos-avancados/projetos/raytracer
+          - 18-projetos-finais/projetos/kv-http-service
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
