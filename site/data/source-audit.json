@@ -1,0 +1,897 @@
+{
+  "generated_from": "site/data/projects.json",
+  "policy": "Somente fontes com licença explicitamente identificada podem ser candidatas a snapshot. A licença deve ser preservada.",
+  "counts": {
+    "unique_github_repositories": 55,
+    "declared_license": 33,
+    "without_verified_license": 22
+  },
+  "repositories": [
+    {
+      "repository": "a327ex/blog",
+      "references": 16,
+      "examples": [
+        "Part 0: Introduction",
+        "Part 1: Game Loop",
+        "Part 2: Libraries"
+      ],
+      "html_url": "https://github.com/a327ex/blog",
+      "default_branch": "master",
+      "size_kb": 301,
+      "archived": true,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "adamwespiser/scheme",
+      "references": 1,
+      "examples": [
+        "Write You A Scheme, Version 2"
+      ],
+      "html_url": "https://github.com/adamwespiser/scheme",
+      "default_branch": "master",
+      "size_kb": 54692,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "aliaksandr-s/prototyping-with-clojure",
+      "references": 1,
+      "examples": [
+        "Prototyping with Clojure"
+      ],
+      "html_url": "https://github.com/aliaksandr-s/prototyping-with-clojure",
+      "default_branch": "master",
+      "size_kb": 540,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "antoaravinth/lets-build-express",
+      "references": 1,
+      "examples": [
+        "Node.js: lets-build-express"
+      ],
+      "html_url": "https://github.com/antsmartian/lets-build-express",
+      "default_branch": "master",
+      "size_kb": 649,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "BrunoLevy/learn-fpga",
+      "references": 1,
+      "examples": [
+        "Verilog: From Blinker to RISC-V"
+      ],
+      "html_url": "https://github.com/BrunoLevy/learn-fpga",
+      "default_branch": "master",
+      "size_kb": 239449,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "BSD-3-Clause",
+      "license_name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "buildthingsuseful/build-your-own-kafka",
+      "references": 1,
+      "examples": [
+        "Java: Building Your Own Kafka-like System From Scratch: A Step-by-Step Guide"
+      ],
+      "html_url": "https://github.com/buildthingsuseful/build-your-own-kafka",
+      "default_branch": "main",
+      "size_kb": 28,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "cfenollosa/os-tutorial",
+      "references": 2,
+      "examples": [
+        "C: How to create an OS from scratch",
+        "How to create an OS from scratch"
+      ],
+      "html_url": "https://github.com/cfenollosa/os-tutorial",
+      "default_branch": "master",
+      "size_kb": 107,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "BSD-3-Clause",
+      "license_name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "cheery/json-algorithm",
+      "references": 1,
+      "examples": [
+        "Python: JSON Decoding Algorithm"
+      ],
+      "html_url": "https://github.com/cheery/json-algorithm",
+      "default_branch": "master",
+      "size_kb": 31,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "codecrafters-io/build-your-own-x",
+      "references": 2,
+      "examples": [
+        "create an issue",
+        "pending submissions"
+      ],
+      "html_url": "https://github.com/codecrafters-io/build-your-own-x",
+      "default_branch": "master",
+      "size_kb": 1086,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "conradoqg/naivecoin",
+      "references": 1,
+      "examples": [
+        "JavaScript: A cryptocurrency implementation in less than 1500 lines of code"
+      ],
+      "html_url": "https://github.com/conradoqg/naivecoin",
+      "default_branch": "master",
+      "size_kb": 509,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "Apache-2.0",
+      "license_name": "Apache License 2.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "DoctorWkt/acwj",
+      "references": 1,
+      "examples": [
+        "C: A journey explaining how to build a compiler from scratch"
+      ],
+      "html_url": "https://github.com/DoctorWkt/acwj",
+      "default_branch": "master",
+      "size_kb": 4062,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "GPL-3.0",
+      "license_name": "GNU General Public License v3.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "dwyl/javascript-todo-list-tutorial",
+      "references": 1,
+      "examples": [
+        "Build a Todo List App in JavaScript"
+      ],
+      "html_url": "https://github.com/dwyl/javascript-todo-list-tutorial",
+      "default_branch": "main",
+      "size_kb": 1541,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "GPL-2.0",
+      "license_name": "GNU General Public License v2.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "EmilHernvall/dnsguide",
+      "references": 1,
+      "examples": [
+        "Rust: Building a DNS server in Rust"
+      ],
+      "html_url": "https://github.com/EmilHernvall/dnsguide",
+      "default_branch": "master",
+      "size_kb": 106,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "Fewbytes/rubber-docker",
+      "references": 1,
+      "examples": [
+        "Python: A workshop on Linux containers: Rebuild Docker from Scratch"
+      ],
+      "html_url": "https://github.com/Fewbytes/rubber-docker",
+      "default_branch": "master",
+      "size_kb": 1349,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "g-plane/tiny-package-manager",
+      "references": 1,
+      "examples": [
+        "TypeScript: Tiny Package Manager: Learns how npm or Yarn works"
+      ],
+      "html_url": "https://github.com/g-plane/tiny-package-manager",
+      "default_branch": "master",
+      "size_kb": 143,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "hazbo/the-super-tiny-compiler",
+      "references": 1,
+      "examples": [
+        "Go: The Super Tiny Compiler"
+      ],
+      "html_url": "https://github.com/hazbo/the-super-tiny-compiler",
+      "default_branch": "master",
+      "size_kb": 23,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "CC-BY-4.0",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "hexacta/didact",
+      "references": 1,
+      "examples": [
+        "JavaScript: A DIY guide to build your own React"
+      ],
+      "html_url": "https://github.com/pomber/didact",
+      "default_branch": "master",
+      "size_kb": 237,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "inFaaa/build-your-own-x-vibe-coding",
+      "references": 1,
+      "examples": [
+        "(any):  build-your-own-x-vibe-coding: BYOX-style tutorials adapted for vibe coding"
+      ],
+      "html_url": "https://github.com/inFaaa/build-your-own-x-vibe-coding",
+      "default_branch": "main",
+      "size_kb": 70,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "jamesroutley/write-a-hash-table",
+      "references": 2,
+      "examples": [
+        "C: Learn how to write a hash table in C",
+        "Write a hash table in C"
+      ],
+      "html_url": "https://github.com/jamesroutley/write-a-hash-table",
+      "default_branch": "master",
+      "size_kb": 53,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "jamiebuilds/the-super-tiny-compiler",
+      "references": 1,
+      "examples": [
+        "JavaScript: The Super Tiny Compiler"
+      ],
+      "html_url": "https://github.com/jamiebuilds/the-super-tiny-compiler",
+      "default_branch": "master",
+      "size_kb": 41,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "CC-BY-4.0",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "jserv/mini-arm-os",
+      "references": 1,
+      "examples": [
+        "C: Build a minimal multi-tasking kernel for ARM from scratch"
+      ],
+      "html_url": "https://github.com/jserv/mini-arm-os",
+      "default_branch": "master",
+      "size_kb": 442,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "kamalmarhubi/shell-workshop",
+      "references": 1,
+      "examples": [
+        "C: Let's build a shell!"
+      ],
+      "html_url": "https://github.com/kamalmarhubi/shell-workshop",
+      "default_branch": "master",
+      "size_kb": 159,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "kanaka/mal",
+      "references": 1,
+      "examples": [
+        "(any): mal - Make a Lisp"
+      ],
+      "html_url": "https://github.com/kanaka/mal",
+      "default_branch": "master",
+      "size_kb": 13191,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "kevmo314/codec-from-scratch",
+      "references": 1,
+      "examples": [
+        "Go: Video Encoding from Scratch"
+      ],
+      "html_url": "https://github.com/kevmo314/codec-from-scratch",
+      "default_branch": "main",
+      "size_kb": 30089,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "Apache-2.0",
+      "license_name": "Apache License 2.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "keyanzhang/the-super-tiny-interpreter",
+      "references": 1,
+      "examples": [
+        "JavaScript: The Super Tiny Interpreter"
+      ],
+      "html_url": "https://github.com/keyz/the-super-tiny-interpreter",
+      "default_branch": "master",
+      "size_kb": 39,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "kezhenxu94/cache-lite",
+      "references": 1,
+      "examples": [
+        "Kotlin: Build Your Own Cache"
+      ],
+      "html_url": "https://github.com/kezhenxu94/cache-lite",
+      "default_branch": "master",
+      "size_kb": 189,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "Apache-2.0",
+      "license_name": "Apache License 2.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "kylemcdonald/SmileCNN",
+      "references": 1,
+      "examples": [
+        "Code a Smile Classifier using CNNS in Python"
+      ],
+      "html_url": "https://github.com/kylemcdonald/SmileCNN",
+      "default_branch": "master",
+      "size_kb": 159,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "langchain-ai/rag-from-scratch",
+      "references": 1,
+      "examples": [
+        "Python: RAG for Document Search"
+      ],
+      "html_url": "https://github.com/langchain-ai/rag-from-scratch",
+      "default_branch": "main",
+      "size_kb": 3333,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "leandromoreira/cdn-up-and-running",
+      "references": 1,
+      "examples": [
+        "Lua: Building a CDN from Scratch to Learn about CDN"
+      ],
+      "html_url": "https://github.com/leandromoreira/cdn-up-and-running",
+      "default_branch": "main",
+      "size_kb": 1612,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "BSD-3-Clause",
+      "license_name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "lotabout/Let-s-build-a-compiler",
+      "references": 1,
+      "examples": [
+        "C: A C & x86 version of the \"Let's Build a Compiler\" by Jack Crenshaw"
+      ],
+      "html_url": "https://github.com/lotabout/Let-s-build-a-compiler",
+      "default_branch": "master",
+      "size_kb": 294,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "lotabout/write-a-C-interpreter",
+      "references": 1,
+      "examples": [
+        "C: C interpreter that interprets itself."
+      ],
+      "html_url": "https://github.com/lotabout/write-a-C-interpreter",
+      "default_branch": "master",
+      "size_kb": 160,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "GPL-2.0",
+      "license_name": "GNU General Public License v2.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "markerikson/react-redux-links",
+      "references": 1,
+      "examples": [
+        "React Redux Links"
+      ],
+      "html_url": "https://github.com/markerikson/react-redux-links",
+      "default_branch": "master",
+      "size_kb": 1612,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "nambrot/blockchain-in-js",
+      "references": 1,
+      "examples": [
+        "JavaScript: Build your own Blockchain in JavaScript"
+      ],
+      "html_url": "https://github.com/nambrot/blockchain-in-js",
+      "default_branch": "master",
+      "size_kb": 161,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "nicklockwood/RetroRampage",
+      "references": 1,
+      "examples": [
+        "Retro first-person shooter from scratch"
+      ],
+      "html_url": "https://github.com/nicklockwood/RetroRampage",
+      "default_branch": "master",
+      "size_kb": 11348,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "nornagon/jonesforth",
+      "references": 1,
+      "examples": [
+        "Assembly: Jonesforth"
+      ],
+      "html_url": "https://github.com/nornagon/jonesforth",
+      "default_branch": "master",
+      "size_kb": 149,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "p8952/bocker",
+      "references": 1,
+      "examples": [
+        "Shell: Docker implemented in around 100 lines of bash"
+      ],
+      "html_url": "https://github.com/p8952/bocker",
+      "default_branch": "master",
+      "size_kb": 373,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "GPL-3.0",
+      "license_name": "GNU General Public License v3.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "peiyuanix/build-your-own-zerotier",
+      "references": 1,
+      "examples": [
+        "C / Python: Build your own VPN/Virtual Switch"
+      ],
+      "html_url": "https://github.com/peiyuanix/build-your-own-zerotier",
+      "default_branch": "master",
+      "size_kb": 14,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "rasbt/LLMs-from-scratch",
+      "references": 1,
+      "examples": [
+        "Python: A Large Language Model (LLM)"
+      ],
+      "html_url": "https://github.com/rasbt/LLMs-from-scratch",
+      "default_branch": "main",
+      "size_kb": 16933,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "relativty/Relativ",
+      "references": 1,
+      "examples": [
+        "C++: Build your own VR headset for $200"
+      ],
+      "html_url": "https://github.com/relativty/Relativty",
+      "default_branch": "master",
+      "size_kb": 177204,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "GPL-3.0",
+      "license_name": "GNU General Public License v3.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "roiamiel1/Build-Deep-Learning-From-Scratch",
+      "references": 1,
+      "examples": [
+        "Python: Build Deep Learning From Scratch (reimplement PyTorch internals across 34 stages)"
+      ],
+      "html_url": "https://github.com/roiamiel1/Build-Deep-Learning-From-Scratch",
+      "default_branch": "main",
+      "size_kb": 514,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "Unlicense",
+      "license_name": "The Unlicense",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "ronami/minipack",
+      "references": 1,
+      "examples": [
+        "JavaScript: Build Your Own Module Bundler - Minipack"
+      ],
+      "html_url": "https://github.com/ronami/minipack",
+      "default_branch": "master",
+      "size_kb": 26,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "s-matyukevich/raspberry-pi-os",
+      "references": 1,
+      "examples": [
+        "C: Learning operating system development using Linux kernel and Raspberry Pi"
+      ],
+      "html_url": "https://github.com/s-matyukevich/raspberry-pi-os",
+      "default_branch": "master",
+      "size_kb": 2016,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "SavjeeTutorials/SavjeeCoin",
+      "references": 1,
+      "examples": [
+        "JavaScript: Creating a blockchain with JavaScript"
+      ],
+      "html_url": "https://github.com/Savjee/SavjeeCoin",
+      "default_branch": "master",
+      "size_kb": 347,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "ssloy/tinykaboom",
+      "references": 1,
+      "examples": [
+        "KABOOM! in 180 lines of bare C++"
+      ],
+      "html_url": "https://github.com/ssloy/tinykaboom",
+      "default_branch": "master",
+      "size_kb": 11166,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "ssloy/tinyraycaster",
+      "references": 1,
+      "examples": [
+        "486 lines of C++: old-school FPS in a weekend"
+      ],
+      "html_url": "https://github.com/ssloy/tinyraycaster",
+      "default_branch": "master",
+      "size_kb": 27992,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "WTFPL",
+      "license_name": "Do What The F*ck You Want To Public License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "ssloy/tinyraytracer",
+      "references": 1,
+      "examples": [
+        "Understandable RayTracing in 256 lines of bare C++"
+      ],
+      "html_url": "https://github.com/ssloy/tinyraytracer",
+      "default_branch": "master",
+      "size_kb": 158857,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "ssloy/tinyrenderer",
+      "references": 2,
+      "examples": [
+        "C++: How OpenGL works: software rendering in 500 lines of code",
+        "Tiny Renderer or how OpenGL works: software rendering in 500 lines of code"
+      ],
+      "html_url": "https://github.com/ssloy/tinyrenderer",
+      "default_branch": "master",
+      "size_kb": 64049,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "SSYGEN/blog",
+      "references": 1,
+      "examples": [
+        "Lua: BYTEPATH"
+      ],
+      "html_url": "https://github.com/a327ex/blog",
+      "default_branch": "master",
+      "size_kb": 301,
+      "archived": true,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "TanayK07/networking-from-scratch",
+      "references": 1,
+      "examples": [
+        "Networking from Scratch"
+      ],
+      "html_url": "https://github.com/TanayK07/networking-from-scratch",
+      "default_branch": "main",
+      "size_kb": 6851,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "tokenrove/build-your-own-shell",
+      "references": 1,
+      "examples": [
+        "C: Build Your Own Shell"
+      ],
+      "html_url": "https://github.com/tokenrove/build-your-own-shell",
+      "default_branch": "master",
+      "size_kb": 75,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "tonybaloney/mocker",
+      "references": 1,
+      "examples": [
+        "Python: A proof-of-concept imitation of Docker, written in 100% Python"
+      ],
+      "html_url": "https://github.com/tonybaloney/mocker",
+      "default_branch": "master",
+      "size_kb": 54,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "Apache-2.0",
+      "license_name": "Apache License 2.0",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "trekhleb/javascript-algorithms",
+      "references": 1,
+      "examples": [
+        "JavaScript: JavaScript Algorithms and Data Structures"
+      ],
+      "html_url": "https://github.com/trekhleb/javascript-algorithms",
+      "default_branch": "master",
+      "size_kb": 14964,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "tuhdo/os01",
+      "references": 1,
+      "examples": [
+        "Write an OS from scratch"
+      ],
+      "html_url": "https://github.com/tuhdo/os01",
+      "default_branch": "master",
+      "size_kb": 20791,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok"
+    },
+    {
+      "repository": "xames3/slowtorch",
+      "references": 1,
+      "examples": [
+        "Python: SlowTorch: Implementation of PyTorch from the ground up in 100% pure Python"
+      ],
+      "html_url": "https://github.com/xames3/slowtorch",
+      "default_branch": "main",
+      "size_kb": 461,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok"
+    },
+    {
+      "repository": "yukimotopress/programming-blockchains-step-by-step",
+      "references": 1,
+      "examples": [
+        "Ruby: Programming Blockchains Step-by-Step (Manuscripts Book Edition)"
+      ],
+      "html_url": "https://github.com/openblockchains/programming-blockchains",
+      "default_branch": "master",
+      "size_kb": 553,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "CC0-1.0",
+      "license_name": "Creative Commons Zero v1.0 Universal",
+      "has_declared_license": true,
+      "status": "ok"
+    }
+  ]
+}
