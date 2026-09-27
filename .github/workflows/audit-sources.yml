@@ -1,0 +1,35 @@
+name: Audit linked GitHub sources
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/audit-sources.yml"
+      - "ferramentas/audit_project_sources.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit repository licenses
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python ferramentas/audit_project_sources.py
+      - name: Commit manifest when changed
+        run: |
+          if [ -z "$(git status --porcelain -- site/data/source-audit.json)" ]; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/source-audit.json
+          git commit -m "chore: audita licenças das fontes GitHub catalogadas"
+          git push
