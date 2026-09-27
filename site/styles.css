@@ -83,3 +83,12 @@ footer{max-width:1220px;margin:0 auto;padding:32px 48px 56px;border-top:1px soli
 @media(max-width:950px){.lesson-layout{grid-template-columns:minmax(0,760px);padding:40px 24px}.lesson-toc{display:none}}
 @media(max-width:600px){.lesson-header{padding:16px 20px}.lesson-header>a:last-child{font-size:.73rem}.lesson-layout{padding:34px 20px}.lesson-article{font-size:1rem}.lesson-neighbors{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card{transition:none}}
+
+.activity{margin-top:54px;padding:28px;border:1px solid #265671;border-radius:18px;background:linear-gradient(160deg,#0d2434,#0a1826)}
+.activity h2{font-size:1.6rem;margin:0 0 8px}.activity h3{margin:0 0 8px}.activity p{color:var(--muted);line-height:1.65}
+.activity-form{display:flex;align-items:end;flex-wrap:wrap;gap:10px;margin-top:20px}.activity-form label{display:grid;gap:7px;color:#c9e4f4;font-size:.82rem}
+.activity-form input{width:110px;border:1px solid #37617a;background:#061521;color:var(--text);border-radius:9px;padding:10px}
+.activity-result{margin-top:22px}.activity-result strong{color:var(--green)}.activity-result ol{columns:2;column-gap:28px;padding-left:20px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.83rem;line-height:1.8;color:#bad8ed}
+.activity-result li{break-inside:avoid}.activity-exercise{margin-top:30px;padding-top:25px;border-top:1px solid var(--line)}
+#quizFeedback{min-height:1.5em;color:var(--green)}.lesson-actions button:disabled{opacity:.55;cursor:not-allowed;box-shadow:none}
+@media(max-width:600px){.activity{padding:20px}.activity-result ol{columns:1}}

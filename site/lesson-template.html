@@ -7,7 +7,7 @@
   <title>{{TITLE}} · Ciência da Computação do 0</title>
   <link rel="stylesheet" href="../../../styles.css">
 </head>
-<body class="lesson-page" data-lesson-path="{{PATH}}">
+<body class="lesson-page" data-lesson-path="{{PATH}}" data-has-exercise="{{HAS_EXERCISE}}">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="lesson-header">
     <a class="brand" href="../../../index.html#aulas"><span class="brand-mark">&lt;/&gt;</span><span><strong>Ciência da Computação</strong><small>do 0</small></span></a>
@@ -17,6 +17,7 @@
     <main id="conteudo" class="lesson-main">
       <div class="lesson-overline">{{MODULE}}</div>
       <article class="lesson-article">{{BODY}}</article>
+      {{ACTIVITY}}
       <div class="lesson-actions">
         <button id="lessonComplete" type="button" class="btn primary" aria-pressed="false">Marcar como concluída</button>
         <a href="{{SOURCE}}" target="_blank" rel="noopener noreferrer">Ver texto original no GitHub ↗</a>
@@ -29,5 +30,6 @@
     </aside>
   </div>
   <script src="../../../lesson.js" defer></script>
+  {{ACTIVITY_SCRIPT}}
 </body>
 </html>
