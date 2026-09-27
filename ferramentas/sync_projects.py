@@ -33,7 +33,59 @@ def parse_byox(md):
     out, category = [], 'Outros'
     for raw in md.splitlines():
         line = raw.strip()
-        h = re.match(r'^##\\s+Build your own\\s+(.+)$', line, re.I)
+        h = re.match(r'^#{2,4}\\s+Build your own\\s+(.+)
+        if h:
+            category = h.group(1).replace('&lt;', '<').replace('&gt;', '>').replace('`', '').strip()
+            continue
+        item = link_from_line(line)
+        if item:
+            title, url = item
+            out.append({'title': title, 'url': url, 'category': category, 'source': 'Build Your Own X'})
+    return out
+
+def parse_pbl(md):
+    out, category, sub = [], 'Outros', ''
+    for raw in md.splitlines():
+        line = raw.strip()
+        h2 = re.match(r'^##\\s+(.+?)(?::)?$', line)
+        if h2 and 'Table of Contents' not in h2.group(1):
+            category, sub = h2.group(1).rstrip(':').strip(), ''
+            continue
+        h3 = re.match(r'^###\\s+(.+?)(?::)?$', line)
+        if h3:
+            sub = h3.group(1).rstrip(':').strip()
+            continue
+        item = link_from_line(line)
+        if item:
+            title, url = item
+            cat = category + (' · ' + sub if sub else '')
+            out.append({'title': title, 'url': url, 'category': cat, 'source': 'Project Based Learning'})
+    return out
+
+def main():
+    byox = parse_byox(fetch(BYOX))
+    pbl = parse_pbl(fetch(PBL))
+    seen, projects = set(), []
+    for p in byox + pbl:
+        key = (p['source'], p['url'])
+        if key not in seen:
+            seen.add(key)
+            projects.append(p)
+    payload = {
+        'generatedFrom': [
+            {'name': 'Build Your Own X', 'url': 'https://github.com/codecrafters-io/build-your-own-x'},
+            {'name': 'Project Based Learning', 'url': 'https://github.com/practical-tutorials/project-based-learning'}
+        ],
+        'note': 'Índice de títulos, categorias e links públicos para navegação educacional; o conteúdo permanece nas fontes.',
+        'counts': {'buildYourOwnX': len(byox), 'projectBasedLearning': len(pbl), 'total': len(projects)},
+        'projects': projects
+    }
+    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\\n', encoding='utf-8')
+    print('Catálogo atualizado:', len(projects), 'entradas')
+
+if __name__ == '__main__':
+    main()
+, line, re.I)
         if h:
             category = h.group(1).replace('&lt;', '<').replace('&gt;', '>').strip()
             continue

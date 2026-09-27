@@ -9,7 +9,7 @@
       "url": "https://github.com/practical-tutorials/project-based-learning"
     }
   ],
-  "note": "Este arquivo indexa títulos, categorias e links públicos para fins de navegação educacional. O conteúdo dos tutoriais permanece nos sites/repositórios de origem e sujeito às respectivas licenças.",
+  "note": "Índice de títulos, categorias e links públicos; o conteúdo permanece nas fontes e sujeito às respectivas licenças.",
   "counts": {
     "buildYourOwnX": 361,
     "projectBasedLearning": 457,
@@ -19,2167 +19,2167 @@
     {
       "title": "Java: Building Your Own Kafka-like System From Scratch: A Step-by-Step Guide",
       "url": "https://github.com/buildthingsuseful/build-your-own-kafka",
-      "category": "<insert-technology-here>",
+      "category": "Distributed Systems",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Introduction to Ray Tracing: a Simple Method for Creating 3D Images",
       "url": "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/how-does-it-work",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: How OpenGL works: software rendering in 500 lines of code",
       "url": "https://github.com/ssloy/tinyrenderer/wiki",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Raycasting engine of Wolfenstein 3D",
       "url": "http://lodev.org/cgtutor/raycasting.html",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Physically Based Rendering:From Theory To Implementation",
       "url": "http://www.pbr-book.org/",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Ray Tracing in One Weekend",
       "url": "https://raytracing.github.io/books/RayTracingInOneWeekend.html",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Rasterization: a Practical Implementation",
       "url": "https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/overview-rasterization-algorithm",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "C# / TypeScript / JavaScript: Learning how to write a 3D soft engine from scratch in C#, TypeScript or JavaScript",
       "url": "https://www.davrous.com/2013/06/13/tutorial-series-learning-how-to-write-a-3d-soft-engine-from-scratch-in-c-typescript-or-javascript/",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "Java / JavaScript: Build your own 3D renderer",
       "url": "https://avik-das.github.io/build-your-own-raytracer/",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "Java: How to create your own simple 3D render engine in pure Java",
       "url": "http://blog.rogach.org/2015/08/how-to-create-your-own-simple-3d-render.html",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript / Pseudocode: Computer Graphics from scratch",
       "url": "http://www.gabrielgambetta.com/computer-graphics-from-scratch/introduction.html",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A 3D Modeller",
       "url": "http://aosabook.org/en/500L/a-3d-modeller.html",
-      "category": "<insert-technology-here>",
+      "category": "3D Renderer",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A Large Language Model (LLM)",
       "url": "https://github.com/rasbt/LLMs-from-scratch",
-      "category": "<insert-technology-here>",
+      "category": "AI Model",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Diffusion Models for Image Generation",
       "url": "https://huggingface.co/learn/diffusion-course/en/unit1/3",
-      "category": "<insert-technology-here>",
+      "category": "AI Model",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: RAG for Document Search",
       "url": "https://github.com/langchain-ai/rag-from-scratch",
-      "category": "<insert-technology-here>",
+      "category": "AI Model",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: How To: Augmented Reality App Tutorial for Beginners with Vuforia and Unity 3D",
       "url": "https://www.youtube.com/watch?v=uXNjNcqW4kY",
-      "category": "<insert-technology-here>",
+      "category": "Augmented Reality",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: How To Unity ARCore",
       "url": "https://www.youtube.com/playlist?list=PLKIKuXdn4ZMjuUAtdQfK1vwTZPQn_rgSv",
-      "category": "<insert-technology-here>",
+      "category": "Augmented Reality",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: AR Portal Tutorial with Unity",
       "url": "https://www.youtube.com/playlist?list=PLPCqNOwwN794Gz5fzUSi1p4OqLU0HTmvn",
-      "category": "<insert-technology-here>",
+      "category": "Augmented Reality",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: How to create a Dragon in Augmented Reality in Unity ARCore",
       "url": "https://www.youtube.com/watch?v=qTSDPkPyPqs",
-      "category": "<insert-technology-here>",
+      "category": "Augmented Reality",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: How to Augmented Reality AR Tutorial: ARKit Portal to the Upside Down",
       "url": "https://www.youtube.com/watch?v=Z5AmqMuNi08",
-      "category": "<insert-technology-here>",
+      "category": "Augmented Reality",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Augmented Reality with Python and OpenCV",
       "url": "https://bitesofcode.wordpress.com/2017/09/12/augmented-reality-with-python-and-opencv-part-1/",
-      "category": "<insert-technology-here>",
+      "category": "Augmented Reality",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Building a BitTorrent client from scratch in C#",
       "url": "https://www.seanjoflynn.com/research/bittorrent.html",
-      "category": "<insert-technology-here>",
+      "category": "BitTorrent Client",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Building a BitTorrent client from the ground up in Go",
       "url": "https://blog.jse.li/posts/torrent/",
-      "category": "<insert-technology-here>",
+      "category": "BitTorrent Client",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a Bencode Parser",
       "url": "https://xmonader.github.io/nimdays/day02_bencode.html",
-      "category": "<insert-technology-here>",
+      "category": "BitTorrent Client",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Write your own bittorrent client",
       "url": "https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html",
-      "category": "<insert-technology-here>",
+      "category": "BitTorrent Client",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A BitTorrent client in Python 3.5",
       "url": "http://markuseliasson.se/article/bittorrent-in-python/",
-      "category": "<insert-technology-here>",
+      "category": "BitTorrent Client",
       "source": "Build Your Own X"
     },
     {
       "title": "ATS: Functional Blockchain",
       "url": "https://beta.observablehq.com/@galletti94/functional-blockchain",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Crystal: Write your own blockchain and PoW algorithm using Crystal",
       "url": "https://medium.com/@bradford_hamilton/write-your-own-blockchain-and-pow-algorithm-using-crystal-d53d5d9d0c52",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Building Blockchain in Go",
       "url": "https://jeiwan.net/posts/building-blockchain-in-go-part-1/",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Code your own blockchain in less than 200 lines of Go",
       "url": "https://medium.com/@mycoralhealth/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Java: Creating Your First Blockchain with Java",
       "url": "https://medium.com/programmers-blockchain/create-simple-blockchain-java-tutorial-from-scratch-6eeed3cb03fa",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: A cryptocurrency implementation in less than 1500 lines of code",
       "url": "https://github.com/conradoqg/naivecoin",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build your own Blockchain in JavaScript",
       "url": "https://github.com/nambrot/blockchain-in-js",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Learn & Build a JavaScript Blockchain",
       "url": "https://medium.com/digital-alchemy-holdings/learn-build-a-javascript-blockchain-part-1-ca61c285821e",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Creating a blockchain with JavaScript",
       "url": "https://github.com/SavjeeTutorials/SavjeeCoin",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: How To Launch Your Own Production-Ready Cryptocurrency",
       "url": "https://hackernoon.com/how-to-launch-your-own-production-ready-cryptocurrency-ab97cb773371",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Writing a Blockchain in Node.js",
       "url": "https://www.smashingmagazine.com/2020/02/cryptocurrency-blockchain-node-js/",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Kotlin: Let’s implement a cryptocurrency in Kotlin",
       "url": "https://medium.com/@vasilyf/lets-implement-a-cryptocurrency-in-kotlin-part-1-blockchain-8704069f8580",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Learn Blockchains by Building One",
       "url": "https://hackernoon.com/learn-blockchains-by-building-one-117428612f46",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Build your own blockchain: a Python tutorial",
       "url": "http://ecomunsing.com/build-your-own-blockchain",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A Practical Introduction to Blockchain with Python",
       "url": "http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Let’s Build the Tiniest Blockchain",
       "url": "https://medium.com/crypto-currently/lets-build-the-tiniest-blockchain-e70965a248b",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Programming Blockchains Step-by-Step (Manuscripts Book Edition)",
       "url": "https://github.com/yukimotopress/programming-blockchains-step-by-step",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Scala: How to build a simple actor-based blockchain",
       "url": "https://medium.freecodecamp.org/how-to-build-a-simple-actor-based-blockchain-aac1e996c177",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "TypeScript: Naivecoin: a tutorial for building a cryptocurrency",
       "url": "https://lhartikk.github.io/",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "TypeScript: NaivecoinStake: a tutorial for building a cryptocurrency with the Proof of Stake consensus",
       "url": "https://naivecoinstake.learn.uno/",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Building A Blockchain in Rust & Substrate",
       "url": "https://hackernoon.com/building-a-blockchain-in-rust-and-substrate-a-step-by-step-guide-for-developers-kc223ybp",
-      "category": "<insert-technology-here>",
+      "category": "Blockchain / Cryptocurrency",
       "source": "Build Your Own X"
     },
     {
       "title": "Haskell: Roll your own IRC bot",
       "url": "https://wiki.haskell.org/Roll_your_own_IRC_bot",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Creating a Simple Facebook Messenger AI Bot with API.ai in Node.js",
       "url": "https://tutorials.botsfloor.com/creating-a-simple-facebook-messenger-ai-bot-with-api-ai-in-node-js-50ae2fa5c80d",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: How to make a responsive telegram bot",
       "url": "https://www.sohamkamani.com/blog/2016/09/21/making-a-telegram-bot/",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Create a Discord bot",
       "url": "https://discordjs.guide/",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: gifbot - Building a GitHub App",
       "url": "https://blog.scottlogic.com/2017/05/22/gifbot-github-integration.html",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Building A Simple AI Chatbot With Web Speech API And Node.js",
       "url": "https://www.smashingmagazine.com/2017/08/ai-chatbot-web-speech-api-node-js/",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: How to Build Your First Slack Bot with Python",
       "url": "https://www.fullstackpython.com/blog/build-first-slack-bot-python.html",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: How to build a Slack Bot with Python using Slack Events API & Django under 20 minute",
       "url": "https://medium.com/freehunch/how-to-build-a-slack-bot-with-python-using-slack-events-api-django-under-20-minute-code-included-269c3a9bf64e",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Build a Reddit Bot",
       "url": "https://pythonforengineers.com/blog/build-a-reddit-bot-part-1/",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: How To Make A Reddit Bot",
       "url": "https://www.youtube.com/watch?v=krTUf7BpTc0",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: How To Create a Telegram Bot Using Python",
       "url": "https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Create a Twitter Bot in Python Using Tweepy",
       "url": "https://medium.freecodecamp.org/creating-a-twitter-bot-in-python-with-tweepy-ac524157a607",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Creating Reddit Bot with Python & PRAW",
       "url": "https://www.youtube.com/playlist?list=PLIFBTFgFpoJ9vmYYlfxRFV6U_XhG-4fpP",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "R: Build A Cryptocurrency Trading Bot with R",
       "url": "https://towardsdatascience.com/build-a-cryptocurrency-trading-bot-with-r-1445c429e1b1",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: A bot for Starcraft in Rust, C or any other language",
       "url": "https://habr.com/en/post/436254/",
-      "category": "<insert-technology-here>",
+      "category": "Bot",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Visualize your local git contributions with Go",
       "url": "https://flaviocopes.com/go-git-contributions/",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Build a command line app with Go: lolcat",
       "url": "https://flaviocopes.com/go-tutorial-lolcat/",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Building a cli command with Go: cowsay",
       "url": "https://flaviocopes.com/go-tutorial-cowsay/",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Go CLI tutorial: fortune clone",
       "url": "https://flaviocopes.com/go-tutorial-fortune/",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a stow alternative to manage dotfiles",
       "url": "https://xmonader.github.io/nimdays/day06_nistow.html",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Create a CLI tool in Javascript",
       "url": "https://citw.dev/tutorial/create-your-own-cli-tool",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Command line apps in Rust",
       "url": "https://rust-cli.github.io/book/index.html",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Writing a Command Line Tool in Rust",
       "url": "https://mattgathu.dev/2017/08/29/writing-cli-app-rust.html",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "Zig: Build Your Own CLI App in Zig from Scratch",
       "url": "https://rebuild-x.github.io/docs/#/./zig/terminal/cli",
-      "category": "<insert-technology-here>",
+      "category": "Command-Line Tool",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Let's Build a Simple Database",
       "url": "https://cstack.github.io/db_tutorial/",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Build Your Own Redis from Scratch",
       "url": "https://build-your-own.org/redis",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Build Your Own Database",
       "url": "https://www.codeproject.com/Articles/1029838/Build-Your-Own-Database",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Clojure: An Archaeology-Inspired Database",
       "url": "http://aosabook.org/en/500L/an-archaeology-inspired-database.html",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Crystal: Why you should build your own NoSQL Database",
       "url": "https://medium.com/@marceloboeira/why-you-should-build-your-own-nosql-database-9bbba42039f5",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Build Your Own Database from Scratch: From B+Tree To SQL in 3000 Lines",
       "url": "https://build-your-own.org/database/",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Code a database in 45 steps: a series of test-driven small coding puzzles",
       "url": "https://trialofcode.org/database/",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Build Your Own Redis from Scratch",
       "url": "https://www.build-redis-from-scratch.dev/",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Dagoba: an in-memory graph database",
       "url": "http://aosabook.org/en/500L/dagoba-an-in-memory-graph-database.html",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: DBDB: Dog Bed Database",
       "url": "http://aosabook.org/en/500L/dbdb-dog-bed-database.html",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Write your own miniature Redis with Python",
       "url": "http://charlesleifer.com/blog/building-a-simple-redis-server-with-python/",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Build your own fast, persistent KV store in Ruby",
       "url": "https://dineshgowda.com/posts/build-your-own-persistent-kv-store/",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Build your own Redis client and server",
       "url": "https://tokio.rs/tokio/tutorial/setup",
-      "category": "<insert-technology-here>",
+      "category": "Database",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Linux containers in 500 lines of code",
       "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
-      "category": "<insert-technology-here>",
+      "category": "Docker",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Build Your Own Container Using Less than 100 Lines of Go",
       "url": "https://www.infoq.com/articles/build-a-container-golang",
-      "category": "<insert-technology-here>",
+      "category": "Docker",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Building a container from scratch in Go",
       "url": "https://www.youtube.com/watch?v=8fi7uSYlOdc",
-      "category": "<insert-technology-here>",
+      "category": "Docker",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A workshop on Linux containers: Rebuild Docker from Scratch",
       "url": "https://github.com/Fewbytes/rubber-docker",
-      "category": "<insert-technology-here>",
+      "category": "Docker",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A proof-of-concept imitation of Docker, written in 100% Python",
       "url": "https://github.com/tonybaloney/mocker",
-      "category": "<insert-technology-here>",
+      "category": "Docker",
       "source": "Build Your Own X"
     },
     {
       "title": "Shell: Docker implemented in around 100 lines of bash",
       "url": "https://github.com/p8952/bocker",
-      "category": "<insert-technology-here>",
+      "category": "Docker",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Home-grown bytecode interpreters",
       "url": "https://medium.com/bumble-tech/home-grown-bytecode-interpreters-51e12d59b25c",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Virtual machine in C",
       "url": "http://web.archive.org/web/20200121100942/https://blog.felixangell.com/virtual-machine-in-c/",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Write your Own Virtual Machine",
       "url": "https://justinmeiners.github.io/lc3-vm/",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Writing a Game Boy emulator, Cinoop",
       "url": "https://cturt.github.io/cinoop.html",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: How to write an emulator (CHIP-8 interpreter)",
       "url": "http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Emulation tutorial (CHIP-8 interpreter)",
       "url": "http://www.codeslinger.co.uk/pages/projects/chip8.html",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Emulation tutorial (GameBoy emulator)",
       "url": "http://www.codeslinger.co.uk/pages/projects/gameboy.html",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Emulation tutorial (Master System emulator)",
       "url": "http://www.codeslinger.co.uk/pages/projects/mastersystem/memory.html",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: NES Emulator From Scratch",
       "url": "https://www.youtube.com/playlist?list=PLrOv9FMX8xJHqMvSGB_9G9nZZ_4IgteYf",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "Common Lisp: CHIP-8 in Common Lisp",
       "url": "http://stevelosh.com/blog/2016/12/chip8-cpu/",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: GameBoy Emulation in JavaScript",
       "url": "http://imrannazar.com/GameBoy-Emulation-in-JavaScript",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Emulation Basics: Write your own Chip 8 Emulator/Interpreter",
       "url": "http://omokute.blogspot.com.br/2012/06/emulation-basics-write-your-own-chip-8.html",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: 0dmg: Learning Rust by building a partial Game Boy emulator",
       "url": "https://jeremybanks.github.io/0dmg/",
-      "category": "<insert-technology-here>",
+      "category": "Emulator / Virtual Machine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: WTF is JSX (Let's Build a JSX Renderer)",
       "url": "https://jasonformat.com/wtf-is-jsx/",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: A DIY guide to build your own React",
       "url": "https://github.com/hexacta/didact",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Building React From Scratch",
       "url": "https://www.youtube.com/watch?v=_MAD4Oly9yg",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Gooact: React in 160 lines of JavaScript",
       "url": "https://medium.com/@sweetpalma/gooact-react-in-160-lines-of-javascript-44e0742ad60f",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Learn how React Reconciler package works by building your own lightweight React DOM",
       "url": "https://hackernoon.com/learn-you-some-custom-react-renderers-aed7164a4199",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build Yourself a Redux",
       "url": "https://zapier.com/engineering/how-to-build-redux/",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Let’s Write Redux!",
       "url": "https://www.jamasoftware.com/blog/lets-write-redux/",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Redux: Implementing Store from Scratch",
       "url": "https://egghead.io/lessons/react-redux-implementing-store-from-scratch",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build Your own Simplified AngularJS in 200 Lines of JavaScript",
       "url": "https://blog.mgechev.com/2015/03/09/build-learn-your-own-light-lightweight-angularjs/",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Make Your Own AngularJS",
       "url": "http://teropa.info/blog/2013/11/03/make-your-own-angular-part-1-scopes-and-digest.html",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: How to write your own Virtual DOM",
       "url": "https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Building a frontend framework, from scratch, with components (templating, state, VDOM)",
       "url": "https://mfrachet.github.io/create-frontend-framework/",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build your own React",
       "url": "https://pomb.us/build-your-own-react/",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Building a Custom React Renderer",
       "url": "https://youtu.be/CGpMlWVcHok",
-      "category": "<insert-technology-here>",
+      "category": "Front-end Framework / Library",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Handmade Hero",
       "url": "https://handmadehero.org/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C: How to Program an NES game in C",
       "url": "https://nesdoug.com/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Chess Engine In C",
       "url": "https://www.youtube.com/playlist?list=PLZ1QII7yudbc-Ky058TEaOstZHVbT-2hg",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Let's Make: Dangerous Dave",
       "url": "https://www.youtube.com/playlist?list=PLSkJey49cOgTSj465v2KbLZ7LMn10bCF9",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Learn Video Game Programming in C",
       "url": "https://www.youtube.com/playlist?list=PLT6WFYYZE6uLMcPGS3qfpYm7T_gViYMMt",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Coding A Sudoku Solver in C",
       "url": "https://www.youtube.com/playlist?list=PLkTXsX7igf8edTYU92nU-f5Ntzuf-RKvW",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Coding a Rogue/Nethack RPG in C",
       "url": "https://www.youtube.com/playlist?list=PLkTXsX7igf8erbWGYT4iSAhpnJLJ0Nk5G",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C: On Tetris and Reimplementation",
       "url": "https://brennan.io/2015/06/12/tetris-reimplementation/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Breakout",
       "url": "https://learnopengl.com/In-Practice/2D-Game/Breakout",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Beginning Game Programming v2.0",
       "url": "http://lazyfoo.net/tutorials/SDL/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Tetris tutorial in C++ platform independent focused in game logic for beginners",
       "url": "http://javilop.com/gamedev/tetris-tutorial-in-c-platform-independent-focused-in-game-logic-for-beginners/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Remaking Cavestory in C++",
       "url": "https://www.youtube.com/watch?v=ETvApbD5xRo&list=PLNOBk_id22bw6LXhrGfhVwqQIa-M2MsLa",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Reconstructing Cave Story",
       "url": "https://www.youtube.com/playlist?list=PL006xsVEsbKjSKBmLu1clo85yLrwjY67X",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Space Invaders from Scratch",
       "url": "http://nicktasios.nl/posts/space-invaders-from-scratch-part-1.html",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Learn C# by Building a Simple RPG",
       "url": "http://scottlilly.com/learn-c-by-building-a-simple-rpg-index/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Creating a Roguelike Game in C#",
       "url": "https://roguesharp.wordpress.com/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Build a C#/WPF RPG",
       "url": "https://scottlilly.com/build-a-cwpf-rpg/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Games With Go",
       "url": "https://www.youtube.com/playlist?list=PLDZujg-VgQlZUy1iCqBbe5faZLMkA3g2x",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Java: Code a 2D Game Engine using Java - Full Course for Beginners",
       "url": "https://www.youtube.com/watch?v=025QFeZfeyM",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Java: 3D Game Development with LWJGL 3",
       "url": "https://lwjglgamedev.gitbooks.io/3d-game-development-with-lwjgl/content/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: 2D breakout game using Phaser",
       "url": "https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: How to Make Flappy Bird in HTML5 With Phaser",
       "url": "http://www.lessmilk.com/tutorial/flappy-bird-phaser-1",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Developing Games with React, Redux, and SVG",
       "url": "https://auth0.com/blog/developing-games-with-react-redux-and-svg-part-1/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build your own 8-Ball Pool game from scratch",
       "url": "https://www.youtube.com/watch?v=aXwCrtAo4Wc",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: How to Make Your First Roguelike",
       "url": "https://gamedevelopment.tutsplus.com/tutorials/how-to-make-your-first-roguelike--gamedev-13677",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Think like a programmer: How to build Snake using only JavaScript, HTML & CSS",
       "url": "https://medium.freecodecamp.org/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Lua: BYTEPATH",
       "url": "https://github.com/SSYGEN/blog/issues/30",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Developing Games With PyGame",
       "url": "https://pythonprogramming.net/pygame-python-3-part-1-intro/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Making Games with Python & Pygame",
       "url": "https://inventwithpython.com/makinggames.pdf",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Roguelike Tutorial Revised",
       "url": "http://rogueliketutorials.com/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Developing Games With Ruby",
       "url": "https://leanpub.com/developing-games-with-ruby/read",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Ruby Snake",
       "url": "https://www.diatomenterprises.com/gamedev-on-ruby-why-not/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Adventures in Rust: A Basic 2D Game",
       "url": "https://a5huynh.github.io/posts/2018/adventures-in-rust/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Roguelike Tutorial in Rust + tcod",
       "url": "https://tomassedovic.github.io/roguelike-tutorial/",
-      "category": "<insert-technology-here>",
+      "category": "Game",
       "source": "Build Your Own X"
     },
     {
       "title": "Haskell: Reimplementing “git clone” in Haskell from the bottom up",
       "url": "http://stefan.saasen.me/articles/git-clone-in-haskell-from-the-bottom-up/",
-      "category": "<insert-technology-here>",
+      "category": "Git",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Gitlet",
       "url": "http://gitlet.maryrosecook.com/docs/gitlet.html",
-      "category": "<insert-technology-here>",
+      "category": "Git",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build GIT - Learn GIT",
       "url": "https://kushagra.dev/blog/build-git-learn-git/",
-      "category": "<insert-technology-here>",
+      "category": "Git",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Just enough of a Git client to create a repo, commit, and push itself to GitHub",
       "url": "https://benhoyt.com/writings/pygit/",
-      "category": "<insert-technology-here>",
+      "category": "Git",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Write yourself a Git!",
       "url": "https://wyag.thb.lt/",
-      "category": "<insert-technology-here>",
+      "category": "Git",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: ugit: Learn Git Internals by Building Git Yourself",
       "url": "https://www.leshenko.net/p/ugit/",
-      "category": "<insert-technology-here>",
+      "category": "Git",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Rebuilding Git in Ruby",
       "url": "https://robots.thoughtbot.com/rebuilding-git-in-ruby",
-      "category": "<insert-technology-here>",
+      "category": "Git",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Malloc is not magic -- Implementing your own memory allocator",
       "url": "https://medium.com/p/e0354e914402",
-      "category": "<insert-technology-here>",
+      "category": "Memory Allocator",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Beej's Guide to Network Programming",
       "url": "http://beej.us/guide/bgnet/",
-      "category": "<insert-technology-here>",
+      "category": "Network Stack",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Let's code a TCP/IP stack",
       "url": "http://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp/",
-      "category": "<insert-technology-here>",
+      "category": "Network Stack",
       "source": "Build Your Own X"
     },
     {
       "title": "C / Python: Build your own VPN/Virtual Switch",
       "url": "https://github.com/peiyuanix/build-your-own-zerotier",
-      "category": "<insert-technology-here>",
+      "category": "Network Stack",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: How to build a network stack in Ruby",
       "url": "https://medium.com/geckoboard-under-the-hood/how-to-build-a-network-stack-in-ruby-f73aeb1b661b",
-      "category": "<insert-technology-here>",
+      "category": "Network Stack",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Neural Network OCR",
       "url": "https://www.codeproject.com/Articles/11285/Neural-Network-OCR",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "F#: Building Neural Networks in F#: Part 1",
       "url": "https://medium.com/data-science/building-neural-networks-in-f-part-1-a2832ae972e6",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "F#: Building Neural Networks in F#: Part 2",
       "url": "https://medium.com/data-science/building-neural-networks-in-f-part-2-training-evaluation-5e3a68889da6",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Build a multilayer perceptron with Golang",
       "url": "https://made2591.github.io/posts/neuralnetwork",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: How to build a simple artificial neural network with Go",
       "url": "https://sausheong.github.io/posts/how-to-build-a-simple-artificial-neural-network-with-go/",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Building a Neural Net from Scratch in Go",
       "url": "https://datadan.io/blog/neural-net-with-go",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript / Java: Neural Networks - The Nature of Code",
       "url": "https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Neural networks from scratch for JavaScript linguists (Part1 — The Perceptron)",
       "url": "https://hackernoon.com/neural-networks-from-scratch-for-javascript-linguists-part1-the-perceptron-632a4d1fbad2",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A Neural Network in 11 lines of Python",
       "url": "https://iamtrask.github.io/2015/07/12/basic-python-network/",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Build Deep Learning From Scratch (reimplement PyTorch internals across 34 stages)",
       "url": "https://github.com/roiamiel1/Build-Deep-Learning-From-Scratch",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Implement a Neural Network from Scratch",
       "url": "https://victorzhou.com/blog/intro-to-neural-networks/",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Optical Character Recognition (OCR)",
       "url": "http://aosabook.org/en/500L/optical-character-recognition-ocr.html",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Traffic signs classification with a convolutional network",
       "url": "https://navoshta.com/traffic-signs-classification/",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Generate Music using LSTM Neural Network in Keras",
       "url": "https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: An Introduction to Convolutional Neural Networks",
       "url": "https://victorzhou.com/blog/intro-to-cnns-part-1/",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Neural Networks: Zero to Hero",
       "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: SlowTorch: Implementation of PyTorch from the ground up in 100% pure Python",
       "url": "https://github.com/xames3/slowtorch",
-      "category": "<insert-technology-here>",
+      "category": "Neural Network",
       "source": "Build Your Own X"
     },
     {
       "title": "Assembly: Writing a Tiny x86 Bootloader",
       "url": "http://joebergeron.io/posts/post_two.html",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "Assembly: Baking Pi – Operating Systems Development",
       "url": "http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/index.html",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Building a software and hardware stack for a simple computer from scratch",
       "url": "https://www.youtube.com/watch?v=ZjwvMcP3Nf0&list=PLU94OURih-CiP4WxKSMt3UcwMSDM3aTtX",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Operating Systems: From 0 to 1",
       "url": "https://tuhdo.github.io/os01/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: The little book about OS development",
       "url": "https://littleosbook.github.io/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Roll your own toy UNIX-clone OS",
       "url": "http://jamesmolloy.co.uk/tutorial_html/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Kernel 101 – Let’s write a Kernel",
       "url": "https://arjunsreedharan.org/post/82710718100/kernel-101-lets-write-a-kernel",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Kernel 201 – Let’s write a Kernel with keyboard and screen support",
       "url": "https://arjunsreedharan.org/post/99370248137/kernel-201-lets-write-a-kernel-with-keyboard",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Build a minimal multi-tasking kernel for ARM from scratch",
       "url": "https://github.com/jserv/mini-arm-os",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: How to create an OS from scratch",
       "url": "https://github.com/cfenollosa/os-tutorial",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Malloc tutorial",
       "url": "https://danluu.com/malloc-tutorial/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Hack the virtual memory",
       "url": "https://blog.holbertonschool.com/hack-the-virtual-memory-c-strings-proc/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Learning operating system development using Linux kernel and Raspberry Pi",
       "url": "https://github.com/s-matyukevich/raspberry-pi-os",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Operating systems development for Dummies",
       "url": "https://medium.com/@lduck11007/operating-systems-development-for-dummies-3d4d786e8ac",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Write your own Operating System",
       "url": "https://www.youtube.com/playlist?list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Writing a Bootloader",
       "url": "http://3zanders.co.uk/2017/10/13/writing-a-bootloader/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Writing an OS in Rust",
       "url": "https://os.phil-opp.com/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Add RISC-V Rust Operating System Tutorial",
       "url": "https://osblog.stephenmarz.com/",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "(any): Linux from scratch",
       "url": "https://linuxfromscratch.org/lfs",
-      "category": "<insert-technology-here>",
+      "category": "Operating System",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Video Game Physics Tutorial",
       "url": "https://www.toptal.com/game/video-game-physics-part-i-an-introduction-to-rigid-body-dynamics",
-      "category": "<insert-technology-here>",
+      "category": "Physics Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Game physics series by Allen Chou",
       "url": "http://allenchou.net/game-physics-series/",
-      "category": "<insert-technology-here>",
+      "category": "Physics Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: How to Create a Custom Physics Engine",
       "url": "https://gamedevelopment.tutsplus.com/series/how-to-create-a-custom-physics-engine--gamedev-12715",
-      "category": "<insert-technology-here>",
+      "category": "Physics Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: 3D Physics Engine Tutorial",
       "url": "https://www.youtube.com/playlist?list=PLEETnX-uPtBXm1KEr_2zQ6K_0hoGH6JJ0",
-      "category": "<insert-technology-here>",
+      "category": "Physics Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: How Physics Engines Work",
       "url": "http://buildnewgames.com/gamephysics/",
-      "category": "<insert-technology-here>",
+      "category": "Physics Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Broad Phase Collision Detection Using Spatial Partitioning",
       "url": "http://buildnewgames.com/broad-phase-collision-detection/",
-      "category": "<insert-technology-here>",
+      "category": "Physics Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build a simple 2D physics engine for JavaScript games",
       "url": "https://developer.ibm.com/tutorials/wa-build2dphysicsengine/?mhsrc=ibmsearch_a&mhq=2dphysic",
-      "category": "<insert-technology-here>",
+      "category": "Physics Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Verilog: From Blinker to RISC-V",
       "url": "https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV/TUTORIALS/FROM_BLINKER_TO_RISCV",
-      "category": "<insert-technology-here>",
+      "category": "Processor",
       "source": "Build Your Own X"
     },
     {
       "title": "(any): mal - Make a Lisp",
       "url": "https://github.com/kanaka/mal#mal---make-a-lisp",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Assembly: Jonesforth",
       "url": "https://github.com/nornagon/jonesforth/blob/master/jonesforth.S",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Baby's First Garbage Collector",
       "url": "http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Build Your Own Lisp: Learn C and build your own programming language in 1000 lines of code",
       "url": "http://www.buildyourownlisp.com/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Writing a Simple Garbage Collector in C",
       "url": "http://maplant.com/gc.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C: C interpreter that interprets itself.",
       "url": "https://github.com/lotabout/write-a-C-interpreter",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C: A C & x86 version of the \"Let's Build a Compiler\" by Jack Crenshaw",
       "url": "https://github.com/lotabout/Let-s-build-a-compiler",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C: A journey explaining how to build a compiler from scratch",
       "url": "https://github.com/DoctorWkt/acwj",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Writing Your Own Toy Compiler Using Flex",
       "url": "https://gnuu.org/2009/09/18/writing-your-own-toy-compiler/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: How to Create a Compiler",
       "url": "https://www.youtube.com/watch?v=eF9qWbuQLuw",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Kaleidoscope: Implementing a Language with LLVM",
       "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "F#: Understanding Parser Combinators",
       "url": "https://fsharpforfunandprofit.com/posts/understanding-parser-combinators/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Elixir: Demystifying compilers by writing your own",
       "url": "https://www.youtube.com/watch?v=zMJYoYwOCd4",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: The Super Tiny Compiler",
       "url": "https://github.com/hazbo/the-super-tiny-compiler",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Lexical Scanning in Go",
       "url": "https://www.youtube.com/watch?v=HxaD_trXwRE",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Haskell: Let's Build a Compiler",
       "url": "https://g-ford.github.io/cradle/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Haskell: Write You a Haskell",
       "url": "http://dev.stephendiehl.com/fun/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Haskell: Write Yourself a Scheme in 48 Hours",
       "url": "https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Haskell: Write You A Scheme",
       "url": "https://www.wespiser.com/writings/wyas/home.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Java: Crafting interpreters: A handbook for making programming languages",
       "url": "http://www.craftinginterpreters.com/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Java: Creating JVM Language",
       "url": "http://jakubdziworski.github.io/categories.html#Enkel-ref",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: The Super Tiny Compiler",
       "url": "https://github.com/jamiebuilds/the-super-tiny-compiler",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: The Super Tiny Interpreter",
       "url": "https://github.com/keyanzhang/the-super-tiny-interpreter",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Little Lisp interpreter",
       "url": "https://maryrosecook.com/blog/post/little-lisp-interpreter",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: How to implement a programming language in JavaScript",
       "url": "http://lisperator.net/pltut/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Let’s go write a Lisp",
       "url": "https://idiocy.org/lets-go-write-a-lisp/part-1.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "OCaml: Writing a C Compiler",
       "url": "https://norasandler.com/2017/11/29/Write-a-Compiler.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "OCaml: Writing a Lisp, the series",
       "url": "https://bernsteinbear.com/blog/lisp/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Pascal: Let's Build a Compiler",
       "url": "https://compilers.iecc.com/crenshaw/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A Python Interpreter Written in Python",
       "url": "http://aosabook.org/en/500L/a-python-interpreter-written-in-python.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: lisp.py: Make your own Lisp interpreter",
       "url": "http://khamidou.com/compilers/lisp.py/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: How to Write a Lisp Interpreter in Python",
       "url": "http://norvig.com/lispy.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Let’s Build A Simple Interpreter",
       "url": "https://ruslanspivak.com/lsbasi-part1/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Make Your Own Simple Interpreted Programming Language",
       "url": "https://www.youtube.com/watch?v=dj9CBS3ikGA&list=PLZQftyCk7_SdoVexSmwy_tBgs7P0b97yD&index=1",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: From Source Code To Machine Code: Build Your Own Compiler From Scratch",
       "url": "https://build-your-own.org/compiler/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Racket: Beautiful Racket: How to make your own programming languages with Racket",
       "url": "https://beautifulracket.com/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: A Compiler From Scratch",
       "url": "https://www.destroyallsoftware.com/screencasts/catalog/a-compiler-from-scratch",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Markdown compiler from scratch in Ruby",
       "url": "https://blog.beezwax.net/2017/07/07/writing-a-markdown-compiler/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Learning Parser Combinators With Rust",
       "url": "https://bodil.lol/parser-combinators/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "Swift: Building a LISP from scratch with Swift",
       "url": "https://www.uraimo.com/2017/02/05/building-a-lisp-from-scratch-with-swift/",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "TypeScript: Build your own WebAssembly Compiler",
       "url": "https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html",
-      "category": "<insert-technology-here>",
+      "category": "Programming Language",
       "source": "Build Your Own X"
     },
     {
       "title": "C: A Regular Expression Matcher",
       "url": "https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Regular Expression Matching Can Be Simple And Fast",
       "url": "https://swtch.com/~rsc/regexp/regexp1.html",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: How to build a regex engine from scratch",
       "url": "https://rhaeguard.github.io/posts/regex",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build a Regex Engine in Less than 40 Lines of Code",
       "url": "https://nickdrane.com/build-your-own-regex/",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: How to implement regular expressions in functional javascript using derivatives",
       "url": "http://dpk.io/dregs/toydregs",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Implementing a Regular Expression Engine",
       "url": "https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Perl: How Regexes Work",
       "url": "https://perl.plover.com/Regex/article.html",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Build Your Own Regular Expression Engines: Backtracking, NFA, DFA",
       "url": "https://build-your-own.org/b2a/r0_intro",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Scala: No Magic: Regular Expressions",
       "url": "https://rcoh.svbtle.com/no-magic-regular-expressions",
-      "category": "<insert-technology-here>",
+      "category": "Regex Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "CSS: A search engine in CSS",
       "url": "https://stories.algolia.com/a-search-engine-in-css-b5ec4e902e97",
-      "category": "<insert-technology-here>",
+      "category": "Search Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Building a search engine using Redis and redis-py",
       "url": "http://www.dr-josiah.com/2010/07/building-search-engine-using-redis-and.html",
-      "category": "<insert-technology-here>",
+      "category": "Search Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Building a Vector Space Indexing Engine in Python",
       "url": "https://boyter.org/2010/08/build-vector-space-search-engine-python/",
-      "category": "<insert-technology-here>",
+      "category": "Search Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Building A Python-Based Search Engine",
       "url": "https://www.youtube.com/watch?v=cY7pE7vX6MU",
-      "category": "<insert-technology-here>",
+      "category": "Search Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Making text search learn from feedback",
       "url": "https://medium.com/filament-ai/making-text-search-learn-from-feedback-4fe210fd87b0",
-      "category": "<insert-technology-here>",
+      "category": "Search Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Finding Important Words in Text Using TF-IDF",
       "url": "https://stevenloria.com/tf-idf/",
-      "category": "<insert-technology-here>",
+      "category": "Search Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Tutorial - Write a Shell in C",
       "url": "https://brennan.io/2015/01/16/write-a-shell-in-c/",
-      "category": "<insert-technology-here>",
+      "category": "Shell",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Let's build a shell!",
       "url": "https://github.com/kamalmarhubi/shell-workshop",
-      "category": "<insert-technology-here>",
+      "category": "Shell",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Writing a UNIX Shell",
       "url": "https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/",
-      "category": "<insert-technology-here>",
+      "category": "Shell",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Build Your Own Shell",
       "url": "https://github.com/tokenrove/build-your-own-shell",
-      "category": "<insert-technology-here>",
+      "category": "Shell",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Write a shell in C",
       "url": "https://danishpraka.sh/posts/write-a-shell/",
-      "category": "<insert-technology-here>",
+      "category": "Shell",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Writing a simple shell in Go",
       "url": "https://sj14.gitlab.io/post/2018-07-01-go-unix-shell/",
-      "category": "<insert-technology-here>",
+      "category": "Shell",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Build Your Own Shell using Rust",
       "url": "https://www.joshmcguigan.com/blog/build-your-own-shell-rust/",
-      "category": "<insert-technology-here>",
+      "category": "Shell",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: JavaScript template engine in just 20 lines",
       "url": "http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line",
-      "category": "<insert-technology-here>",
+      "category": "Template Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Understanding JavaScript Micro-Templating",
       "url": "https://medium.com/wdstack/understanding-javascript-micro-templating-f37a37b3b40e",
-      "category": "<insert-technology-here>",
+      "category": "Template Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Approach: Building a toy template engine in Python",
       "url": "http://alexmic.net/building-a-template-engine/",
-      "category": "<insert-technology-here>",
+      "category": "Template Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A Template Engine",
       "url": "http://aosabook.org/en/500L/a-template-engine.html",
-      "category": "<insert-technology-here>",
+      "category": "Template Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: How to write a template engine in less than 30 lines of code",
       "url": "http://bits.citrusbyte.com/how-to-write-a-template-library/",
-      "category": "<insert-technology-here>",
+      "category": "Template Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Build Your Own Text Editor",
       "url": "https://viewsourcecode.org/snaptoken/kilo/",
-      "category": "<insert-technology-here>",
+      "category": "Text Editor",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Designing a Simple Text Editor",
       "url": "http://www.fltk.org/doc-1.1/editor.html",
-      "category": "<insert-technology-here>",
+      "category": "Text Editor",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Python Tutorial: Make Your Own Text Editor",
       "url": "https://www.youtube.com/watch?v=xqDonHEYPgA",
-      "category": "<insert-technology-here>",
+      "category": "Text Editor",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Create a Simple Python Text Editor!",
       "url": "http://www.instructables.com/id/Create-a-Simple-Python-Text-Editor/",
-      "category": "<insert-technology-here>",
+      "category": "Text Editor",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Build a Collaborative Text Editor Using Rails",
       "url": "https://blog.aha.io/text-editor/",
-      "category": "<insert-technology-here>",
+      "category": "Text Editor",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Hecto: Build your own text editor in Rust",
       "url": "https://www.flenker.blog/hecto/",
-      "category": "<insert-technology-here>",
+      "category": "Text Editor",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Developing a License Plate Recognition System with Machine Learning in Python",
       "url": "https://medium.com/devcenter/developing-a-license-plate-recognition-system-with-machine-learning-in-python-787833569ccd",
-      "category": "<insert-technology-here>",
+      "category": "Visual Recognition System",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Building a Facial Recognition Pipeline with Deep Learning in Tensorflow",
       "url": "https://hackernoon.com/building-a-facial-recognition-pipeline-with-deep-learning-in-tensorflow-66e7645015b8",
-      "category": "<insert-technology-here>",
+      "category": "Visual Recognition System",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Let's Make a Voxel Engine",
       "url": "https://sites.google.com/site/letsmakeavoxelengine/home",
-      "category": "<insert-technology-here>",
+      "category": "Voxel Engine",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Let's build a browser engine",
       "url": "https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Browser",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Browser Engineering",
       "url": "https://browser.engineering",
-      "category": "<insert-technology-here>",
+      "category": "Web Browser",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Writing a Web Server from Scratch",
       "url": "https://www.codeproject.com/Articles/859108/Writing-a-Web-Server-from-Scratch",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Build Your Own Web Server From Scratch In JavaScript",
       "url": "https://build-your-own.org/webserver/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Let's code a web server from scratch with NodeJS Streams",
       "url": "https://www.codementor.io/@ziad-saab/let-s-code-a-web-server-from-scratch-with-nodejs-streams-h4uc9utji",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: lets-build-express",
       "url": "https://github.com/antoaravinth/lets-build-express",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "PHP: Writing a webserver in pure PHP",
       "url": "http://station.clancats.com/writing-a-webserver-in-pure-php/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A Simple Web Server",
       "url": "http://aosabook.org/en/500L/a-simple-web-server.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Let’s Build A Web Server.",
       "url": "https://ruslanspivak.com/lsbaws-part1/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Web application from scratch",
       "url": "https://defn.io/2018/02/25/web-app-from-scratch-01/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Building a basic HTTP Server from scratch in Python",
       "url": "http://joaoventura.net/blog/2017/python-webserver/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Implementing a RESTful Web API with Python & Flask",
       "url": "http://blog.luisrei.com/articles/flaskrest.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Building a simple websockets server from scratch in Ruby",
       "url": "http://blog.honeybadger.io/building-a-simple-websockets-server-from-scratch-in-ruby/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "(any): From NAND to Tetris: Building a Modern Computer From First Principles",
       "url": "http://nand2tetris.org/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "(any):  build-your-own-x-vibe-coding: BYOX-style tutorials adapted for vibe coding",
       "url": "https://github.com/inFaaa/build-your-own-x-vibe-coding",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Alloy: The Same-Origin Policy",
       "url": "http://aosabook.org/en/500L/the-same-origin-policy.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C: How to Write a Video Player in Less Than 1000 Lines",
       "url": "http://dranger.com/ffmpeg/ffmpeg.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Learn how to write a hash table in C",
       "url": "https://github.com/jamesroutley/write-a-hash-table",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C: The very basics of a terminal emulator",
       "url": "https://www.uninformativ.de/blog/postings/2018-02-24/0/POSTING-en.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Write a System Call",
       "url": "https://brennan.io/2016/11/14/kernel-dev-ep3/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C: Sol - An MQTT broker from scratch",
       "url": "https://codepr.github.io/posts/sol-mqtt-broker",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Build your own VR headset for $200",
       "url": "https://github.com/relativty/Relativ",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: How X Window Managers work and how to write one",
       "url": "https://seasonofcode.com/posts/how-x-window-managers-work-and-how-to-write-one-part-i.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Writing a Linux Debugger",
       "url": "https://blog.tartanllama.xyz/writing-a-linux-debugger-setup/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: How a 64k intro is made",
       "url": "http://www.lofibucket.com/articles/64k_intro.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C++: Make your own Game Engine",
       "url": "https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: C# Networking: Create a TCP chater server, TCP games, UDP Pong and more",
       "url": "https://16bpp.net/tutorials/csharp-networking",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "C#: Loading and rendering 3D skeletal animations from scratch in C# and GLSL",
       "url": "https://www.seanjoflynn.com/research/skeletal-animation.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Clojure: Building a spell-checker",
       "url": "https://bernhardwenzel.com/articles/clojure-spellchecker/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Build A Simple Terminal Emulator In 100 Lines of Golang",
       "url": "https://ishuah.com/2021/03/10/build-a-terminal-emulator-in-100-lines-of-go/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Let's Create a Simple Load Balancer",
       "url": "https://kasvith.me/posts/lets-create-a-simple-lb-go/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Go: Video Encoding from Scratch",
       "url": "https://github.com/kevmo314/codec-from-scratch",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Java: How to Build an Android Reddit App",
       "url": "https://www.youtube.com/playlist?list=PLgCYzUzKIBE9HUJU-upNvl3TRVAo9W47y",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build Your Own Module Bundler - Minipack",
       "url": "https://github.com/ronami/minipack",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Learn JavaScript Promises by Building a Promise from Scratch",
       "url": "https://levelup.gitconnected.com/understand-javascript-promises-by-building-a-promise-from-scratch-84c0fd855720",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Implementing promises from scratch (TDD way)",
       "url": "https://www.mauriciopoppe.com/notes/computer-science/computation/promises/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Implement your own — call(), apply() and bind() method in JavaScript",
       "url": "https://blog.usejournal.com/implement-your-own-call-apply-and-bind-method-in-javascript-42cc85dba1b",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: JavaScript Algorithms and Data Structures",
       "url": "https://github.com/trekhleb/javascript-algorithms",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build a ride hailing app with React Native",
       "url": "https://pusher.com/tutorials/ride-hailing-react-native",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "JavaScript: Build Your Own AdBlocker in (Literally) 10 Minutes",
       "url": "https://levelup.gitconnected.com/building-your-own-adblocker-in-literally-10-minutes-1eec093b04cd",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Kotlin: Build Your Own Cache",
       "url": "https://github.com/kezhenxu94/cache-lite",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Lua: Building a CDN from Scratch to Learn about CDN",
       "url": "https://github.com/leandromoreira/cdn-up-and-running",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a Redis Protocol Parser",
       "url": "https://xmonader.github.io/nimdays/day12_resp.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a Build system",
       "url": "https://xmonader.github.io/nimdays/day11_buildsystem.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a MiniTest Framework",
       "url": "https://xmonader.github.io/nimdays/day08_minitest.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a DMIDecode Parser",
       "url": "https://xmonader.github.io/nimdays/day01_dmidecode.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a INI Parser",
       "url": "https://xmonader.github.io/nimdays/day05_iniparser.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a Link Checker",
       "url": "https://xmonader.github.io/nimdays/day04_asynclinkschecker.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Nim: Writing a URL Shortening Service",
       "url": "https://xmonader.github.io/nimdays/day07_shorturl.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Build a static site generator in 40 lines with Node.js",
       "url": "https://www.webdevdrops.com/en/build-static-site-generator-nodejs-8969ebe34b22/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Building A Simple Single Sign On(SSO) Server And Solution From Scratch In Node.js.",
       "url": "https://codeburst.io/building-a-simple-single-sign-on-sso-server-and-solution-from-scratch-in-node-js-ea6ee5fdf340",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: How to create a real-world Node CLI app with Node",
       "url": "https://medium.freecodecamp.org/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Build a DNS Server in Node.js",
       "url": "https://engineerhead.github.io/dns-server/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Node.js: Build a Synchronization Engine with Node.js and Y.js",
       "url": "https://greenvitriol.com/posts/sync-engine-for-everyone",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "PHP: Write your own MVC from scratch in PHP",
       "url": "https://chaitya62.github.io/2018/04/29/Writing-your-own-MVC-from-Scratch-in-PHP.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "PHP: Make your own blog",
       "url": "https://ilovephp.jondh.me.uk/en/tutorial/make-your-own-blog",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "PHP: Modern PHP Without a Framework",
       "url": "https://kevinsmith.io/modern-php-without-a-framework",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "PHP: Code a Web Search Engine in PHP",
       "url": "https://boyter.org/2013/01/code-for-a-search-engine-in-php-part-1/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Build a Deep Learning Library",
       "url": "https://www.youtube.com/watch?v=o64FV-ez6Gw",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: How to Build a Kick-Ass Mobile Document Scanner in Just 5 Minutes",
       "url": "https://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Continuous Integration System",
       "url": "http://aosabook.org/en/500L/a-continuous-integration-system.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Recommender Systems in Python: Beginner Tutorial",
       "url": "https://www.datacamp.com/community/tutorials/recommender-systems-python",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Write SMS-spam detector with Scikit-learn",
       "url": "https://medium.com/@kopilov.vlad/detect-sms-spam-in-kaggle-with-scikit-learn-5f6afa7a3ca2",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: A Simple Content-Based Recommendation Engine in Python",
       "url": "http://blog.untrod.com/2016/06/simple-similar-products-recommendation-engine-in-python.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Stock Market Predictions with LSTM in Python",
       "url": "https://www.datacamp.com/community/tutorials/lstm-python-stock-market",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Building a simple Generative Adversarial Network (GAN) using Tensorflow",
       "url": "https://blog.paperspace.com/implementing-gans-in-tensorflow/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Learn ML Algorithms by coding: Decision Trees",
       "url": "https://lethalbrains.com/learn-ml-algorithms-by-coding-decision-trees-439ac503c9a4",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: JSON Decoding Algorithm",
       "url": "https://github.com/cheery/json-algorithm",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Python: Build your own Git plugin with python",
       "url": "https://joshburns-xyz.vercel.app/posts/build-your-own-git-plugin",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: A Pedometer in the Real World",
       "url": "http://aosabook.org/en/500L/a-pedometer-in-the-real-world.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Ruby: Creating a Linux Desktop application with Ruby",
       "url": "https://iridakos.com/tutorials/2018/01/25/creating-a-gtk-todo-application-with-ruby",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Building a DNS server in Rust",
       "url": "https://github.com/EmilHernvall/dnsguide/blob/master/README.md",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: Writing Scalable Chat Service from Scratch",
       "url": "https://nbaksalyar.github.io/2015/07/10/writing-chat-in-rust.html",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "Rust: WebGL + Rust: Basic Water Tutorial",
       "url": "https://www.chinedufn.com/3d-webgl-basic-water-tutorial/",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "TypeScript: Tiny Package Manager: Learns how npm or Yarn works",
       "url": "https://github.com/g-plane/tiny-package-manager",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "create an issue",
       "url": "https://github.com/codecrafters-io/build-your-own-x/issues/new",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {
       "title": "pending submissions",
       "url": "https://github.com/codecrafters-io/build-your-own-x/issues",
-      "category": "<insert-technology-here>",
+      "category": "Web Server",
       "source": "Build Your Own X"
     },
     {

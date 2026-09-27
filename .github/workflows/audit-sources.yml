@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/audit-sources.yml"
       - "ferramentas/audit_project_sources.py"
+      - "site/data/projects.json"
   workflow_dispatch:
 
 permissions:
