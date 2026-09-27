@@ -1,0 +1,27 @@
+{
+  "thealgorithms-python": {
+    "url": "https://github.com/TheAlgorithms/Python",
+    "license": "MIT",
+    "commit": "7f81fcd68c195ce71534de09d1b69d2b61665902"
+  },
+  "algorithms-explanation": {
+    "url": "https://github.com/TheAlgorithms/Algorithms-Explanation",
+    "license": "MIT",
+    "commit": "bbfce50b37c6be54d3c8b6b940e962fa6d864740"
+  },
+  "project-based-learning": {
+    "url": "https://github.com/practical-tutorials/project-based-learning",
+    "license": "MIT",
+    "commit": "6117a66c910350beca28e1141ff3f6308dabc2b8"
+  },
+  "computer-science-from-scratch": {
+    "url": "https://github.com/davecom/ComputerScienceFromScratch",
+    "license": "Apache-2.0",
+    "commit": "510b89be63d4e331353aac9d24633a26642630f6"
+  },
+  "coding-interview-university": {
+    "url": "https://github.com/jwasham/coding-interview-university",
+    "license": "CC-BY-SA-4.0",
+    "commit": "717298bf219a30d7fb0671285c5f057b1bb74b27"
+  }
+}
