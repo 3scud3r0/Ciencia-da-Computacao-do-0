@@ -1,0 +1,686 @@
+{
+  "policy": {
+    "max_size_kb": 50000,
+    "rule": "snapshot somente quando GitHub identifica licença explícita; licença original permanece dentro da cópia",
+    "execution": "nenhum código de terceiro é executado durante a importação"
+  },
+  "counts": {
+    "imported": 30,
+    "skipped": 25,
+    "failed": 0
+  },
+  "imported": [
+    {
+      "repository": "antoaravinth/lets-build-express",
+      "url": "https://github.com/antsmartian/lets-build-express",
+      "license_spdx": "MIT",
+      "size_kb": 649,
+      "upstream_commit": "5a3ba64c6b2cef29eff483a0e14e2d7b12266f16",
+      "path": "vendor/community/antoaravinth__lets-build-express"
+    },
+    {
+      "repository": "buildthingsuseful/build-your-own-kafka",
+      "url": "https://github.com/buildthingsuseful/build-your-own-kafka",
+      "license_spdx": "MIT",
+      "size_kb": 28,
+      "upstream_commit": "c14e4e8dc31a05d779c2fbf4097c3ffdcc87571e",
+      "path": "vendor/community/buildthingsuseful__build-your-own-kafka"
+    },
+    {
+      "repository": "cfenollosa/os-tutorial",
+      "url": "https://github.com/cfenollosa/os-tutorial",
+      "license_spdx": "BSD-3-Clause",
+      "size_kb": 107,
+      "upstream_commit": "8002382ee56f876119f77217220b8a5034e9bac1",
+      "path": "vendor/community/cfenollosa__os-tutorial"
+    },
+    {
+      "repository": "cheery/json-algorithm",
+      "url": "https://github.com/cheery/json-algorithm",
+      "license_spdx": "MIT",
+      "size_kb": 31,
+      "upstream_commit": "f04deb90a0e26a85cf2ea0929d361ae4c946e4af",
+      "path": "vendor/community/cheery__json-algorithm"
+    },
+    {
+      "repository": "conradoqg/naivecoin",
+      "url": "https://github.com/conradoqg/naivecoin",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 509,
+      "upstream_commit": "f48d078f83c5818cc8f7a3a16b1f0aa87e583b2f",
+      "path": "vendor/community/conradoqg__naivecoin"
+    },
+    {
+      "repository": "DoctorWkt/acwj",
+      "url": "https://github.com/DoctorWkt/acwj",
+      "license_spdx": "GPL-3.0",
+      "size_kb": 4062,
+      "upstream_commit": "84855ea20dcd2f300ba8e91951cf6aa1e7810225",
+      "path": "vendor/community/DoctorWkt__acwj"
+    },
+    {
+      "repository": "dwyl/javascript-todo-list-tutorial",
+      "url": "https://github.com/dwyl/javascript-todo-list-tutorial",
+      "license_spdx": "GPL-2.0",
+      "size_kb": 1541,
+      "upstream_commit": "ec6a745b897d69d1ea98b4e444ea2d9cf4eb549b",
+      "path": "vendor/community/dwyl__javascript-todo-list-tutorial"
+    },
+    {
+      "repository": "EmilHernvall/dnsguide",
+      "url": "https://github.com/EmilHernvall/dnsguide",
+      "license_spdx": "MIT",
+      "size_kb": 106,
+      "upstream_commit": "029d45011d4308ff9116e711ba47a43bb3d9d598",
+      "path": "vendor/community/EmilHernvall__dnsguide"
+    },
+    {
+      "repository": "Fewbytes/rubber-docker",
+      "url": "https://github.com/Fewbytes/rubber-docker",
+      "license_spdx": "MIT",
+      "size_kb": 1349,
+      "upstream_commit": "2b3fca3ae4e6de1d3288edbdf3935399cb3c324c",
+      "path": "vendor/community/Fewbytes__rubber-docker"
+    },
+    {
+      "repository": "g-plane/tiny-package-manager",
+      "url": "https://github.com/g-plane/tiny-package-manager",
+      "license_spdx": "MIT",
+      "size_kb": 143,
+      "upstream_commit": "643fe89cf76e497a03fa1124c6e5748275a1a698",
+      "path": "vendor/community/g-plane__tiny-package-manager"
+    },
+    {
+      "repository": "hazbo/the-super-tiny-compiler",
+      "url": "https://github.com/hazbo/the-super-tiny-compiler",
+      "license_spdx": "CC-BY-4.0",
+      "size_kb": 23,
+      "upstream_commit": "d498e94d6dc4ea4d7089f8f032a780a9e882abad",
+      "path": "vendor/community/hazbo__the-super-tiny-compiler"
+    },
+    {
+      "repository": "jamesroutley/write-a-hash-table",
+      "url": "https://github.com/jamesroutley/write-a-hash-table",
+      "license_spdx": "MIT",
+      "size_kb": 53,
+      "upstream_commit": "cfb49be7baf1a9286d41bebf697c561c062f4901",
+      "path": "vendor/community/jamesroutley__write-a-hash-table"
+    },
+    {
+      "repository": "jamiebuilds/the-super-tiny-compiler",
+      "url": "https://github.com/jamiebuilds/the-super-tiny-compiler",
+      "license_spdx": "CC-BY-4.0",
+      "size_kb": 41,
+      "upstream_commit": "d8d40130459d1537f6117a927947cd46c83182b0",
+      "path": "vendor/community/jamiebuilds__the-super-tiny-compiler"
+    },
+    {
+      "repository": "kevmo314/codec-from-scratch",
+      "url": "https://github.com/kevmo314/codec-from-scratch",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 30089,
+      "upstream_commit": "f70c5e948d57b93a9081161955056758e3a980f8",
+      "path": "vendor/community/kevmo314__codec-from-scratch"
+    },
+    {
+      "repository": "keyanzhang/the-super-tiny-interpreter",
+      "url": "https://github.com/keyz/the-super-tiny-interpreter",
+      "license_spdx": "MIT",
+      "size_kb": 39,
+      "upstream_commit": "e07804d1f5e855b778eeb4a935d1eb424c317d7a",
+      "path": "vendor/community/keyanzhang__the-super-tiny-interpreter"
+    },
+    {
+      "repository": "kezhenxu94/cache-lite",
+      "url": "https://github.com/kezhenxu94/cache-lite",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 189,
+      "upstream_commit": "99d04f862285f8a079d2283ef0d090047d40189e",
+      "path": "vendor/community/kezhenxu94__cache-lite"
+    },
+    {
+      "repository": "leandromoreira/cdn-up-and-running",
+      "url": "https://github.com/leandromoreira/cdn-up-and-running",
+      "license_spdx": "BSD-3-Clause",
+      "size_kb": 1612,
+      "upstream_commit": "cab10ba90833eac1831cde462f94187184bfc4cd",
+      "path": "vendor/community/leandromoreira__cdn-up-and-running"
+    },
+    {
+      "repository": "lotabout/write-a-C-interpreter",
+      "url": "https://github.com/lotabout/write-a-C-interpreter",
+      "license_spdx": "GPL-2.0",
+      "size_kb": 160,
+      "upstream_commit": "afbeba6e8d5bdb229ebb25079f5e3060bd2c7065",
+      "path": "vendor/community/lotabout__write-a-C-interpreter"
+    },
+    {
+      "repository": "p8952/bocker",
+      "url": "https://github.com/p8952/bocker",
+      "license_spdx": "GPL-3.0",
+      "size_kb": 373,
+      "upstream_commit": "000633061c6cfcb99c8d9eef5aa483a44318f3e6",
+      "path": "vendor/community/p8952__bocker"
+    },
+    {
+      "repository": "peiyuanix/build-your-own-zerotier",
+      "url": "https://github.com/peiyuanix/build-your-own-zerotier",
+      "license_spdx": "MIT",
+      "size_kb": 14,
+      "upstream_commit": "8cff3440e953e6d54225db1cd78db65d0c45814e",
+      "path": "vendor/community/peiyuanix__build-your-own-zerotier"
+    },
+    {
+      "repository": "roiamiel1/Build-Deep-Learning-From-Scratch",
+      "url": "https://github.com/roiamiel1/Build-Deep-Learning-From-Scratch",
+      "license_spdx": "Unlicense",
+      "size_kb": 514,
+      "upstream_commit": "044e9b17fe4e78f5919ff809d3c02da0d9bb8c7f",
+      "path": "vendor/community/roiamiel1__Build-Deep-Learning-From-Scratch"
+    },
+    {
+      "repository": "ronami/minipack",
+      "url": "https://github.com/ronami/minipack",
+      "license_spdx": "MIT",
+      "size_kb": 26,
+      "upstream_commit": "a4d91ea1087fc23d96f63e8c893fdf16137ee4d4",
+      "path": "vendor/community/ronami__minipack"
+    },
+    {
+      "repository": "s-matyukevich/raspberry-pi-os",
+      "url": "https://github.com/s-matyukevich/raspberry-pi-os",
+      "license_spdx": "MIT",
+      "size_kb": 2016,
+      "upstream_commit": "31fc1481f529ba1a72a8a6bc62dc488b84fc2cdb",
+      "path": "vendor/community/s-matyukevich__raspberry-pi-os"
+    },
+    {
+      "repository": "SavjeeTutorials/SavjeeCoin",
+      "url": "https://github.com/Savjee/SavjeeCoin",
+      "license_spdx": "MIT",
+      "size_kb": 347,
+      "upstream_commit": "3ccc0a6b7d95ff8702c7dceab3abac87b986c608",
+      "path": "vendor/community/SavjeeTutorials__SavjeeCoin"
+    },
+    {
+      "repository": "ssloy/tinyraycaster",
+      "url": "https://github.com/ssloy/tinyraycaster",
+      "license_spdx": "WTFPL",
+      "size_kb": 27992,
+      "upstream_commit": "8dae70f8d8152b00d9197c37be6ef0e8869dc57f",
+      "path": "vendor/community/ssloy__tinyraycaster"
+    },
+    {
+      "repository": "TanayK07/networking-from-scratch",
+      "url": "https://github.com/TanayK07/networking-from-scratch",
+      "license_spdx": "MIT",
+      "size_kb": 6851,
+      "upstream_commit": "d7f4c08a79d2496b6a6f67ed93652d4186a4577e",
+      "path": "vendor/community/TanayK07__networking-from-scratch"
+    },
+    {
+      "repository": "tonybaloney/mocker",
+      "url": "https://github.com/tonybaloney/mocker",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 54,
+      "upstream_commit": "bffd33fb0abcce358ffea3e330ac43a6fd72c174",
+      "path": "vendor/community/tonybaloney__mocker"
+    },
+    {
+      "repository": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms",
+      "license_spdx": "MIT",
+      "size_kb": 14964,
+      "upstream_commit": "85293e3e2b88f4d2ce330d956b139cf628aa1e82",
+      "path": "vendor/community/trekhleb__javascript-algorithms"
+    },
+    {
+      "repository": "xames3/slowtorch",
+      "url": "https://github.com/xames3/slowtorch",
+      "license_spdx": "MIT",
+      "size_kb": 461,
+      "upstream_commit": "fa4bbe17f0926218d110b38b9b6f16ad4f3e8da9",
+      "path": "vendor/community/xames3__slowtorch"
+    },
+    {
+      "repository": "yukimotopress/programming-blockchains-step-by-step",
+      "url": "https://github.com/openblockchains/programming-blockchains",
+      "license_spdx": "CC0-1.0",
+      "size_kb": 553,
+      "upstream_commit": "e29f9d1186860ae0afdfc13995d27a6aff43d89a",
+      "path": "vendor/community/yukimotopress__programming-blockchains-step-by-step"
+    }
+  ],
+  "skipped": [
+    {
+      "repository": "a327ex/blog",
+      "references": 16,
+      "examples": [
+        "Part 0: Introduction",
+        "Part 1: Game Loop",
+        "Part 2: Libraries"
+      ],
+      "html_url": "https://github.com/a327ex/blog",
+      "default_branch": "master",
+      "size_kb": 301,
+      "archived": true,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "adamwespiser/scheme",
+      "references": 1,
+      "examples": [
+        "Write You A Scheme, Version 2"
+      ],
+      "html_url": "https://github.com/adamwespiser/scheme",
+      "default_branch": "master",
+      "size_kb": 54692,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "MIT",
+      "license_name": "MIT License",
+      "has_declared_license": true,
+      "status": "ok",
+      "reason": "tamanho reportado acima de 50000 KB"
+    },
+    {
+      "repository": "aliaksandr-s/prototyping-with-clojure",
+      "references": 1,
+      "examples": [
+        "Prototyping with Clojure"
+      ],
+      "html_url": "https://github.com/aliaksandr-s/prototyping-with-clojure",
+      "default_branch": "master",
+      "size_kb": 540,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "BrunoLevy/learn-fpga",
+      "references": 1,
+      "examples": [
+        "Verilog: From Blinker to RISC-V"
+      ],
+      "html_url": "https://github.com/BrunoLevy/learn-fpga",
+      "default_branch": "master",
+      "size_kb": 239449,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "BSD-3-Clause",
+      "license_name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "has_declared_license": true,
+      "status": "ok",
+      "reason": "tamanho reportado acima de 50000 KB"
+    },
+    {
+      "repository": "codecrafters-io/build-your-own-x",
+      "references": 2,
+      "examples": [
+        "create an issue",
+        "pending submissions"
+      ],
+      "html_url": "https://github.com/codecrafters-io/build-your-own-x",
+      "default_branch": "master",
+      "size_kb": 1086,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "hexacta/didact",
+      "references": 1,
+      "examples": [
+        "JavaScript: A DIY guide to build your own React"
+      ],
+      "html_url": "https://github.com/pomber/didact",
+      "default_branch": "master",
+      "size_kb": 237,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "inFaaa/build-your-own-x-vibe-coding",
+      "references": 1,
+      "examples": [
+        "(any):  build-your-own-x-vibe-coding: BYOX-style tutorials adapted for vibe coding"
+      ],
+      "html_url": "https://github.com/inFaaa/build-your-own-x-vibe-coding",
+      "default_branch": "main",
+      "size_kb": 70,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "jserv/mini-arm-os",
+      "references": 1,
+      "examples": [
+        "C: Build a minimal multi-tasking kernel for ARM from scratch"
+      ],
+      "html_url": "https://github.com/jserv/mini-arm-os",
+      "default_branch": "master",
+      "size_kb": 442,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "kamalmarhubi/shell-workshop",
+      "references": 1,
+      "examples": [
+        "C: Let's build a shell!"
+      ],
+      "html_url": "https://github.com/kamalmarhubi/shell-workshop",
+      "default_branch": "master",
+      "size_kb": 159,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "kanaka/mal",
+      "references": 1,
+      "examples": [
+        "(any): mal - Make a Lisp"
+      ],
+      "html_url": "https://github.com/kanaka/mal",
+      "default_branch": "master",
+      "size_kb": 13191,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "kylemcdonald/SmileCNN",
+      "references": 1,
+      "examples": [
+        "Code a Smile Classifier using CNNS in Python"
+      ],
+      "html_url": "https://github.com/kylemcdonald/SmileCNN",
+      "default_branch": "master",
+      "size_kb": 159,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "langchain-ai/rag-from-scratch",
+      "references": 1,
+      "examples": [
+        "Python: RAG for Document Search"
+      ],
+      "html_url": "https://github.com/langchain-ai/rag-from-scratch",
+      "default_branch": "main",
+      "size_kb": 3333,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "lotabout/Let-s-build-a-compiler",
+      "references": 1,
+      "examples": [
+        "C: A C & x86 version of the \"Let's Build a Compiler\" by Jack Crenshaw"
+      ],
+      "html_url": "https://github.com/lotabout/Let-s-build-a-compiler",
+      "default_branch": "master",
+      "size_kb": 294,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "markerikson/react-redux-links",
+      "references": 1,
+      "examples": [
+        "React Redux Links"
+      ],
+      "html_url": "https://github.com/markerikson/react-redux-links",
+      "default_branch": "master",
+      "size_kb": 1612,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "nambrot/blockchain-in-js",
+      "references": 1,
+      "examples": [
+        "JavaScript: Build your own Blockchain in JavaScript"
+      ],
+      "html_url": "https://github.com/nambrot/blockchain-in-js",
+      "default_branch": "master",
+      "size_kb": 161,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "nicklockwood/RetroRampage",
+      "references": 1,
+      "examples": [
+        "Retro first-person shooter from scratch"
+      ],
+      "html_url": "https://github.com/nicklockwood/RetroRampage",
+      "default_branch": "master",
+      "size_kb": 11348,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "nornagon/jonesforth",
+      "references": 1,
+      "examples": [
+        "Assembly: Jonesforth"
+      ],
+      "html_url": "https://github.com/nornagon/jonesforth",
+      "default_branch": "master",
+      "size_kb": 149,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "rasbt/LLMs-from-scratch",
+      "references": 1,
+      "examples": [
+        "Python: A Large Language Model (LLM)"
+      ],
+      "html_url": "https://github.com/rasbt/LLMs-from-scratch",
+      "default_branch": "main",
+      "size_kb": 16933,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "relativty/Relativ",
+      "references": 1,
+      "examples": [
+        "C++: Build your own VR headset for $200"
+      ],
+      "html_url": "https://github.com/relativty/Relativty",
+      "default_branch": "master",
+      "size_kb": 177204,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "GPL-3.0",
+      "license_name": "GNU General Public License v3.0",
+      "has_declared_license": true,
+      "status": "ok",
+      "reason": "tamanho reportado acima de 50000 KB"
+    },
+    {
+      "repository": "ssloy/tinykaboom",
+      "references": 1,
+      "examples": [
+        "KABOOM! in 180 lines of bare C++"
+      ],
+      "html_url": "https://github.com/ssloy/tinykaboom",
+      "default_branch": "master",
+      "size_kb": 11166,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "ssloy/tinyraytracer",
+      "references": 1,
+      "examples": [
+        "Understandable RayTracing in 256 lines of bare C++"
+      ],
+      "html_url": "https://github.com/ssloy/tinyraytracer",
+      "default_branch": "master",
+      "size_kb": 158857,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "ssloy/tinyrenderer",
+      "references": 2,
+      "examples": [
+        "C++: How OpenGL works: software rendering in 500 lines of code",
+        "Tiny Renderer or how OpenGL works: software rendering in 500 lines of code"
+      ],
+      "html_url": "https://github.com/ssloy/tinyrenderer",
+      "default_branch": "master",
+      "size_kb": 64049,
+      "archived": false,
+      "fork": false,
+      "license_spdx": "NOASSERTION",
+      "license_name": "Other",
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "SSYGEN/blog",
+      "references": 1,
+      "examples": [
+        "Lua: BYTEPATH"
+      ],
+      "html_url": "https://github.com/a327ex/blog",
+      "default_branch": "master",
+      "size_kb": 301,
+      "archived": true,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "tokenrove/build-your-own-shell",
+      "references": 1,
+      "examples": [
+        "C: Build Your Own Shell"
+      ],
+      "html_url": "https://github.com/tokenrove/build-your-own-shell",
+      "default_branch": "master",
+      "size_kb": 75,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    },
+    {
+      "repository": "tuhdo/os01",
+      "references": 1,
+      "examples": [
+        "Write an OS from scratch"
+      ],
+      "html_url": "https://github.com/tuhdo/os01",
+      "default_branch": "master",
+      "size_kb": 20791,
+      "archived": false,
+      "fork": false,
+      "license_spdx": null,
+      "license_name": null,
+      "has_declared_license": false,
+      "status": "ok",
+      "reason": "sem licença verificada"
+    }
+  ],
+  "failed": []
+}

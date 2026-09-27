@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap — Networking from Scratch</title>
+<meta name="description" content="Interactive dependency graph showing how the 15 networking phases connect.">
+<meta property="og:title" content="Roadmap — Networking from Scratch">
+<meta property="og:description" content="Interactive dependency graph showing how the 15 networking phases connect.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://networkingfromscratch.vercel.app/roadmap.html">
+<meta property="og:image" content="https://networkingfromscratch.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Roadmap — Networking from Scratch">
+<meta name="twitter:description" content="Interactive dependency graph showing how the 15 networking phases connect.">
+<meta name="twitter:image" content="https://networkingfromscratch.vercel.app/og.png">
+<meta name="theme-color" content="#00897B">
+<meta name="google-site-verification" content="0wstVvV2yfk22BVUKDKAiLU3llaYtNL0mdeo5vN2gPo">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Networking from Scratch">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+<link rel="canonical" href="https://networkingfromscratch.vercel.app/roadmap.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.github.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Source+Serif+4:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>
+var _t=localStorage.getItem('nfs_theme');if(_t==='dark'||(!_t&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.addEventListener('DOMContentLoaded',function(){var t=document.querySelector('.theme-toggle');if(t){t.textContent='☀';t.title='Switch to light mode'}})}else if(_t==='light'){document.documentElement.classList.add('light')}
+</script>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="brand">NETWORKING / FROM SCRATCH</a>
+  <div class="links">
+    <a href="index.html">Contents</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="roadmap.html" class="active">Roadmap</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="https://github.com/TanayK07/networking-from-scratch" class="gh-link">GitHub <span class="gh-stars" style="display:none"></span></a>
+    <button class="theme-toggle" aria-label="Toggle theme">☾</button>
+  </div>
+</nav>
+
+<main class="container" style="padding-top:40px;padding-bottom:80px;">
+  <h1>Roadmap</h1>
+  <p class="text-muted" style="margin-bottom:16px;">Click any phase to highlight its prerequisites and what it unlocks. Scroll to pan, pinch to zoom.</p>
+
+  <div class="legend">
+    <span class="legend-item"><span class="status-sq done"></span> Complete</span>
+    <span class="legend-item"><span class="status-sq inprogress"></span> In Progress</span>
+    <span class="legend-item"><span class="status-sq planned"></span> Planned</span>
+    <span class="legend-item" style="margin-left:16px"><span style="display:inline-block;width:12px;height:3px;background:var(--done);vertical-align:middle;margin-right:4px"></span> Upstream</span>
+    <span class="legend-item"><span style="display:inline-block;width:12px;height:3px;background:var(--inprogress);vertical-align:middle;margin-right:4px"></span> Downstream</span>
+    <button class="btn btn-small" id="resetBtn">Reset</button>
+  </div>
+
+  <div class="roadmap-container" style="margin:24px 0;border:1px solid var(--line-soft);background:var(--bg-surface);position:relative;min-height:500px;">
+    <svg id="graph" style="width:100%;height:560px;display:block;"></svg>
+  </div>
+
+  <div class="card" id="detail" style="margin-top:24px;">
+    <div class="text-muted" style="padding:20px;text-align:center;">Click a phase node above to see its prerequisites and downstream phases.</div>
+  </div>
+</main>
+
+<footer>
+  <span><a href="https://github.com/TanayK07/networking-from-scratch">GitHub</a> &middot; open source &middot; free forever</span>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="https://github.com/TanayK07/networking-from-scratch/discussions">Discussions</a>
+  </div>
+</footer>
+
+<script src="https://d3js.org/d3.v7.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="js/data.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/header.js"></script>
+<script src="js/app.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var NODE_W = 170, NODE_H = 60, PAD = 40;
+  var selectedPhase = null;
+
+  var PHASE_MAP = {};
+  NFS.PHASES.forEach(function(p) { PHASE_MAP[p.id] = p; });
+
+  function computeDepths() {
+    var depth = {};
+    function getDepth(id) {
+      if (depth[id] !== undefined) return depth[id];
+      var p = PHASE_MAP[id];
+      if (!p || !p.deps || p.deps.length === 0) { depth[id] = 0; return 0; }
+      var maxDep = 0;
+      p.deps.forEach(function(d) { maxDep = Math.max(maxDep, getDepth(d)); });
+      depth[id] = maxDep + 1;
+      return depth[id];
+    }
+    NFS.PHASES.forEach(function(p) { getDepth(p.id); });
+    return depth;
+  }
+
+  function layoutNodes() {
+    var depths = computeDepths();
+    var columns = {};
+    NFS.PHASES.forEach(function(p) {
+      var d = depths[p.id];
+      if (!columns[d]) columns[d] = [];
+      columns[d].push(p);
+    });
+
+    var maxCol = Math.max.apply(null, Object.keys(columns).map(Number));
+    var colWidth = NODE_W + 60;
+
+    Object.keys(columns).forEach(function(col) {
+      var nodes = columns[col];
+      var totalH = nodes.length * NODE_H + (nodes.length - 1) * 30;
+      var startY = (560 - totalH) / 2;
+      nodes.forEach(function(p, i) {
+        p._x = PAD + parseInt(col) * colWidth;
+        p._y = Math.max(PAD, startY + i * (NODE_H + 30));
+      });
+    });
+
+    return (maxCol + 1) * colWidth + PAD * 2;
+  }
+
+  function getUpstream(id, visited) {
+    visited = visited || {};
+    if (visited[id]) return [];
+    visited[id] = true;
+    var p = PHASE_MAP[id];
+    if (!p || !p.deps) return [];
+    var result = [];
+    p.deps.forEach(function(d) {
+      result.push(d);
+      result = result.concat(getUpstream(d, visited));
+    });
+    return result;
+  }
+
+  function getDownstream(id, visited) {
+    visited = visited || {};
+    if (visited[id]) return [];
+    visited[id] = true;
+    var result = [];
+    NFS.PHASES.forEach(function(p) {
+      if (p.deps && p.deps.indexOf(id) !== -1) {
+        result.push(p.id);
+        result = result.concat(getDownstream(p.id, visited));
+      }
+    });
+    return result;
+  }
+
+  function render() {
+    var svgEl = document.getElementById('graph');
+    var totalW = layoutNodes();
+    svgEl.style.minWidth = Math.max(totalW, 900) + 'px';
+
+    var svg = d3.select('#graph');
+    svg.selectAll('*').remove();
+
+    var defs = svg.append('defs');
+    defs.append('marker').attr('id','arrow').attr('viewBox','0 0 10 8')
+      .attr('refX',10).attr('refY',4).attr('markerWidth',8).attr('markerHeight',6)
+      .attr('orient','auto')
+      .append('polygon').attr('points','0,0 10,4 0,8').attr('class','edge-arrow');
+    defs.append('marker').attr('id','arrow-hl').attr('viewBox','0 0 10 8')
+      .attr('refX',10).attr('refY',4).attr('markerWidth',8).attr('markerHeight',6)
+      .attr('orient','auto')
+      .append('polygon').attr('points','0,0 10,4 0,8').attr('class','edge-arrow highlighted');
+
+    var g = svg.append('g');
+    var zoom = d3.zoom()
+      .scaleExtent([0.4, 2.5])
+      .on('zoom', function(event) { g.attr('transform', event.transform); });
+    svg.call(zoom);
+    svg.on('dblclick.zoom', null);
+
+    svg.on('click', function(event) {
+      if (event.target === svgEl || event.target.tagName === 'svg') {
+        selectedPhase = null;
+        render();
+        renderDetail();
+      }
+    });
+
+    var upstream = selectedPhase ? getUpstream(selectedPhase) : [];
+    var downstream = selectedPhase ? getDownstream(selectedPhase) : [];
+
+    var edgeData = [];
+    NFS.PHASES.forEach(function(p) {
+      if (!p.deps) return;
+      p.deps.forEach(function(depId) {
+        var dep = PHASE_MAP[depId];
+        if (!dep) return;
+        edgeData.push({ from: dep, to: p, fromId: depId, toId: p.id });
+      });
+    });
+
+    g.selectAll('.edge-path').data(edgeData).enter()
+      .append('path')
+      .attr('class', function(d) {
+        if (!selectedPhase) return 'edge';
+        var isHl = (d.toId === selectedPhase && upstream.indexOf(d.fromId) !== -1) ||
+                   (d.fromId === selectedPhase && downstream.indexOf(d.toId) !== -1) ||
+                   (upstream.indexOf(d.fromId) !== -1 && upstream.indexOf(d.toId) !== -1) ||
+                   (downstream.indexOf(d.fromId) !== -1 && downstream.indexOf(d.toId) !== -1);
+        return isHl ? 'edge highlighted' : 'edge dimmed';
+      })
+      .attr('d', function(d) {
+        var x1 = d.from._x + NODE_W, y1 = d.from._y + NODE_H / 2;
+        var x2 = d.to._x, y2 = d.to._y + NODE_H / 2;
+        var dx = Math.abs(x2 - x1) * 0.45;
+        return 'M' + x1 + ',' + y1 + ' C' + (x1+dx) + ',' + y1 + ' ' + (x2-dx) + ',' + y2 + ' ' + x2 + ',' + y2;
+      })
+      .attr('marker-end', function(d) {
+        if (!selectedPhase) return 'url(#arrow)';
+        var isHl = (d.toId === selectedPhase && upstream.indexOf(d.fromId) !== -1) ||
+                   (d.fromId === selectedPhase && downstream.indexOf(d.toId) !== -1) ||
+                   (upstream.indexOf(d.fromId) !== -1 && upstream.indexOf(d.toId) !== -1) ||
+                   (downstream.indexOf(d.fromId) !== -1 && downstream.indexOf(d.toId) !== -1);
+        return isHl ? 'url(#arrow-hl)' : 'url(#arrow)';
+      });
+
+    var nodes = g.selectAll('.node').data(NFS.PHASES).enter()
+      .append('g')
+      .attr('class', function(p) {
+        var cls = 'node';
+        if (selectedPhase) {
+          if (p.id === selectedPhase) cls += ' selected';
+          else if (upstream.indexOf(p.id) !== -1) cls += ' upstream';
+          else if (downstream.indexOf(p.id) !== -1) cls += ' downstream';
+          else cls += ' dimmed';
+        }
+        if (p.bonus) cls += ' bonus';
+        return cls;
+      })
+      .attr('transform', function(p) { return 'translate(' + p._x + ',' + p._y + ')'; })
+      .on('click', function(event, p) {
+        event.stopPropagation();
+        selectedPhase = (selectedPhase === p.id) ? null : p.id;
+        render();
+        renderDetail();
+      });
+
+    nodes.append('rect')
+      .attr('width', NODE_W).attr('height', NODE_H).attr('rx', 4);
+
+    nodes.append('text').attr('class','node-id')
+      .attr('x', 10).attr('y', 20)
+      .text(function(p) { return p.id + (p.bonus ? ' BONUS' : ''); });
+
+    nodes.append('text').attr('class','node-title')
+      .attr('x', 10).attr('y', 38)
+      .text(function(p) { return p.title.length > 22 ? p.title.substring(0,22) + '...' : p.title; });
+
+    nodes.append('text').attr('class','node-count')
+      .attr('x', NODE_W - 10).attr('y', 20).attr('text-anchor','end')
+      .text(function(p) { return p.count; });
+
+    nodes.append('title')
+      .text(function(p) { return p.id + ': ' + p.title + '\n' + p.count + ' lessons\n' + p.desc; });
+  }
+
+  function renderDetail() {
+    var el = document.getElementById('detail');
+    if (!selectedPhase) {
+      el.innerHTML = '<div class="text-muted" style="padding:20px;text-align:center;">Click a phase node above to see its prerequisites and downstream phases.</div>';
+      return;
+    }
+    var p = PHASE_MAP[selectedPhase];
+    var deps = p.deps || [];
+    var down = [];
+    NFS.PHASES.forEach(function(ph) {
+      if (ph.deps && ph.deps.indexOf(selectedPhase) !== -1) down.push(ph.id);
+    });
+
+    var pIdx = NFS.PHASES.indexOf(p);
+    var done = NFS.progress ? NFS.progress.phaseDone(pIdx) : 0;
+    var pct = p.count > 0 ? Math.round(done / p.count * 100) : 0;
+
+    var html = '<div style="padding:24px;">' +
+      '<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">' +
+        '<span class="mono text-accent" style="font-size:1.3rem;font-weight:600;">' + p.id + '</span>' +
+        '<h3 style="margin:0;font-family:var(--font-display);font-size:1.4rem;">' + p.title + '</h3>' +
+      '</div>' +
+      '<p class="text-muted" style="margin-bottom:12px;">' + p.desc + '</p>' +
+      '<div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">' +
+        '<span class="mono" style="font-size:0.85rem;">' + p.count + ' lessons</span>' +
+        '<div style="flex:1;max-width:200px;height:4px;background:var(--line-soft);border-radius:2px;">' +
+          '<div style="width:' + pct + '%;height:100%;background:var(--accent);border-radius:2px;transition:width 0.3s;"></div>' +
+        '</div>' +
+        '<span class="mono text-muted" style="font-size:0.75rem;">' + done + '/' + p.count + '</span>' +
+      '</div>' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">' +
+        '<div><h4 class="mono text-muted" style="font-size:0.75rem;margin-bottom:8px;">PREREQUISITES</h4>';
+
+    if (deps.length === 0) html += '<span class="text-muted">None — start here</span>';
+    else deps.forEach(function(d) {
+      html += '<a href="#" onclick="NFS_selectPhase(\'' + d + '\');return false;" class="text-accent mono" style="display:block;margin-bottom:4px;">' + d + ' — ' + PHASE_MAP[d].title + '</a>';
+    });
+
+    html += '</div><div><h4 class="mono text-muted" style="font-size:0.75rem;margin-bottom:8px;">UNLOCKS</h4>';
+    if (down.length === 0) html += '<span class="text-muted">Terminal phase</span>';
+    else down.forEach(function(d) {
+      html += '<a href="#" onclick="NFS_selectPhase(\'' + d + '\');return false;" class="text-accent mono" style="display:block;margin-bottom:4px;">' + d + ' — ' + PHASE_MAP[d].title + '</a>';
+    });
+
+    html += '</div></div></div>';
+    el.innerHTML = html;
+  }
+
+  window.NFS_selectPhase = function(id) {
+    selectedPhase = (selectedPhase === id) ? null : id;
+    render();
+    renderDetail();
+  };
+
+  document.getElementById('resetBtn').addEventListener('click', function() {
+    selectedPhase = null;
+    render();
+    renderDetail();
+  });
+
+  render();
+  renderDetail();
+})();
+</script>
+
+</body>
+</html>

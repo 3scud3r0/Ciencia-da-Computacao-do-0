@@ -1,0 +1,17 @@
+image:
+  file: Dockerfile
+ports:
+- port: 6080
+  onOpen: notify
+- port: 5900
+  onOpen: ignore
+tasks:
+- command: >
+    mkdir --parents build &&
+    cd build &&
+    cmake .. &&
+    make &&
+    ./tinyraycaster &&
+    pnmtopng out.ppm > out.png &&
+    open out.png &&
+    cd ..

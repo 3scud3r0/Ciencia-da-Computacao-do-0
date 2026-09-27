@@ -1,0 +1,16 @@
+# Claude Code local config, memory, and session transcripts — not project source.
+.claude/
+
+# Python caches / environments (also covered per-subproject)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

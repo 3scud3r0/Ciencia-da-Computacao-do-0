@@ -1,0 +1,203 @@
+name: Build & Test Lessons
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'phases/**/*.c'
+      - 'phases/**/*.h'
+      - 'phases/**/Makefile'
+      - 'common/c/**'
+      - '.github/workflows/lessons.yml'
+  pull_request:
+    paths:
+      - 'phases/**/*.c'
+      - 'phases/**/*.h'
+      - 'phases/**/Makefile'
+      - 'common/c/**'
+      - '.github/workflows/lessons.yml'
+
+jobs:
+  test-lesson:
+    name: ${{ matrix.lesson }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - lesson: 01-bits-and-wires/02-bits-bytes-endianness
+            path: phases/01-bits-and-wires/02-bits-bytes-endianness
+          - lesson: 02-link-layer/03-raw-sockets-on-linux-afpacket
+            path: phases/02-link-layer/03-raw-sockets-on-linux-afpacket
+          - lesson: 02-link-layer/06-arp-request-reply
+            path: phases/02-link-layer/06-arp-request-reply
+          - lesson: 03-network-layer/01-the-ipv4-header-rfc-791
+            path: phases/03-network-layer/01-the-ipv4-header-rfc-791
+          - lesson: 03-network-layer/02-internet-checksum
+            path: phases/03-network-layer/02-internet-checksum
+          - lesson: 01-bits-and-wires/08-errors-and-crcs-crc-81632
+            path: phases/01-bits-and-wires/08-errors-and-crcs-crc-81632
+          - lesson: 03-network-layer/09-icmpv4-ping-clone
+            path: phases/03-network-layer/09-icmpv4-ping-clone
+          - lesson: 04-transport/02-udp-header-rfc-768
+            path: phases/04-transport/02-udp-header-rfc-768
+          - lesson: 04-transport/09-the-three-way-handshake
+            path: phases/04-transport/09-the-three-way-handshake
+          - lesson: 01-bits-and-wires/03-hex-dumps-and-the-binary-mind
+            path: phases/01-bits-and-wires/03-hex-dumps-and-the-binary-mind
+          - lesson: 01-bits-and-wires/04-bit-fields-and-packed-structs
+            path: phases/01-bits-and-wires/04-bit-fields-and-packed-structs
+          - lesson: 01-bits-and-wires/05-manchester-nrz-4b5b-encodings
+            path: phases/01-bits-and-wires/05-manchester-nrz-4b5b-encodings
+          - lesson: 01-bits-and-wires/09-forward-error-correction-hamming-74
+            path: phases/01-bits-and-wires/09-forward-error-correction-hamming-74
+          - lesson: 01-bits-and-wires/10-framing-byte-stuffing-bit-stuffing
+            path: phases/01-bits-and-wires/10-framing-byte-stuffing-bit-stuffing
+          - lesson: 02-link-layer/01-ethernet-ii-frame-layout
+            path: phases/02-link-layer/01-ethernet-ii-frame-layout
+          - lesson: 02-link-layer/02-mac-addresses-and-oui
+            path: phases/02-link-layer/02-mac-addresses-and-oui
+          - lesson: 02-link-layer/07-the-arp-cache
+            path: phases/02-link-layer/07-the-arp-cache
+          - lesson: 02-link-layer/08-vlans-8021q
+            path: phases/02-link-layer/08-vlans-8021q
+          - lesson: 02-link-layer/12-pcap-file-format
+            path: phases/02-link-layer/12-pcap-file-format
+          - lesson: 03-network-layer/03-cidr-and-subnetting
+            path: phases/03-network-layer/03-cidr-and-subnetting
+          - lesson: 03-network-layer/04-longest-prefix-match-routing
+            path: phases/03-network-layer/04-longest-prefix-match-routing
+          - lesson: 03-network-layer/06-ttl-and-the-traceroute-trick
+            path: phases/03-network-layer/06-ttl-and-the-traceroute-trick
+          - lesson: 03-network-layer/07-ip-fragmentation
+            path: phases/03-network-layer/07-ip-fragmentation
+          - lesson: 03-network-layer/12-ipv6-header-rfc-8200
+            path: phases/03-network-layer/12-ipv6-header-rfc-8200
+          - lesson: 04-transport/03-udp-checksum-with-ipv4-pseudo-header
+            path: phases/04-transport/03-udp-checksum-with-ipv4-pseudo-header
+          - lesson: 04-transport/07-the-tcp-header
+            path: phases/04-transport/07-the-tcp-header
+          - lesson: 04-transport/08-tcp-checksum
+            path: phases/04-transport/08-tcp-checksum
+          - lesson: 04-transport/10-the-tcp-state-machine-11-states
+            path: phases/04-transport/10-the-tcp-state-machine-11-states
+          - lesson: 04-transport/12-sequence-number-arithmetic-mod-2
+            path: phases/04-transport/12-sequence-number-arithmetic-mod-2
+          - lesson: 04-transport/13-sliding-window-basics
+            path: phases/04-transport/13-sliding-window-basics
+          - lesson: 04-transport/15-tcp-options-encoderdecoder
+            path: phases/04-transport/15-tcp-options-encoderdecoder
+          - lesson: 04-transport/17-the-retransmission-timer-rfc-6298
+            path: phases/04-transport/17-the-retransmission-timer-rfc-6298
+          - lesson: 04-transport/19-selective-acknowledgment-sack
+            path: phases/04-transport/19-selective-acknowledgment-sack
+          - lesson: 04-transport/22-connection-teardown-and-time-wait
+            path: phases/04-transport/22-connection-teardown-and-time-wait
+          - lesson: 02-link-layer/10-switching-tables-and-mac-learning
+            path: phases/02-link-layer/10-switching-tables-and-mac-learning
+          - lesson: 02-link-layer/14-wake-on-lan
+            path: phases/02-link-layer/14-wake-on-lan
+          - lesson: 02-link-layer/15-ppp-and-slip-briefly
+            path: phases/02-link-layer/15-ppp-and-slip-briefly
+          - lesson: 03-network-layer/05-the-routing-table
+            path: phases/03-network-layer/05-the-routing-table
+          - lesson: 03-network-layer/08-path-mtu-discovery-rfc-1191
+            path: phases/03-network-layer/08-path-mtu-discovery-rfc-1191
+          - lesson: 03-network-layer/11-ip-options
+            path: phases/03-network-layer/11-ip-options
+          - lesson: 03-network-layer/13-ipv6-addressing
+            path: phases/03-network-layer/13-ipv6-addressing
+          - lesson: 03-network-layer/14-ndp-neighbor-discovery
+            path: phases/03-network-layer/14-ndp-neighbor-discovery
+          - lesson: 03-network-layer/15-slaac
+            path: phases/03-network-layer/15-slaac
+          - lesson: 03-network-layer/16-dhcpv4-rfc-2131
+            path: phases/03-network-layer/16-dhcpv4-rfc-2131
+          - lesson: 03-network-layer/17-nat-what-really-happens
+            path: phases/03-network-layer/17-nat-what-really-happens
+          - lesson: 03-network-layer/19-tunneling-ip-in-ip-gre
+            path: phases/03-network-layer/19-tunneling-ip-in-ip-gre
+          - lesson: 04-transport/04-a-udp-echo-server
+            path: phases/04-transport/04-a-udp-echo-server
+          - lesson: 04-transport/05-a-udp-file-transfer-protocol
+            path: phases/04-transport/05-a-udp-file-transfer-protocol
+          - lesson: 04-transport/11-tcb-transmission-control-block
+            path: phases/04-transport/11-tcb-transmission-control-block
+          - lesson: 04-transport/14-window-scaling-option-rfc-7323
+            path: phases/04-transport/14-window-scaling-option-rfc-7323
+          - lesson: 04-transport/16-reliable-data-transfer
+            path: phases/04-transport/16-reliable-data-transfer
+          - lesson: 04-transport/18-retransmission-queue
+            path: phases/04-transport/18-retransmission-queue
+          - lesson: 04-transport/20-delayed-acks-and-nagles-algorithm
+            path: phases/04-transport/20-delayed-acks-and-nagles-algorithm
+          - lesson: 04-transport/21-receive-window-and-zero-window-probes
+            path: phases/04-transport/21-receive-window-and-zero-window-probes
+          - lesson: 04-transport/24-slow-start-and-congestion-avoidance
+            path: phases/04-transport/24-slow-start-and-congestion-avoidance
+          - lesson: 04-transport/25-fast-retransmit-and-fast-recovery
+            path: phases/04-transport/25-fast-retransmit-and-fast-recovery
+          - lesson: 04-transport/26-tcp-reno
+            path: phases/04-transport/26-tcp-reno
+          - lesson: 04-transport/27-tcp-cubic-rfc-8312
+            path: phases/04-transport/27-tcp-cubic-rfc-8312
+          - lesson: 04-transport/28-tcp-bbr-with-software-pacing
+            path: phases/04-transport/28-tcp-bbr-with-software-pacing
+          - lesson: 04-transport/31-explicit-congestion-notification-ecn
+            path: phases/04-transport/31-explicit-congestion-notification-ecn
+          - lesson: 04-transport/32-tcp-keepalive
+            path: phases/04-transport/32-tcp-keepalive
+          - lesson: 04-transport/33-connection-tracking-from-outside
+            path: phases/04-transport/33-connection-tracking-from-outside
+          - lesson: 04-transport/36-quic-packets-and-frames
+            path: phases/04-transport/36-quic-packets-and-frames
+          - lesson: 05-sockets-io-models/01-the-berkeley-sockets-api
+            path: phases/05-sockets-io-models/01-the-berkeley-sockets-api
+          - lesson: 05-sockets-io-models/02-address-families
+            path: phases/05-sockets-io-models/02-address-families
+          - lesson: 05-sockets-io-models/04-blocking-vs-nonblocking
+            path: phases/05-sockets-io-models/04-blocking-vs-nonblocking
+          - lesson: 05-sockets-io-models/05-select-and-poll
+            path: phases/05-sockets-io-models/05-select-and-poll
+          - lesson: 05-sockets-io-models/11-scattergather-readv-writev
+            path: phases/05-sockets-io-models/11-scattergather-readv-writev
+          - lesson: 06-application-protocols/02-a-dns-resolver-from-scratch
+            path: phases/06-application-protocols/02-a-dns-resolver-from-scratch
+          - lesson: 06-application-protocols/03-authoritative-dns-server
+            path: phases/06-application-protocols/03-authoritative-dns-server
+          - lesson: 06-application-protocols/04-dns-over-udp-then-tcp
+            path: phases/06-application-protocols/04-dns-over-udp-then-tcp
+          - lesson: 06-application-protocols/05-edns0-rfc-6891
+            path: phases/06-application-protocols/05-edns0-rfc-6891
+          - lesson: 06-application-protocols/09-a-toy-http-server-in-c
+            path: phases/06-application-protocols/09-a-toy-http-server-in-c
+          - lesson: 06-application-protocols/10-persistent-connections-and-pipelining
+            path: phases/06-application-protocols/10-persistent-connections-and-pipelining
+          - lesson: 06-application-protocols/11-chunked-transfer-encoding
+            path: phases/06-application-protocols/11-chunked-transfer-encoding
+          - lesson: 06-application-protocols/12-http2-binary-framing
+            path: phases/06-application-protocols/12-http2-binary-framing
+          - lesson: 06-application-protocols/13-hpack-header-compression
+            path: phases/06-application-protocols/13-hpack-header-compression
+          - lesson: 06-application-protocols/20-ntp-and-sntp-client
+            path: phases/06-application-protocols/20-ntp-and-sntp-client
+          - lesson: 06-application-protocols/21-syslog-rfc-5424
+            path: phases/06-application-protocols/21-syslog-rfc-5424
+          - lesson: 06-application-protocols/25-http11-with-virtual-hosts
+            path: phases/06-application-protocols/25-http11-with-virtual-hosts
+          - lesson: 06-application-protocols/27-url-encoding-mime-types
+            path: phases/06-application-protocols/27-url-encoding-mime-types
+          - lesson: 06-application-protocols/28-cookies-and-session-management
+            path: phases/06-application-protocols/28-cookies-and-session-management
+          - lesson: 07-tls/07-the-tls-record-layer
+            path: phases/07-tls/07-the-tls-record-layer
+          - lesson: 07-tls/08-tls-13-clienthello-byte-by-byte
+            path: phases/07-tls/08-tls-13-clienthello-byte-by-byte
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential gcc
+
+      - name: Build and test
+        run: make -C ${{ matrix.path }} test

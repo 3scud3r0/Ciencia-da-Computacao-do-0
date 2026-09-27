@@ -1,0 +1,33 @@
+# ============================================================================
+# Build Deep Learning From Scratch — dependencies
+# ============================================================================
+#
+# These are the ONLY three packages permitted in this entire curriculum.
+#
+#   - numpy       : raw N-dimensional array math (elementwise ops, matmul,
+#                   reductions, broadcasting). For FORWARD computation only.
+#   - matplotlib  : plotting and visualization (loss curves, decision
+#                   boundaries, feature maps, attention maps).
+#   - pytest      : running the per-stage test suites.
+#
+# ----------------------------------------------------------------------------
+# HARD RULE — NO AUTODIFF / DEEP-LEARNING LIBRARIES ARE PERMITTED.
+# ----------------------------------------------------------------------------
+# Do NOT add (or import) any of the following, at any stage, for any reason:
+#
+#   torch, tensorflow, jax, jaxlib, flax, autograd, tinygrad, micrograd,
+#   chainer, theano, mxnet, cupy, keras, sklearn (for models/gradients),
+#   or anything else that computes gradients / backprop for you.
+#
+# NumPy is allowed for array arithmetic ONLY. It must NEVER be used to compute
+# a derivative for you. Every gradient, every backward pass, and every
+# chain-rule accumulation in this curriculum must be code YOU wrote by hand.
+# You are the autodiff library.
+#
+# If you find yourself wanting `pip install` for anything beyond the three
+# packages below, stop: the concept is meant to be built, not imported.
+# ============================================================================
+
+numpy==1.26.4
+matplotlib==3.8.4
+pytest==8.2.2

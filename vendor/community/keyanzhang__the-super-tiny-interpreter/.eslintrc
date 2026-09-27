@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "jasmine": true,
+  },
+  "globals": {
+    "__DEV__": true,
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-void": 0,
+    "no-mixed-operators": 0,
+    "no-continue": 0,
+    "import/prefer-default-export": 0,
+  },
+  "plugins": [
+    "babel",
+  ],
+}

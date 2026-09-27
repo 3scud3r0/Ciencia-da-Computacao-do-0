@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting… — Networking from Scratch</title>
+<script src="js/data.js"></script>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var p = parseInt(params.get('p'), 10);
+  var l = parseInt(params.get('l'), 10);
+  if (!isNaN(p) && !isNaN(l) && NFS.PHASES && NFS.PHASES[p] && NFS.PHASES[p].lessons[l]) {
+    var phase = NFS.PHASES[p];
+    var lesson = phase.lessons[l];
+    window.location.replace('/lessons/' + phase.slug + '/' + lesson[3] + '/');
+  } else {
+    window.location.replace('/catalog.html');
+  }
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=/catalog.html"></noscript>
+</head>
+<body><p>Redirecting…</p></body>
+</html>

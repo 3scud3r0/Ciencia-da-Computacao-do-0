@@ -1,0 +1,35 @@
+name: Docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'website/**'
+      - 'README.md'
+      - '.github/workflows/docs.yml'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'website/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate website HTML
+        run: |
+          python3 -c "
+          import html.parser, sys, pathlib
+          ok = True
+          for f in pathlib.Path('website').glob('*.html'):
+              try:
+                  html.parser.HTMLParser().feed(f.read_text())
+                  print(f'  OK: {f}')
+              except Exception as e:
+                  print(f'FAIL: {f}: {e}', file=sys.stderr)
+                  ok = False
+          sys.exit(0 if ok else 1)
+          "
