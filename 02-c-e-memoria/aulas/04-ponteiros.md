@@ -1,0 +1,53 @@
+# 04 — Ponteiros
+
+Módulo 02: C, memória e representação · Nível: Essencial
+
+## Ideia central
+
+Ponteiro armazena endereço e seu tipo orienta a interpretação dos bytes. Pointer arithmetic avança em elementos e dereference só é válido durante o lifetime do objeto.
+
+## Modelo mental
+
+C remove boa parte das proteções de linguagens de alto nível. Isso torna visíveis representação binária, endereços, lifetime, layout e responsabilidade pela memória.
+
+Neste capítulo identifique estado, invariante, operação e custo. Se houver uma abstração, pergunte qual problema ela resolve e o que acontece uma camada abaixo.
+
+## Código e laboratório
+
+O laboratório principal do módulo está em [projetos/vetor-dinamico](../projetos/vetor-dinamico). Execute os testes antes de alterar o código.
+
+Ciclo de investigação:
+
+1. execute a versão atual;
+2. formule uma hipótese;
+3. altere uma variável, estrutura ou entrada;
+4. observe teste, saída, tempo, memória ou estado;
+5. explique causalmente o resultado.
+
+## Experimento guiado
+
+1. Escolha uma entrada pequena simulável à mão.
+2. Registre o estado antes de cada passo.
+3. Execute e compare com sua previsão.
+4. Crie um caso extremo: vazio, limite, repetido, inválido ou grande.
+5. Reduza qualquer divergência até o primeiro passo inesperado.
+
+## Perguntas de domínio
+
+- Qual é a definição operacional de Ponteiros?
+- Que invariante ou garantia é essencial?
+- Que custo de tempo, espaço, coordenação ou I/O cresce com a entrada?
+- O que a abstração esconde da camada inferior?
+- Que falha aparece se uma hipótese central deixar de valer?
+
+## Exercícios
+
+1. Explique o conceito em cinco frases sem consultar a aula.
+2. Crie um exemplo correto e um contraexemplo.
+3. Torne o conceito observável no laboratório do módulo.
+4. Justifique o resultado com vocabulário técnico.
+5. Conecte este capítulo ao anterior e ao próximo.
+
+## Critério de conclusão
+
+Você concluiu quando consegue prever um caso novo, explicar o mecanismo por baixo da API e justificar pelo menos um trade-off relevante.

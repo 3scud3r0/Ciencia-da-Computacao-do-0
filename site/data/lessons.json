@@ -1,107 +1,1474 @@
 [
   {
     "module": "00",
+    "moduleTitle": "Ambiente, ferramentas e método",
     "title": "Como um computador executa um programa",
-    "description": "Processos, memória, instruções e syscalls.",
-    "path": "00-como-estudar/capitulos/01-como-um-computador-executa",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/00-como-estudar/capitulos/01-como-um-computador-executa"
+    "description": "Executar um programa envolve resolver o executável, criar um processo, mapear memória, carregar dependências e transferir controle para instruções que a CPU entende. Programa armazenado e processo em execução são distintos.",
+    "path": "00-como-estudar/aulas/01-como-um-computador-executa-um-programa.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/00-como-estudar/aulas/01-como-um-computador-executa-um-programa.md"
+  },
+  {
+    "module": "00",
+    "moduleTitle": "Ambiente, ferramentas e método",
+    "title": "Terminal e shell",
+    "description": "O shell faz parsing de comandos, expansão, redirecionamento e pipelines. stdin, stdout e stderr são streams; pipes conectam saída de um processo à entrada de outro.",
+    "path": "00-como-estudar/aulas/02-terminal-e-shell.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/00-como-estudar/aulas/02-terminal-e-shell.md"
+  },
+  {
+    "module": "00",
+    "moduleTitle": "Ambiente, ferramentas e método",
+    "title": "Git e GitHub",
+    "description": "Git é um banco content-addressed de objetos: blobs, trees e commits. Branches são referências móveis; commits formam um DAG e merges combinam históricos.",
+    "path": "00-como-estudar/aulas/03-git-e-github.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/00-como-estudar/aulas/03-git-e-github.md"
+  },
+  {
+    "module": "00",
+    "moduleTitle": "Ambiente, ferramentas e método",
+    "title": "Debugger, profiler, build e CI",
+    "description": "Debugger controla execução e inspeciona estado; profiler mede onde tempo ou memória são gastos; build transforma fontes em artefatos; CI torna as verificações reproduzíveis.",
+    "path": "00-como-estudar/aulas/04-debugger-profiler-build-e-ci.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/00-como-estudar/aulas/04-debugger-profiler-build-e-ci.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Valores, tipos e representação",
+    "description": "Valores possuem representação e operações válidas; tipos restringem interpretações. Mutabilidade define se identidade e estado podem mudar depois da criação.",
+    "path": "01-programacao/aulas/01-valores-tipos-e-representacao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/01-valores-tipos-e-representacao.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Controle de fluxo",
+    "description": "Condicionais escolhem caminhos e loops repetem transições de estado. Invariantes são propriedades que devem permanecer verdadeiras antes e depois de cada iteração.",
+    "path": "01-programacao/aulas/02-controle-de-fluxo.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/02-controle-de-fluxo.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Funções e escopo",
+    "description": "Função cria uma fronteira de abstração. Escopo define visibilidade; closures capturam ambiente léxico; argumentos e retornos formam contratos.",
+    "path": "01-programacao/aulas/03-funcoes-e-escopo.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/03-funcoes-e-escopo.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Recursão",
+    "description": "Recursão reduz um problema a instâncias menores até um caso base. Cada chamada mantém estado lógico; ausência de progresso produz recursão infinita.",
+    "path": "01-programacao/aulas/04-recursao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/04-recursao.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Abstração e modularidade",
+    "description": "Modularidade reduz acoplamento ao esconder decisões internas atrás de interfaces. Uma abstração boa expõe o necessário e preserva invariantes.",
+    "path": "01-programacao/aulas/05-abstracao-e-modularidade.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/05-abstracao-e-modularidade.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Orientação a objetos",
+    "description": "Orientação a objetos combina estado e comportamento. Composição modela relações tem-um; herança exige substituição sem quebrar expectativas do tipo base.",
+    "path": "01-programacao/aulas/06-orientacao-a-objetos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/06-orientacao-a-objetos.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Programação funcional",
+    "description": "Programação funcional enfatiza funções puras, composição e imutabilidade. map/filter/reduce são padrões de transformação e pureza facilita raciocínio e testes.",
+    "path": "01-programacao/aulas/07-programacao-funcional.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/07-programacao-funcional.md"
+  },
+  {
+    "module": "01",
+    "moduleTitle": "Programação e pensamento computacional",
+    "title": "Erros e depuração",
+    "description": "Erros devem produzir evidência. Exceções propagam falhas, assertions verificam invariantes e debugger/tracing ajudam a localizar a primeira divergência.",
+    "path": "01-programacao/aulas/08-erros-e-depuracao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/01-programacao/aulas/08-erros-e-depuracao.md"
   },
   {
     "module": "02",
-    "title": "Bits, bytes e bases numéricas",
-    "description": "Representação, hexadecimal, bitwise e overflow.",
-    "path": "02-c-e-memoria/capitulos/01-bits-bytes-e-bases",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/capitulos/01-bits-bytes-e-bases"
+    "moduleTitle": "C, memória e representação",
+    "title": "Bits, bytes e bases",
+    "description": "Bits não carregam significado por si; convenções decidem se um padrão representa unsigned, signed, caractere ou flags. Hexadecimal agrupa quatro bits e torna máscaras legíveis.",
+    "path": "02-c-e-memoria/aulas/01-bits-bytes-e-bases.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/01-bits-bytes-e-bases.md"
   },
   {
     "module": "02",
+    "moduleTitle": "C, memória e representação",
+    "title": "Inteiros e IEEE 754",
+    "description": "Inteiros de largura fixa sofrem overflow modular; IEEE 754 separa sinal, expoente e fração. Nem todo decimal tem representação binária finita.",
+    "path": "02-c-e-memoria/aulas/02-inteiros-e-ieee-754.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/02-inteiros-e-ieee-754.md"
+  },
+  {
+    "module": "02",
+    "moduleTitle": "C, memória e representação",
+    "title": "C do zero",
+    "description": "C compila tipos e operações para instruções próximas do hardware. Headers declaram interfaces, objetos compilados contêm código/dados e linker resolve símbolos.",
+    "path": "02-c-e-memoria/aulas/03-c-do-zero.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/03-c-do-zero.md"
+  },
+  {
+    "module": "02",
+    "moduleTitle": "C, memória e representação",
     "title": "Ponteiros",
-    "description": "Endereços, dereference, lifetime, stack e heap.",
-    "path": "02-c-e-memoria/capitulos/04-ponteiros",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/capitulos/04-ponteiros"
+    "description": "Ponteiro armazena endereço e seu tipo orienta a interpretação dos bytes. Pointer arithmetic avança em elementos e dereference só é válido durante o lifetime do objeto.",
+    "path": "02-c-e-memoria/aulas/04-ponteiros.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/04-ponteiros.md"
+  },
+  {
+    "module": "02",
+    "moduleTitle": "C, memória e representação",
+    "title": "Stack e heap",
+    "description": "Stack normalmente contém frames e objetos automáticos; heap contém alocações de duração explícita. Lifetime e região de armazenamento não são o mesmo conceito.",
+    "path": "02-c-e-memoria/aulas/05-stack-e-heap.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/05-stack-e-heap.md"
+  },
+  {
+    "module": "02",
+    "moduleTitle": "C, memória e representação",
+    "title": "Layout de memória",
+    "description": "Um processo separa código, dados, BSS, heap, mappings e stack em espaço virtual. readelf, objdump e gdb permitem observar esse layout.",
+    "path": "02-c-e-memoria/aulas/06-layout-de-memoria.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/06-layout-de-memoria.md"
+  },
+  {
+    "module": "02",
+    "moduleTitle": "C, memória e representação",
+    "title": "Alocação dinâmica",
+    "description": "Alocador precisa localizar blocos, dividir, reutilizar e coalescer espaço. Fragmentação interna desperdiça dentro de blocos; externa cria espaços livres pouco utilizáveis.",
+    "path": "02-c-e-memoria/aulas/07-alocacao-dinamica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/07-alocacao-dinamica.md"
+  },
+  {
+    "module": "02",
+    "moduleTitle": "C, memória e representação",
+    "title": "Segurança de memória",
+    "description": "Buffer overflow, use-after-free, double free e integer overflow podem corromper estado. Sanitizers instrumentam execução e tornam vários bugs reproduzíveis.",
+    "path": "02-c-e-memoria/aulas/08-seguranca-de-memoria.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/aulas/08-seguranca-de-memoria.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Lógica",
+    "description": "Lógica proposicional combina verdade com ¬, ∧, ∨ e →. Equivalências permitem reescrever expressões e tabelas-verdade verificam fórmulas finitas.",
+    "path": "03-matematica-discreta/aulas/01-logica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/01-logica.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Provas",
+    "description": "Provas estabelecem propriedades para toda uma classe. Direta, contraposição, contradição e indução são técnicas diferentes para ligar hipóteses a conclusões.",
+    "path": "03-matematica-discreta/aulas/02-provas.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/02-provas.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Conjuntos e relações",
+    "description": "Conjuntos modelam coleções e relações são subconjuntos de produtos cartesianos. Reflexividade, simetria e transitividade definem equivalência; ordens parciais modelam precedência.",
+    "path": "03-matematica-discreta/aulas/03-conjuntos-e-relacoes.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/03-conjuntos-e-relacoes.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Funções e cardinalidade",
+    "description": "Funções podem ser injetivas, sobrejetivas ou bijetivas. Bijeções comparam cardinalidades e diagonalização mostra que alguns infinitos não são enumeráveis.",
+    "path": "03-matematica-discreta/aulas/04-funcoes-e-cardinalidade.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/04-funcoes-e-cardinalidade.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Combinatória",
+    "description": "Princípios aditivo e multiplicativo contam escolhas. Permutações consideram ordem; combinações não: C(n,k)=n!/(k!(n-k)!).",
+    "path": "03-matematica-discreta/aulas/05-combinatoria.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/05-combinatoria.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Probabilidade discreta",
+    "description": "Probabilidade discreta atribui massa a resultados. Esperança é linear mesmo sem independência; Bayes inverte condicionais por P(A|B)=P(B|A)P(A)/P(B).",
+    "path": "03-matematica-discreta/aulas/06-probabilidade-discreta.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/06-probabilidade-discreta.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Grafos",
+    "description": "Grafos modelam vértices e arestas. Caminhos, ciclos, conectividade, árvores e DAGs representam redes, dependências e espaços de estado.",
+    "path": "03-matematica-discreta/aulas/07-grafos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/07-grafos.md"
+  },
+  {
+    "module": "03",
+    "moduleTitle": "Matemática discreta",
+    "title": "Recorrências",
+    "description": "Recorrências descrevem custo em termos de instâncias menores. Expandir, substituir ou usar árvore de recursão revela crescimento como Θ(n log n).",
+    "path": "03-matematica-discreta/aulas/08-recorrencias.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/03-matematica-discreta/aulas/08-recorrencias.md"
   },
   {
     "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Arrays",
+    "description": "Array é memória contígua com acesso indexado O(1). Inserir no meio desloca O(n); arrays dinâmicos reservam capacidade para append amortizado O(1).",
+    "path": "04-estruturas-de-dados/aulas/01-arrays.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/01-arrays.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Linked lists",
+    "description": "Linked list guarda elementos em nós ligados. Inserção local é O(1) quando o nó é conhecido, mas busca por índice é O(n) e localidade de cache é pior.",
+    "path": "04-estruturas-de-dados/aulas/02-linked-lists.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/02-linked-lists.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Stack, queue e deque",
+    "description": "Stack implementa LIFO, queue FIFO e deque opera nas duas extremidades. Essas interfaces aparecem em parsers, BFS, schedulers e buffers.",
+    "path": "04-estruturas-de-dados/aulas/03-stack-queue-e-deque.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/03-stack-queue-e-deque.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
     "title": "Hash tables",
-    "description": "Hashing, colisões, probing, tombstones e load factor.",
-    "path": "04-estruturas-de-dados/capitulos/04-hash-tables",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/capitulos/04-hash-tables"
+    "description": "Hash table transforma chave em índice e precisa tratar colisões. Chaining/open addressing e load factor determinam custo esperado e momento de resize.",
+    "path": "04-estruturas-de-dados/aulas/04-hash-tables.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/04-hash-tables.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Árvores",
+    "description": "Árvore organiza nós hierarquicamente. Profundidade, altura e subárvore permitem raciocínio recursivo; traversals diferem pela ordem da visita.",
+    "path": "04-estruturas-de-dados/aulas/05-arvores.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/05-arvores.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "BST",
+    "description": "BST mantém esquerda < nó < direita. Busca custa O(h); árvore degenerada tem h=n e uma balanceada mantém h=Θ(log n).",
+    "path": "04-estruturas-de-dados/aulas/06-bst.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/06-bst.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "AVL e Red-Black",
+    "description": "AVL usa fator de balanceamento; Red-Black usa regras de cores. Ambas preservam operações O(log n) por rotações e manutenção de invariantes.",
+    "path": "04-estruturas-de-dados/aulas/07-avl-e-red-black.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/07-avl-e-red-black.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Heaps",
+    "description": "Heap mantém ordem parcial. O mínimo/máximo fica na raiz e push/pop custam O(log n), sustentando priority queues e heapsort.",
+    "path": "04-estruturas-de-dados/aulas/08-heaps.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/08-heaps.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Tries",
+    "description": "Trie percorre símbolos da chave por arestas. Busca custa O(L) e prefixos compartilhados reutilizam a mesma trajetória.",
+    "path": "04-estruturas-de-dados/aulas/09-tries.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/09-tries.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Union-Find",
+    "description": "Union-Find mantém conjuntos disjuntos. Union by rank/size e path compression dão custo amortizado O(α(n)), quase constante.",
+    "path": "04-estruturas-de-dados/aulas/10-union-find.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/10-union-find.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "Grafos",
+    "description": "Grafos usam matriz O(V²) ou listas O(V+E). A escolha altera custo de consultar arestas, iterar vizinhos e memória.",
+    "path": "04-estruturas-de-dados/aulas/11-grafos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/11-grafos.md"
+  },
+  {
+    "module": "04",
+    "moduleTitle": "Estruturas de dados",
+    "title": "B/B+ Trees",
+    "description": "B-Tree/B+ Tree usam muitos filhos para reduzir altura e page I/O. B+ Trees concentram registros nas folhas ligadas e favorecem range scans.",
+    "path": "04-estruturas-de-dados/aulas/12-b-b-trees.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/aulas/12-b-b-trees.md"
   },
   {
     "module": "05",
+    "moduleTitle": "Algoritmos",
     "title": "Análise assintótica",
-    "description": "O, Ω, Θ, logaritmos e análise amortizada.",
-    "path": "05-algoritmos/capitulos/01-analise-assintotica",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/capitulos/01-analise-assintotica"
+    "description": "Análise assintótica compara crescimento: O limita acima, Ω abaixo e Θ caracteriza ordem. Benchmarks entram depois para custos concretos.",
+    "path": "05-algoritmos/aulas/01-analise-assintotica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/01-analise-assintotica.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Busca",
+    "description": "Busca linear custa Θ(n); binary search custa Θ(log n), mas exige ordem e acesso eficiente ao elemento central.",
+    "path": "05-algoritmos/aulas/02-busca.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/02-busca.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Ordenação",
+    "description": "Insertion sort é bom para pequenos/quase ordenados; merge sort garante Θ(n log n); quicksort é ótimo em média; heapsort garante Θ(n log n).",
+    "path": "05-algoritmos/aulas/03-ordenacao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/03-ordenacao.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Divide and conquer",
+    "description": "Divide and conquer divide, resolve subproblemas e combina. Recorrências como T(n)=aT(n/b)+f(n) ajudam a derivar custo.",
+    "path": "05-algoritmos/aulas/04-divide-and-conquer.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/04-divide-and-conquer.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Greedy",
+    "description": "Greedy escolhe decisão local sem revisitar. Correção exige propriedade de escolha gulosa e subestrutura ótima, não apenas intuição.",
+    "path": "05-algoritmos/aulas/05-greedy.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/05-greedy.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Programação dinâmica",
+    "description": "Programação dinâmica reutiliza subproblemas sobrepostos. Memoization é top-down, tabulation bottom-up; o trabalho principal é definir estado/transição.",
+    "path": "05-algoritmos/aulas/06-programacao-dinamica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/06-programacao-dinamica.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Backtracking",
+    "description": "Backtracking percorre árvore de decisões e desfaz escolhas inviáveis. Pruning e branch-and-bound reduzem o espaço explorado.",
+    "path": "05-algoritmos/aulas/07-backtracking.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/07-backtracking.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "BFS/DFS",
+    "description": "BFS usa queue e descobre por distância em arestas; DFS usa stack/recursão. Com listas, ambos custam O(V+E).",
+    "path": "05-algoritmos/aulas/08-bfs-dfs.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/08-bfs-dfs.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Caminhos mínimos",
+    "description": "Dijkstra exige pesos não negativos; Bellman-Ford tolera negativos e detecta ciclos negativos; Floyd-Warshall resolve all-pairs em O(V³).",
+    "path": "05-algoritmos/aulas/09-caminhos-minimos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/09-caminhos-minimos.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "MST",
+    "description": "MST conecta todos os vértices com peso total mínimo. Kruskal ordena arestas e usa Union-Find; Prim cresce pela fronteira.",
+    "path": "05-algoritmos/aulas/10-mst.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/10-mst.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Strings",
+    "description": "KMP evita retroceder no texto usando informação de prefixos; Rabin-Karp usa hashes e precisa confirmar colisões.",
+    "path": "05-algoritmos/aulas/11-strings.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/11-strings.md"
+  },
+  {
+    "module": "05",
+    "moduleTitle": "Algoritmos",
+    "title": "Randomizados",
+    "description": "Randomizados usam aleatoriedade para tempo esperado ou garantia probabilística. Diferencie Monte Carlo de Las Vegas e controle seeds em testes.",
+    "path": "05-algoritmos/aulas/12-randomizados.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/aulas/12-randomizados.md"
   },
   {
     "module": "06",
-    "title": "CPU: fetch, decode, execute",
-    "description": "ISA, registradores, ALU, memória e ciclo de instrução.",
-    "path": "06-arquitetura-de-computadores/capitulos/05-cpu",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/capitulos/05-cpu"
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Portas lógicas",
+    "description": "Portas AND/OR/NOT/XOR implementam funções booleanas; circuitos combinacionais dependem apenas das entradas atuais. Multiplexadores escolhem fontes.",
+    "path": "06-arquitetura-de-computadores/aulas/01-portas-logicas.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/01-portas-logicas.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Álgebra booleana",
+    "description": "Álgebra booleana simplifica circuitos via identidades e De Morgan. Menos portas pode reduzir atraso, área e consumo.",
+    "path": "06-arquitetura-de-computadores/aulas/02-algebra-booleana.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/02-algebra-booleana.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Somadores e ALU",
+    "description": "Somadores propagam carry; ALU seleciona operações aritméticas/lógicas. Flags zero, negativo, carry e overflow alimentam controle.",
+    "path": "06-arquitetura-de-computadores/aulas/03-somadores-e-alu.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/03-somadores-e-alu.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Clock e registradores",
+    "description": "Clock discretiza mudanças. Flip-flops/registradores armazenam bits entre ciclos; circuitos sequenciais dependem de estado anterior.",
+    "path": "06-arquitetura-de-computadores/aulas/04-clock-e-registradores.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/04-clock-e-registradores.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "CPU",
+    "description": "CPU coordena fetch, decode e execute com PC, registradores, controle e datapath. Branch altera PC e load/store conecta memória.",
+    "path": "06-arquitetura-de-computadores/aulas/05-cpu.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/05-cpu.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "ISA",
+    "description": "ISA é contrato software-hardware: instruções, registradores, formatos, endereçamento e semântica. Microarquiteturas distintas podem implementar a mesma ISA.",
+    "path": "06-arquitetura-de-computadores/aulas/06-isa.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/06-isa.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Assembly x86-64",
+    "description": "Assembly x86-64 expõe registradores, stack, CALL/RET e ABI. Convenção de chamada define argumentos e registradores preservados.",
+    "path": "06-arquitetura-de-computadores/aulas/07-assembly-x86-64.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/07-assembly-x86-64.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Cache",
+    "description": "Cache explora localidade em linhas. Miss compulsório, de capacidade e de conflito explicam comportamento; associatividade reduz conflitos.",
+    "path": "06-arquitetura-de-computadores/aulas/08-cache.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/08-cache.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Pipeline",
+    "description": "Pipeline sobrepõe estágios. Hazards de dados, controle e recursos exigem forwarding, stalls ou previsão; throughput difere de latência.",
+    "path": "06-arquitetura-de-computadores/aulas/09-pipeline.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/09-pipeline.md"
+  },
+  {
+    "module": "06",
+    "moduleTitle": "Arquitetura de computadores",
+    "title": "Virtualização",
+    "description": "Virtualização compartilha hardware entre sistemas isolados. Hypervisor e suporte de CPU/MMU controlam operações privilegiadas e memória.",
+    "path": "06-arquitetura-de-computadores/aulas/10-virtualizacao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/aulas/10-virtualizacao.md"
   },
   {
     "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Kernel e user space",
+    "description": "Kernel roda privilegiado e controla recursos; user space é restrito. Syscalls são transições controladas para pedir serviços.",
+    "path": "07-sistemas-operacionais/aulas/01-kernel-e-user-space.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/01-kernel-e-user-space.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
     "title": "Processos",
-    "description": "Espaço virtual, scheduling, fork/exec e contexto.",
-    "path": "07-sistemas-operacionais/capitulos/02-processos",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/capitulos/02-processos"
+    "description": "Processo reúne endereço virtual, descritores, credenciais e threads. Context switch salva estado; fork deriva e exec substitui programa.",
+    "path": "07-sistemas-operacionais/aulas/02-processos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/02-processos.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Threads",
+    "description": "Threads compartilham heap/descritores, mas têm stacks e registradores próprios. Compartilhamento rápido cria riscos de race.",
+    "path": "07-sistemas-operacionais/aulas/03-threads.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/03-threads.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Scheduling",
+    "description": "Scheduler decide qual thread usa CPU. FCFS, SJF e Round Robin expõem trade-offs de throughput, latência e fairness.",
+    "path": "07-sistemas-operacionais/aulas/04-scheduling.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/04-scheduling.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Concorrência",
+    "description": "Concorrência exige preservar invariantes de estado compartilhado. Mutex, semáforo e condition variable coordenam interleavings.",
+    "path": "07-sistemas-operacionais/aulas/05-concorrencia.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/05-concorrencia.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Deadlocks",
+    "description": "Deadlock depende de exclusão, hold-and-wait, ausência de preempção e espera circular. Prevenção quebra condição; detecção procura ciclos.",
+    "path": "07-sistemas-operacionais/aulas/06-deadlocks.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/06-deadlocks.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Memória virtual",
+    "description": "Memória virtual traduz endereços por page tables/TLB. Page faults transferem controle ao kernel e demand paging carrega sob necessidade.",
+    "path": "07-sistemas-operacionais/aulas/07-memoria-virtual.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/07-memoria-virtual.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Alocação",
+    "description": "Alocadores de user space administram heap e kernel administra páginas/frames. Free lists, buddy e slab atacam padrões diferentes.",
+    "path": "07-sistemas-operacionais/aulas/08-alocacao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/08-alocacao.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Filesystems",
+    "description": "Filesystem mapeia nomes para metadados/blocos. Inodes separam identidade de nome e journaling ajuda recuperação após crash.",
+    "path": "07-sistemas-operacionais/aulas/09-filesystems.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/09-filesystems.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "I/O",
+    "description": "I/O envolve dispositivos, interrupts e DMA. Drivers traduzem operações e buffering desacopla velocidades.",
+    "path": "07-sistemas-operacionais/aulas/10-i-o.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/10-i-o.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Syscalls",
+    "description": "Syscalls como read/write/open/mmap/futex validam argumentos e atravessam privilégio; bibliotecas constroem APIs sobre essas primitivas.",
+    "path": "07-sistemas-operacionais/aulas/11-syscalls.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/11-syscalls.md"
+  },
+  {
+    "module": "07",
+    "moduleTitle": "Sistemas operacionais",
+    "title": "Containers",
+    "description": "Containers combinam namespaces, cgroups, mounts e capabilities. São processos isolados, não máquinas virtuais completas.",
+    "path": "07-sistemas-operacionais/aulas/12-containers.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/aulas/12-containers.md"
   },
   {
     "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "Camadas",
+    "description": "Camadas separam responsabilidades: link move frames locais, IP roteia pacotes, transporte liga processos e aplicação define semântica.",
+    "path": "08-redes/aulas/01-camadas.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/01-camadas.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "Ethernet",
+    "description": "Ethernet usa frames/MAC numa LAN. Switch aprende MAC→porta e inunda destinos desconhecidos.",
+    "path": "08-redes/aulas/02-ethernet.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/02-ethernet.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "IP",
+    "description": "IP fornece datagramas best-effort e endereçamento roteável. CIDR define prefixos; routers usam longest-prefix match; TTL evita loops.",
+    "path": "08-redes/aulas/03-ip.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/03-ip.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "ARP/ND",
+    "description": "ARP resolve IPv4 local para MAC; IPv6 usa Neighbor Discovery. A resolução ocorre antes de enviar frame ao próximo salto local.",
+    "path": "08-redes/aulas/04-arp-nd.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/04-arp-nd.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "ICMP",
+    "description": "ICMP carrega controle/diagnóstico. Echo sustenta ping; Time Exceeded sustenta traceroute; erros ajudam hosts a reagir.",
+    "path": "08-redes/aulas/05-icmp.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/05-icmp.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "UDP",
+    "description": "UDP adiciona portas/checksum sem conexão, retransmissão ou ordem. A aplicação aceita isso ou implementa garantias adicionais.",
+    "path": "08-redes/aulas/06-udp.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/06-udp.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
     "title": "TCP",
-    "description": "Sequência, ACK, retransmissão, fluxo e congestionamento.",
-    "path": "08-redes/capitulos/07-tcp",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/capitulos/07-tcp"
+    "description": "TCP cria stream confiável com sequence, ACK, retransmissão, flow e congestion control. Não preserva fronteiras de mensagens.",
+    "path": "08-redes/aulas/07-tcp.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/07-tcp.md"
   },
   {
     "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "DNS",
+    "description": "DNS é hierárquico, distribuído e cacheado. Resolvers percorrem root/TLD/autoritativos e TTL limita validade.",
+    "path": "08-redes/aulas/08-dns.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/08-dns.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
     "title": "HTTP",
-    "description": "Mensagens, framing, métodos, status e versões.",
-    "path": "08-redes/capitulos/09-http",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/capitulos/09-http"
+    "description": "HTTP define mensagens e recursos. HTTP/1.1 usa framing textual, HTTP/2 multiplexa streams e HTTP/3 usa QUIC.",
+    "path": "08-redes/aulas/09-http.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/09-http.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "TLS",
+    "description": "TLS autentica e deriva chaves de sessão para confidencialidade/integridade. Certificados formam cadeia de confiança.",
+    "path": "08-redes/aulas/10-tls.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/10-tls.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "Sockets",
+    "description": "Sockets expõem endpoints. bind/listen/accept servem TCP; connect inicia cliente; send/recv podem transferir menos bytes que pedidos.",
+    "path": "08-redes/aulas/11-sockets.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/11-sockets.md"
+  },
+  {
+    "module": "08",
+    "moduleTitle": "Redes de computadores",
+    "title": "NAT e proxies",
+    "description": "NAT reescreve endereços/portas; firewall aplica política; proxy termina/inicia conexões e pode balancear, cachear e terminar TLS.",
+    "path": "08-redes/aulas/12-nat-e-proxies.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/aulas/12-nat-e-proxies.md"
   },
   {
     "module": "09",
-    "title": "Índices de banco de dados",
-    "description": "B+ Trees, páginas, range scans e custo de escrita.",
-    "path": "09-bancos-de-dados/capitulos/05-indices",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/capitulos/05-indices"
+    "moduleTitle": "Bancos de dados",
+    "title": "Modelo relacional",
+    "description": "Modelo relacional usa relações, atributos e tuplas. Chaves identificam e foreign keys preservam referências; normalização reduz anomalias.",
+    "path": "09-bancos-de-dados/aulas/01-modelo-relacional.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/01-modelo-relacional.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "SQL",
+    "description": "SQL é declarativa: descreve resultado. SELECT/JOIN/GROUP BY/CTE compõem consultas enquanto engine escolhe algoritmos.",
+    "path": "09-bancos-de-dados/aulas/02-sql.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/02-sql.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "Álgebra relacional",
+    "description": "Álgebra relacional formaliza seleção, projeção, produto, join, união e diferença, permitindo reescritas equivalentes.",
+    "path": "09-bancos-de-dados/aulas/03-algebra-relacional.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/03-algebra-relacional.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "Storage pages",
+    "description": "Storage engine usa páginas fixas. Slotted pages separam diretório e payload para mover registros sem quebrar IDs lógicos.",
+    "path": "09-bancos-de-dados/aulas/04-storage-pages.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/04-storage-pages.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "Índices",
+    "description": "Índices trocam espaço/escrita por leitura. B+ Tree favorece equality/range; hash favorece equality; seletividade decide utilidade.",
+    "path": "09-bancos-de-dados/aulas/05-indices.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/05-indices.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "Query processing",
+    "description": "Query processing materializa scans, joins, sorts e agregações. Cada operador consome/produz tuples ou blocos.",
+    "path": "09-bancos-de-dados/aulas/06-query-processing.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/06-query-processing.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "Optimizer",
+    "description": "Optimizer estima cardinalidades/custos para escolher join order, índices e algoritmos. Estatísticas erradas geram planos ruins.",
+    "path": "09-bancos-de-dados/aulas/07-optimizer.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/07-optimizer.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "Transações",
+    "description": "Transação agrupa operações com atomicidade, consistência, isolamento e durabilidade implementados por logging e controle de concorrência.",
+    "path": "09-bancos-de-dados/aulas/08-transacoes.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/08-transacoes.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "MVCC e locks",
+    "description": "Locks controlam conflitos; MVCC mantém versões para reduzir bloqueio. Isolation levels definem anomalias permitidas.",
+    "path": "09-bancos-de-dados/aulas/09-mvcc-e-locks.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/09-mvcc-e-locks.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "Recovery/WAL",
+    "description": "WAL registra antes de páginas persistirem. Recovery aplica redo/undo conforme protocolo e checkpoints limitam trabalho.",
+    "path": "09-bancos-de-dados/aulas/10-recovery-wal.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/10-recovery-wal.md"
+  },
+  {
+    "module": "09",
+    "moduleTitle": "Bancos de dados",
+    "title": "NoSQL",
+    "description": "NoSQL inclui key-value, documento, wide-column e graph. Escolha depende de acesso, consistência e escala, não de moda.",
+    "path": "09-bancos-de-dados/aulas/11-nosql.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/aulas/11-nosql.md"
   },
   {
     "module": "10",
-    "title": "Parsing",
-    "description": "Tokens, gramáticas, precedência, AST e recursive descent.",
-    "path": "10-linguagens-e-compiladores/capitulos/03-parsing",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/capitulos/03-parsing"
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Implementação de linguagens",
+    "description": "Implementar linguagem exige sintaxe, semântica e runtime. Pipeline pode interpretar AST, executar bytecode ou gerar nativo.",
+    "path": "10-linguagens-e-compiladores/aulas/01-implementacao-de-linguagens.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/01-implementacao-de-linguagens.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Lexer",
+    "description": "Lexer transforma caracteres em tokens e resolve palavras-chave, identificadores, números e operadores preservando posição para erros.",
+    "path": "10-linguagens-e-compiladores/aulas/02-lexer.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/02-lexer.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Parser",
+    "description": "Parser verifica gramática e cria estrutura. Recursive descent e Pratt são técnicas úteis para precedência e associatividade.",
+    "path": "10-linguagens-e-compiladores/aulas/03-parser.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/03-parser.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "AST",
+    "description": "AST remove detalhes puramente sintáticos e preserva estrutura semântica para passes de análise/execução.",
+    "path": "10-linguagens-e-compiladores/aulas/04-ast.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/04-ast.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Interpretadores",
+    "description": "Interpretador avalia nós em ambiente. Runtime errors ocorrem depois de sintaxe válida e precisam de localização/contexto.",
+    "path": "10-linguagens-e-compiladores/aulas/05-interpretadores.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/05-interpretadores.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Escopo",
+    "description": "Escopo léxico resolve nomes pela estrutura do código. Ambientes encadeados implementam blocos, shadowing e closures.",
+    "path": "10-linguagens-e-compiladores/aulas/06-escopo.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/06-escopo.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Tipos",
+    "description": "Tipos classificam valores/operações. Checagem estática antecipa erros; dinâmica verifica no runtime; inferência deduz tipos.",
+    "path": "10-linguagens-e-compiladores/aulas/07-tipos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/07-tipos.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Bytecode e VM",
+    "description": "Bytecode é ISA virtual. VM stack-based simplifica encoding; dispatch interpreta opcodes, frames e operandos.",
+    "path": "10-linguagens-e-compiladores/aulas/08-bytecode-e-vm.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/08-bytecode-e-vm.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Compilação",
+    "description": "Compilação pode usar IR antes de assembly. IR facilita análise/otimização e separa frontend de backend.",
+    "path": "10-linguagens-e-compiladores/aulas/09-compilacao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/09-compilacao.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Garbage collection",
+    "description": "Garbage collection recupera inalcançáveis. Reference counting sofre ciclos; tracing mark-and-sweep lida com ciclos.",
+    "path": "10-linguagens-e-compiladores/aulas/10-garbage-collection.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/10-garbage-collection.md"
+  },
+  {
+    "module": "10",
+    "moduleTitle": "Linguagens e compiladores",
+    "title": "Otimizações",
+    "description": "Otimizações preservam semântica. Constant folding, DCE, inlining e CSE exigem provas/análises de segurança.",
+    "path": "10-linguagens-e-compiladores/aulas/11-otimizacoes.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/aulas/11-otimizacoes.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "APIs e contratos",
+    "description": "API é contrato. Pré/pós-condições, erros, idempotência e compatibilidade precisam ser explícitos para clientes.",
+    "path": "11-engenharia-de-software/aulas/01-apis-e-contratos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/01-apis-e-contratos.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Testes",
+    "description": "Unit testa unidade, integration combina componentes, property-based testa invariantes e E2E valida fluxo completo.",
+    "path": "11-engenharia-de-software/aulas/02-testes.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/02-testes.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Design e modularidade",
+    "description": "Coesão alta agrupa responsabilidades e acoplamento baixo reduz dependências. SOLID é heurística, não objetivo absoluto.",
+    "path": "11-engenharia-de-software/aulas/03-design-e-modularidade.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/03-design-e-modularidade.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Refatoração",
+    "description": "Refatoração muda estrutura sem mudar comportamento. Testes e passos pequenos tornam regressões localizáveis.",
+    "path": "11-engenharia-de-software/aulas/04-refatoracao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/04-refatoracao.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Observabilidade",
+    "description": "Logs são eventos, métricas são séries e traces conectam spans. Observabilidade deve permitir perguntas não previstas.",
+    "path": "11-engenharia-de-software/aulas/05-observabilidade.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/05-observabilidade.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Performance",
+    "description": "Performance exige profile antes de otimizar. Latência, throughput e percentis de cauda respondem perguntas diferentes.",
+    "path": "11-engenharia-de-software/aulas/06-performance.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/06-performance.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Build e dependências",
+    "description": "Build resolve dependências e produz artefatos reproduzíveis. Lockfiles, checksums e provenance protegem supply chain.",
+    "path": "11-engenharia-de-software/aulas/07-build-e-dependencias.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/07-build-e-dependencias.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "CI/CD",
+    "description": "CI valida mudanças e CD automatiza promoção/deploy. Pipeline deve ser determinístico e proteger ambientes/segredos.",
+    "path": "11-engenharia-de-software/aulas/08-ci-cd.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/08-ci-cd.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Versionamento",
+    "description": "Versionamento comunica compatibilidade. SemVer, migrations e deprecation ajudam evolução sem quebra abrupta.",
+    "path": "11-engenharia-de-software/aulas/09-versionamento.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/09-versionamento.md"
+  },
+  {
+    "module": "11",
+    "moduleTitle": "Engenharia de software",
+    "title": "Arquitetura",
+    "description": "Arquitetura define fronteiras. Monólito modular reduz complexidade operacional; microservices adicionam rede e consistência distribuída.",
+    "path": "11-engenharia-de-software/aulas/10-arquitetura.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/11-engenharia-de-software/aulas/10-arquitetura.md"
   },
   {
     "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
+    "title": "Concorrência vs paralelismo",
+    "description": "Concorrência trata tarefas em progresso; paralelismo executa simultaneamente. Um sistema pode ter um sem o outro.",
+    "path": "12-concorrencia-e-paralelismo/aulas/01-concorrencia-vs-paralelismo.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/01-concorrencia-vs-paralelismo.md"
+  },
+  {
+    "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
+    "title": "Threads",
+    "description": "Threads compartilham heap mas têm stacks/registros próprios. Context switch e sincronização têm custo.",
+    "path": "12-concorrencia-e-paralelismo/aulas/02-threads.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/02-threads.md"
+  },
+  {
+    "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
     "title": "Locks e atomics",
-    "description": "Race conditions, invariantes, mutexes e memory ordering.",
-    "path": "12-concorrencia-e-paralelismo/capitulos/03-locks-e-atomics",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/capitulos/03-locks-e-atomics"
+    "description": "Locks protegem seção crítica; atomics oferecem operações indivisíveis. Memory ordering define reordenações observáveis.",
+    "path": "12-concorrencia-e-paralelismo/aulas/03-locks-e-atomics.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/03-locks-e-atomics.md"
+  },
+  {
+    "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
+    "title": "Semáforos",
+    "description": "Semáforo conta permissões; condition variable dorme até condição mudar e deve ser usada com mutex e rechecagem em loop.",
+    "path": "12-concorrencia-e-paralelismo/aulas/04-semaforos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/04-semaforos.md"
+  },
+  {
+    "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
+    "title": "Lock-free",
+    "description": "Lock-free usa atomics como compare-and-swap para progresso global. ABA, reclamation e ordering tornam implementação difícil.",
+    "path": "12-concorrencia-e-paralelismo/aulas/05-lock-free.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/05-lock-free.md"
+  },
+  {
+    "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
+    "title": "Async/await",
+    "description": "Async/await estrutura concorrência cooperativa; event loop alterna tarefas durante espera de I/O. Bloquear o loop destrói escalabilidade.",
+    "path": "12-concorrencia-e-paralelismo/aulas/06-async-await.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/06-async-await.md"
+  },
+  {
+    "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
+    "title": "Multiprocessing",
+    "description": "Multiprocessing separa memória e usa IPC. Custa serialização, mas isola falhas e usa múltiplos cores em runtimes com GIL.",
+    "path": "12-concorrencia-e-paralelismo/aulas/07-multiprocessing.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/07-multiprocessing.md"
+  },
+  {
+    "module": "12",
+    "moduleTitle": "Concorrência e paralelismo",
+    "title": "SIMD",
+    "description": "SIMD aplica operação a múltiplos elementos. Layout, alinhamento e dependências decidem se vetorização é possível.",
+    "path": "12-concorrencia-e-paralelismo/aulas/08-simd.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/aulas/08-simd.md"
   },
   {
     "module": "13",
-    "title": "Consenso distribuído",
-    "description": "Safety, liveness, quorum e modelo de Raft.",
-    "path": "13-sistemas-distribuidos/capitulos/08-consensus",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/capitulos/08-consensus"
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Modelos de falha",
+    "description": "Modelo de falha define o que tolerar: crash-stop, recovery, omission, partition ou Byzantine. Garantia depende do modelo.",
+    "path": "13-sistemas-distribuidos/aulas/01-modelos-de-falha.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/01-modelos-de-falha.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Relógios",
+    "description": "Relógios físicos não sincronizam perfeitamente. Lamport captura ordem causal parcial e vector clocks distinguem concorrência.",
+    "path": "13-sistemas-distribuidos/aulas/02-relogios.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/02-relogios.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Replicação",
+    "description": "Replicação aumenta disponibilidade. Leader-based ordena facilmente; multi-leader/leaderless mudam conflitos e reconciliação.",
+    "path": "13-sistemas-distribuidos/aulas/03-replicacao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/03-replicacao.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Sharding",
+    "description": "Sharding divide por chave. Range favorece scans e pode gerar hotspot; hash distribui melhor e complica range.",
+    "path": "13-sistemas-distribuidos/aulas/04-sharding.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/04-sharding.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Consistência",
+    "description": "Consistência define observações permitidas: linearizability, sequential e eventual têm garantias e custos diferentes.",
+    "path": "13-sistemas-distribuidos/aulas/05-consistencia.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/05-consistencia.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "CAP/PACELC",
+    "description": "CAP: sob partição, disponibilidade total e consistência linearizável não coexistem. PACELC adiciona trade-off latência/consistência sem partição.",
+    "path": "13-sistemas-distribuidos/aulas/06-cap-pacelc.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/06-cap-pacelc.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Consensus",
+    "description": "Consensus produz sequência comum de decisões. Quorums intersectantes preservam informação; Raft usa termos, líder e log.",
+    "path": "13-sistemas-distribuidos/aulas/07-consensus.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/07-consensus.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Leader election",
+    "description": "Leader election precisa evitar split brain. Epoch/term permite rejeitar líderes antigos e mensagens obsoletas.",
+    "path": "13-sistemas-distribuidos/aulas/08-leader-election.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/08-leader-election.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Transações distribuídas",
+    "description": "Transação distribuída coordena participantes. 2PC pode bloquear; sagas usam passos e compensações.",
+    "path": "13-sistemas-distribuidos/aulas/09-transacoes-distribuidas.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/09-transacoes-distribuidas.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "Queues e logs",
+    "description": "Queues desacoplam; logs append-only preservam ordem por partição/replay. Delivery semantics dependem de efeitos externos.",
+    "path": "13-sistemas-distribuidos/aulas/10-queues-e-logs.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/10-queues-e-logs.md"
+  },
+  {
+    "module": "13",
+    "moduleTitle": "Sistemas distribuídos",
+    "title": "MapReduce",
+    "description": "MapReduce divide map e reduce; shuffle redistribui por chave e frequentemente domina I/O.",
+    "path": "13-sistemas-distribuidos/aulas/11-mapreduce.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/aulas/11-mapreduce.md"
   },
   {
     "module": "14",
-    "title": "Hashes, MAC e KDF",
-    "description": "Integridade, autenticidade, derivação e passwords.",
-    "path": "14-seguranca/capitulos/03-hashes-mac-kdf",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/capitulos/03-hashes-mac-kdf"
+    "moduleTitle": "Segurança de computadores",
+    "title": "Threat modeling",
+    "description": "Threat modeling identifica ativos, fronteiras, adversários e impactos antes dos controles. STRIDE ajuda a enumerar ameaças.",
+    "path": "14-seguranca/aulas/01-threat-modeling.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/01-threat-modeling.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Criptografia simétrica",
+    "description": "Criptografia simétrica usa segredo compartilhado. AEAD como AES-GCM/ChaCha20-Poly1305 combina confidencialidade e autenticação.",
+    "path": "14-seguranca/aulas/02-criptografia-simetrica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/02-criptografia-simetrica.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Hashes/MAC/KDF",
+    "description": "Hash não tem chave; MAC autentica com segredo; KDF deriva chaves. Password hashing usa função cara e salt único.",
+    "path": "14-seguranca/aulas/03-hashes-mac-kdf.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/03-hashes-mac-kdf.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Assimétrica",
+    "description": "Assimétrica usa chave pública/privada. Protocolos híbridos usam key agreement/assinatura para estabelecer chaves simétricas.",
+    "path": "14-seguranca/aulas/04-assimetrica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/04-assimetrica.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Assinaturas",
+    "description": "Assinatura usa privada para assinar e pública para verificar. Contexto e nonces adequados evitam reutilização perigosa.",
+    "path": "14-seguranca/aulas/05-assinaturas.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/05-assinaturas.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "PKI",
+    "description": "PKI liga identidade a chave por certificados e CAs. Validação inclui cadeia, hostname, validade, política e revogação.",
+    "path": "14-seguranca/aulas/06-pki.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/06-pki.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "TLS",
+    "description": "TLS negocia parâmetros, autentica e deriva chaves de tráfego; registros AEAD protegem a aplicação.",
+    "path": "14-seguranca/aulas/07-tls.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/07-tls.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "AuthN/AuthZ",
+    "description": "Authentication prova identidade; authorization decide permissão. Sessions, OAuth e OIDC resolvem partes distintas.",
+    "path": "14-seguranca/aulas/08-authn-authz.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/08-authn-authz.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Web security",
+    "description": "Web security cobre XSS, CSRF, injection, SSRF e sessão. Cada ameaça exige controle apropriado, não uma defesa universal.",
+    "path": "14-seguranca/aulas/09-web-security.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/09-web-security.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Memory safety",
+    "description": "Memory safety impede acesso fora de bounds/lifetime. Rust verifica ownership/borrowing estaticamente, mas não elimina falhas lógicas.",
+    "path": "14-seguranca/aulas/10-memory-safety.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/10-memory-safety.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Sandboxing",
+    "description": "Sandboxing reduz privilégios com isolamento, seccomp, namespaces, capabilities e políticas.",
+    "path": "14-seguranca/aulas/11-sandboxing.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/11-sandboxing.md"
+  },
+  {
+    "module": "14",
+    "moduleTitle": "Segurança de computadores",
+    "title": "Secure coding",
+    "description": "Secure coding inclui validação, least privilege, segredos, logs seguros, atualização e design fail-safe.",
+    "path": "14-seguranca/aulas/12-secure-coding.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/aulas/12-secure-coding.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "Do URL ao pixel",
+    "description": "URL→pixel passa por URL parsing, DNS, conexão, TLS, HTTP, HTML/CSS, JS, layout, paint e compositing.",
+    "path": "15-web-e-internet/aulas/01-do-url-ao-pixel.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/01-do-url-ao-pixel.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "HTML e DOM",
+    "description": "HTML forma DOM semântico. Elementos corretos melhoram estrutura/acessibilidade e parser segue regras mesmo com markup imperfeito.",
+    "path": "15-web-e-internet/aulas/02-html-e-dom.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/02-html-e-dom.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "CSS",
+    "description": "CSS usa cascade, inheritance e specificity. Flexbox é unidimensional, Grid bidimensional; mudanças podem provocar reflow.",
+    "path": "15-web-e-internet/aulas/03-css.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/03-css.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "JavaScript e event loop",
+    "description": "JavaScript usa call stack, event loop, task queues e microtasks. Promise agenda continuação sem bloquear I/O.",
+    "path": "15-web-e-internet/aulas/04-javascript-e-event-loop.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/04-javascript-e-event-loop.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "Backend",
+    "description": "Backend faz routing, middleware, regras e dados. Separar HTTP, domínio e persistência reduz acoplamento.",
+    "path": "15-web-e-internet/aulas/05-backend.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/05-backend.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "REST/RPC/GraphQL",
+    "description": "REST modela recursos, RPC chamadas e GraphQL seleção de campos. Cada estilo troca simplicidade, controle e acoplamento.",
+    "path": "15-web-e-internet/aulas/06-rest-rpc-graphql.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/06-rest-rpc-graphql.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "Caching e CDNs",
+    "description": "Cache reduz latência/carga e cria invalidação. Cache-Control, ETag e CDN operam em camadas; chave/TTL precisam refletir variantes.",
+    "path": "15-web-e-internet/aulas/07-caching-e-cdns.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/07-caching-e-cdns.md"
+  },
+  {
+    "module": "15",
+    "moduleTitle": "Web e Internet",
+    "title": "WebSockets",
+    "description": "WebSocket mantém conexão bidirecional. Realtime exige heartbeat, backpressure, reconexão e escala de conexões.",
+    "path": "15-web-e-internet/aulas/08-websockets.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/15-web-e-internet/aulas/08-websockets.md"
   },
   {
     "module": "16",
-    "title": "P, NP, NP-hard e NP-complete",
-    "description": "Classes de problemas, verificação e reduções.",
-    "path": "16-teoria-da-computacao/capitulos/08-classes-de-complexidade",
-    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/capitulos/08-classes-de-complexidade"
+    "moduleTitle": "Teoria da computação",
+    "title": "Linguagens formais",
+    "description": "Linguagem formal é conjunto de strings sobre alfabeto. Reconhecedores decidem pertinência e geradores descrevem strings válidas.",
+    "path": "16-teoria-da-computacao/aulas/01-linguagens-formais.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/01-linguagens-formais.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "Autômatos",
+    "description": "DFA tem uma transição por símbolo; NFA permite múltiplas/ε. Ambos reconhecem linguagens regulares e subset construction converte NFA→DFA.",
+    "path": "16-teoria-da-computacao/aulas/02-automatos.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/02-automatos.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "Regex",
+    "description": "Regex formal usa união, concatenação e estrela para linguagens regulares. Engines modernas podem acrescentar recursos não regulares.",
+    "path": "16-teoria-da-computacao/aulas/03-regex.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/03-regex.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "CFGs",
+    "description": "CFG usa produções A→α e descreve estruturas aninhadas. Ambiguidade ocorre quando uma string tem múltiplas derivações estruturais.",
+    "path": "16-teoria-da-computacao/aulas/04-cfgs.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/04-cfgs.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "Máquinas de Turing",
+    "description": "Máquina de Turing usa fita, cabeça, estados e transição; serve como modelo universal de computabilidade.",
+    "path": "16-teoria-da-computacao/aulas/05-maquinas-de-turing.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/05-maquinas-de-turing.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "Computabilidade",
+    "description": "Computabilidade separa funções com algoritmo das impossíveis genericamente. Enumerabilidade/reduções comparam poder.",
+    "path": "16-teoria-da-computacao/aulas/06-computabilidade.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/06-computabilidade.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "Problema da parada",
+    "description": "Problema da parada não possui decisor geral; a prova usa auto-referência para obter contradição.",
+    "path": "16-teoria-da-computacao/aulas/07-problema-da-parada.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/07-problema-da-parada.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "P/NP",
+    "description": "P contém decisão polinomial e NP certificados verificáveis em tempo polinomial. Ainda não se sabe P=NP.",
+    "path": "16-teoria-da-computacao/aulas/08-p-np.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/08-p-np.md"
+  },
+  {
+    "module": "16",
+    "moduleTitle": "Teoria da computação",
+    "title": "Reduções",
+    "description": "Redução polinomial transforma A em B preservando resposta. Para provar B difícil, reduz-se problema difícil conhecido a B.",
+    "path": "16-teoria-da-computacao/aulas/09-reducoes.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/aulas/09-reducoes.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "Computação gráfica",
+    "description": "Gráficos usa vetores/matrizes/projeções. Rasterization converte primitivas em fragments; ray tracing resolve interseções de raios.",
+    "path": "17-topicos-avancados/aulas/01-computacao-grafica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/01-computacao-grafica.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "IA clássica",
+    "description": "IA clássica inclui busca, CSP, minimax e heurísticas. Representação de estado e função de custo dominam desempenho.",
+    "path": "17-topicos-avancados/aulas/02-ia-classica.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/02-ia-classica.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "ML por dentro",
+    "description": "ML começa com loss e otimização. Gradiente dá direção local e backprop aplica regra da cadeia em DAG de operações.",
+    "path": "17-topicos-avancados/aulas/03-ml-por-dentro.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/03-ml-por-dentro.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "Storage avançado",
+    "description": "Storage avançado usa LSM para writes sequenciais, Bloom para negativas e compaction com write amplification.",
+    "path": "17-topicos-avancados/aulas/04-storage-avancado.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/04-storage-avancado.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "Cloud",
+    "description": "Cloud combina virtualização, rede, storage e automação. Load balancing, discovery, autoscaling e orchestration lidam com mudança.",
+    "path": "17-topicos-avancados/aulas/05-cloud.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/05-cloud.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "Rust",
+    "description": "Rust usa ownership, borrowing e lifetimes para verificar várias classes de memória sem GC.",
+    "path": "17-topicos-avancados/aulas/06-rust.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/06-rust.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "Information retrieval",
+    "description": "Information retrieval usa inverted index e ranking. TF-IDF/BM25 ponderam frequência/raridade e analyzers normalizam texto.",
+    "path": "17-topicos-avancados/aulas/07-information-retrieval.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/07-information-retrieval.md"
+  },
+  {
+    "module": "17",
+    "moduleTitle": "Tópicos avançados",
+    "title": "Compressão",
+    "description": "Compressão explora redundância. Huffman usa códigos prefix-free; LZ usa referências; entropy limita custo médio sob modelo.",
+    "path": "17-topicos-avancados/aulas/08-compressao.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/17-topicos-avancados/aulas/08-compressao.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Mini computador",
+    "description": "Mini computador integra portas, registradores, ALU, memória, CPU e assembler para executar programa explicável bit a bit.",
+    "path": "18-projetos-finais/aulas/01-mini-computador.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/01-mini-computador.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Mini SO",
+    "description": "Mini SO integra boot, interrupções, scheduler, memória e filesystem mínimos em hardware/emulador.",
+    "path": "18-projetos-finais/aulas/02-mini-so.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/02-mini-so.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Banco de dados",
+    "description": "Banco capstone combina páginas, B+ Tree, SQL, executor, transações e WAL, incluindo recovery após restart.",
+    "path": "18-projetos-finais/aulas/03-banco-de-dados.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/03-banco-de-dados.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Redis-like",
+    "description": "Redis-like foca protocolo, event loop, estruturas em memória, expiração e persistência sob baixa latência.",
+    "path": "18-projetos-finais/aulas/04-redis-like.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/04-redis-like.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Git-like",
+    "description": "Git-like integra content-addressed storage, trees, commits, refs, checkout e merge por ancestralidade.",
+    "path": "18-projetos-finais/aulas/05-git-like.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/05-git-like.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Container runtime",
+    "description": "Container runtime usa namespaces, cgroups, mounts e init para compor isolamento com primitivas Linux.",
+    "path": "18-projetos-finais/aulas/06-container-runtime.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/06-container-runtime.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Linguagem",
+    "description": "Linguagem integra lexer, parser, AST, nomes, runtime/VM e GC opcional sob uma especificação.",
+    "path": "18-projetos-finais/aulas/07-linguagem.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/07-linguagem.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Distributed KV store",
+    "description": "Distributed KV store combina rede, sharding, replicação, persistência e consenso opcional, testando falhas.",
+    "path": "18-projetos-finais/aulas/08-distributed-kv-store.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/08-distributed-kv-store.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Search engine",
+    "description": "Search engine combina tokenizer, inverted index, ranking, persistência e API, medindo relevância e latência.",
+    "path": "18-projetos-finais/aulas/09-search-engine.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/09-search-engine.md"
+  },
+  {
+    "module": "18",
+    "moduleTitle": "Projetos finais integradores",
+    "title": "Stack web completo",
+    "description": "Stack web completo conecta navegador, API, auth, banco, cache e observabilidade e documenta request path e ameaças.",
+    "path": "18-projetos-finais/aulas/10-stack-web-completo.md",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/aulas/10-stack-web-completo.md"
   }
 ]
