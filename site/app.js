@@ -6,6 +6,8 @@ const state = {
 };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
+const lessonUrl = (lesson) => './aulas/' + lesson.path.split('/')[0] + '/' + lesson.path.split('/').pop().replace(/\.md$/, '') + '/';
+const lessonDone = (lesson) => localStorage.getItem('cc0:lesson:' + lesson.path) === 'done';
 
 async function loadData() {
   const responses = await Promise.all([
@@ -59,10 +61,10 @@ function renderLessons() {
   const visible = filtered.slice(0, state.visibleLessons);
   $('#lessonMeta').textContent = filtered.length + ' aulas encontradas · exibindo ' + visible.length;
   $('#lessonGrid').innerHTML = visible.map((lesson) =>
-    '<a class="project-card" href="' + escapeAttribute(lesson.url) + '" target="_blank" rel="noreferrer">' +
-    '<span class="source">MÓDULO ' + escapeHtml(lesson.module) + ' · AUTORAL</span>' +
+    '<a class="project-card" href="' + escapeAttribute(lessonUrl(lesson)) + '">' +
+    '<span class="source">MÓDULO ' + escapeHtml(lesson.module) + ' · ' + (lessonDone(lesson) ? 'CONCLUÍDA ✓' : 'AULA') + '</span>' +
     '<h3>' + escapeHtml(lesson.title) + '</h3>' +
-    '<p>' + escapeHtml(lesson.description) + ' ↗</p></a>'
+    '<p>' + escapeHtml(lesson.description) + ' →</p></a>'
   ).join('');
   $('#lessonLoadMore').style.display = visible.length < filtered.length ? 'flex' : 'none';
 }
@@ -79,21 +81,18 @@ function renderCapstones() {
 function renderCurriculum() {
   const filtered = state.curriculum.filter((module) => state.level === 'all' || module.level === state.level);
   $('#curriculumGrid').innerHTML = filtered.map((module) => {
-    const done = localStorage.getItem('cc0:' + module.id) === 'done';
+    const lessons = state.lessons.filter((lesson) => lesson.module === module.id);
+    const completed = lessons.filter(lessonDone).length;
+    const firstLesson = lessons[0];
     const sample = module.chapters.slice(0,4).map((chapter) => '<li>' + escapeHtml(chapter) + '</li>').join('');
     return '<article id="module-' + module.id + '" class="curriculum-card">' +
       '<div class="top"><span class="module-num">MÓDULO ' + module.id + '</span><span class="level">' + escapeHtml(module.level) + '</span></div>' +
       '<h3>' + escapeHtml(module.title) + '</h3><p>' + module.chapters.length + ' capítulos · ' + escapeHtml(module.hours) + '</p>' +
       '<ul>' + sample + '</ul><div class="card-footer"><small>' + escapeHtml(module.projects.join(' · ')) + '</small>' +
-      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/blob/main/' + encodeURIComponent(module.slug) + '/AULAS.md" target="_blank" rel="noreferrer">Aulas ↗</a>' +
+      '<span>' + (firstLesson ? '<a class="module-open" href="' + escapeAttribute(lessonUrl(firstLesson)) + '">Ler aulas →</a>' : '') +
       '<a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/blob/main/' + encodeURIComponent(module.slug) + '/LABORATORIOS.md" target="_blank" rel="noreferrer">Labs ↗</a>' +
-      '<button class="complete-toggle ' + (done ? 'done' : '') + '" data-module="' + module.id + '">' + (done ? 'Concluído ✓' : 'Concluir') + '</button></span></div></article>';
+      '<span class="module-progress">' + completed + '/' + lessons.length + ' aulas</span></span></div></article>';
   }).join('');
-  $$('.complete-toggle').forEach((button) => button.addEventListener('click', () => {
-    const key = 'cc0:' + button.dataset.module;
-    localStorage.setItem(key, localStorage.getItem(key) === 'done' ? '' : 'done');
-    renderCurriculum(); updateProgress();
-  }));
 }
 
 function populateCategories() {
@@ -133,9 +132,9 @@ function renderVendors(counts) {
 }
 
 function updateProgress() {
-  const done = state.curriculum.filter((module) => localStorage.getItem('cc0:' + module.id) === 'done').length;
-  const percent = state.curriculum.length ? Math.round((done / state.curriculum.length) * 100) : 0;
-  $('#progressText').textContent = percent + '% concluído · ' + done + '/' + state.curriculum.length + ' módulos';
+  const done = state.lessons.filter(lessonDone).length;
+  const percent = state.lessons.length ? Math.round((done / state.lessons.length) * 100) : 0;
+  $('#progressText').textContent = percent + '% concluído · ' + done + '/' + state.lessons.length + ' aulas';
   $('#progressBar').style.width = percent + '%';
 }
 function escapeHtml(value){return String(value).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
@@ -161,7 +160,12 @@ $('#sourceFilter').addEventListener('change',(event)=>{state.source=event.target
 $('#categoryFilter').addEventListener('change',(event)=>{state.category=event.target.value;state.visibleProjects=36;renderProjects();});
 $('#loadMore').addEventListener('click',()=>{state.visibleProjects+=36;renderProjects();});
 $('#globalSearch').addEventListener('input',(event)=>{
-  const q=event.target.value.trim(); if(!q)return;
-  state.projectQuery=q; $('#projectSearch').value=q; location.hash='#projetos'; renderProjects();
+  const q=event.target.value.trim();
+  state.lessonQuery=q; $('#lessonSearch').value=q; state.visibleLessons=24; renderLessons();
+  state.projectQuery=q; $('#projectSearch').value=q; state.visibleProjects=36; renderProjects();
+  if(q) location.hash='#aulas';
+});
+window.addEventListener('pageshow', () => {
+  if (state.lessons.length) { renderLessons(); renderCurriculum(); updateProgress(); }
 });
 loadData().catch((error)=>{$('#projectMeta').textContent=error.message;console.error(error);});

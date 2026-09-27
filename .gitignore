@@ -1,0 +1,4 @@
+# As páginas de aula são geradas a partir dos arquivos Markdown no deploy.
+/site/aulas/
+__pycache__/
+*.pyc
