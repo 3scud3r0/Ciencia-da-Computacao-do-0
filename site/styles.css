@@ -49,3 +49,7 @@ footer{max-width:1220px;margin:0 auto;padding:32px 48px 56px;border-top:1px soli
 @media(max-width:700px){.section{padding:50px 20px}.main-nav{grid-template-columns:repeat(2,1fr)}.hero{min-height:auto}.stats{margin:0 20px;grid-template-columns:repeat(2,1fr)}.stats article:nth-child(2){border-right:0}.stats article{border-bottom:1px solid var(--line)}.section-heading{align-items:start;flex-direction:column}.feature-grid,.curriculum-grid,.project-grid,.resource-grid{grid-template-columns:1fr}.project-toolbar{grid-template-columns:1fr}.hero-actions{flex-direction:column}.code-window pre{font-size:.8rem}.sidebar{padding:16px}.sidebar-search{order:3}footer{padding:28px 20px}}
 
 .module-open{display:inline-block;color:#75c2ff;font-size:.72rem;padding:6px 8px}.module-open:hover{color:#fff}.card-footer>span{display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+
+#aulas .project-card{min-height:145px}
+#biblioteca .project-card{min-height:125px}
+#biblioteca .load-more{width:max-content}

@@ -1,39 +1,33 @@
 'use strict';
 
 const state = {
-  curriculum: [],
-  projects: [],
-  visibleProjects: 36,
-  level: 'all',
-  source: 'all',
-  category: 'all',
-  projectQuery: ''
+  curriculum: [], projects: [], lessons: [], vendors: [],
+  visibleProjects: 36, level: 'all', source: 'all', category: 'all', projectQuery: ''
 };
-
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 
 async function loadData() {
-  const [curriculumResponse, projectResponse] = await Promise.all([
+  const responses = await Promise.all([
     fetch('./data/curriculum.json'),
-    fetch('./data/projects.json')
+    fetch('./data/projects.json'),
+    fetch('./data/lessons.json'),
+    fetch('./data/vendor-summary.json')
   ]);
-  if (!curriculumResponse.ok || !projectResponse.ok) {
-    throw new Error('Falha ao carregar os dados do site.');
-  }
-  state.curriculum = await curriculumResponse.json();
-  const payload = await projectResponse.json();
-  state.projects = payload.projects;
+  if (responses.some((response) => !response.ok)) throw new Error('Falha ao carregar os dados do site.');
+  state.curriculum = await responses[0].json();
+  const projectPayload = await responses[1].json();
+  state.projects = projectPayload.projects;
+  state.lessons = await responses[2].json();
+  const vendorPayload = await responses[3].json();
+  state.vendors = vendorPayload.sources;
 
   $('#moduleCount').textContent = state.curriculum.length;
   $('#chapterCount').textContent = state.curriculum.reduce((sum, m) => sum + m.chapters.length, 0);
-  $('#projectCount').textContent = payload.counts.total;
+  $('#projectCount').textContent = projectPayload.counts.total;
 
-  renderSidebar();
-  renderCurriculum();
-  populateCategories();
-  renderProjects();
-  updateProgress();
+  renderSidebar(); renderLessons(); renderCurriculum(); populateCategories(); renderProjects();
+  renderVendors(vendorPayload.counts); updateProgress();
 }
 
 function renderSidebar() {
@@ -42,31 +36,31 @@ function renderSidebar() {
   ).join('');
 }
 
-function renderCurriculum() {
-  const filtered = state.curriculum.filter((module) =>
-    state.level === 'all' || module.level === state.level
-  );
+function renderLessons() {
+  $('#lessonGrid').innerHTML = state.lessons.map((lesson) =>
+    '<a class="project-card" href="' + escapeAttribute(lesson.url) + '" target="_blank" rel="noreferrer">' +
+    '<span class="source">MÓDULO ' + escapeHtml(lesson.module) + ' · AUTORAL</span>' +
+    '<h3>' + escapeHtml(lesson.title) + '</h3>' +
+    '<p>' + escapeHtml(lesson.description) + ' ↗</p></a>'
+  ).join('');
+}
 
+function renderCurriculum() {
+  const filtered = state.curriculum.filter((module) => state.level === 'all' || module.level === state.level);
   $('#curriculumGrid').innerHTML = filtered.map((module) => {
     const done = localStorage.getItem('cc0:' + module.id) === 'done';
-    const sampleChapters = module.chapters.slice(0, 4).map((chapter) => '<li>' + escapeHtml(chapter) + '</li>').join('');
+    const sample = module.chapters.slice(0,4).map((chapter) => '<li>' + escapeHtml(chapter) + '</li>').join('');
     return '<article id="module-' + module.id + '" class="curriculum-card">' +
       '<div class="top"><span class="module-num">MÓDULO ' + module.id + '</span><span class="level">' + escapeHtml(module.level) + '</span></div>' +
-      '<h3>' + escapeHtml(module.title) + '</h3>' +
-      '<p>' + module.chapters.length + ' capítulos · ' + escapeHtml(module.hours) + '</p>' +
-      '<ul>' + sampleChapters + '</ul>' +
-      '<div class="card-footer"><small>' + escapeHtml(module.projects.join(' · ')) + '</small>' +
-      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/' + encodeURIComponent(module.slug) + '" target="_blank" rel="noreferrer">Abrir módulo ↗</a> ' +
-      '<button class="complete-toggle ' + (done ? 'done' : '') + '" data-module="' + module.id + '">' + (done ? 'Concluído ✓' : 'Concluir') + '</button></span></div>' +
-      '</article>';
+      '<h3>' + escapeHtml(module.title) + '</h3><p>' + module.chapters.length + ' capítulos · ' + escapeHtml(module.hours) + '</p>' +
+      '<ul>' + sample + '</ul><div class="card-footer"><small>' + escapeHtml(module.projects.join(' · ')) + '</small>' +
+      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/' + encodeURIComponent(module.slug) + '" target="_blank" rel="noreferrer">Abrir módulo ↗</a>' +
+      '<button class="complete-toggle ' + (done ? 'done' : '') + '" data-module="' + module.id + '">' + (done ? 'Concluído ✓' : 'Concluir') + '</button></span></div></article>';
   }).join('');
-
   $$('.complete-toggle').forEach((button) => button.addEventListener('click', () => {
     const key = 'cc0:' + button.dataset.module;
-    const done = localStorage.getItem(key) === 'done';
-    localStorage.setItem(key, done ? '' : 'done');
-    renderCurriculum();
-    updateProgress();
+    localStorage.setItem(key, localStorage.getItem(key) === 'done' ? '' : 'done');
+    renderCurriculum(); updateProgress();
   }));
 }
 
@@ -81,23 +75,29 @@ function filteredProjects() {
   return state.projects.filter((project) => {
     const haystack = (project.title + ' ' + project.category + ' ' + project.source).toLowerCase();
     return (state.source === 'all' || project.source === state.source) &&
-      (state.category === 'all' || project.category === state.category) &&
-      (!q || haystack.includes(q));
+      (state.category === 'all' || project.category === state.category) && (!q || haystack.includes(q));
   });
 }
 
 function renderProjects() {
-  const filtered = filteredProjects();
-  const visible = filtered.slice(0, state.visibleProjects);
+  const filtered = filteredProjects(), visible = filtered.slice(0,state.visibleProjects);
   $('#projectMeta').textContent = filtered.length + ' projetos encontrados · exibindo ' + visible.length;
   $('#projectGrid').innerHTML = visible.map((project) =>
     '<a class="project-card" href="' + escapeAttribute(project.url) + '" target="_blank" rel="noreferrer">' +
-      '<span class="source">' + escapeHtml(project.source) + '</span>' +
-      '<h3>' + escapeHtml(project.title) + '</h3>' +
-      '<p>' + escapeHtml(project.category) + ' ↗</p>' +
-    '</a>'
+    '<span class="source">' + escapeHtml(project.source) + '</span><h3>' + escapeHtml(project.title) + '</h3>' +
+    '<p>' + escapeHtml(project.category) + ' ↗</p></a>'
   ).join('');
   $('#loadMore').style.display = visible.length < filtered.length ? 'flex' : 'none';
+}
+
+function renderVendors(counts) {
+  $('#vendorMeta').textContent = counts.total + ' snapshots no repositório · ' + counts.community +
+    ' importados da auditoria comunitária · ' + counts.skipped + ' fontes não copiadas';
+  $('#vendorGrid').innerHTML = state.vendors.slice(0,18).map((source) =>
+    '<a class="project-card" href="' + escapeAttribute(source.url) + '" target="_blank" rel="noreferrer">' +
+    '<span class="source">' + escapeHtml(source.license_spdx || 'licença preservada') + '</span>' +
+    '<h3>' + escapeHtml(source.repository) + '</h3><p>Snapshot local ↗</p></a>'
+  ).join('');
 }
 
 function updateProgress() {
@@ -106,49 +106,21 @@ function updateProgress() {
   $('#progressText').textContent = percent + '% concluído · ' + done + '/' + state.curriculum.length + ' módulos';
   $('#progressBar').style.width = percent + '%';
 }
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+function escapeAttribute(value){return escapeHtml(value);}
 
-function escapeHtml(value) {
-  return String(value).replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
-}
-function escapeAttribute(value) { return escapeHtml(value); }
-
-$('#levelFilters').addEventListener('click', (event) => {
-  const button = event.target.closest('[data-level]');
-  if (!button) return;
-  state.level = button.dataset.level;
-  $$('#levelFilters .filter').forEach((item) => item.classList.toggle('active', item === button));
+$('#levelFilters').addEventListener('click',(event)=>{
+  const button=event.target.closest('[data-level]'); if(!button)return;
+  state.level=button.dataset.level;
+  $$('#levelFilters .filter').forEach((item)=>item.classList.toggle('active',item===button));
   renderCurriculum();
 });
-
-$('#projectSearch').addEventListener('input', (event) => {
-  state.projectQuery = event.target.value;
-  state.visibleProjects = 36;
-  renderProjects();
+$('#projectSearch').addEventListener('input',(event)=>{state.projectQuery=event.target.value;state.visibleProjects=36;renderProjects();});
+$('#sourceFilter').addEventListener('change',(event)=>{state.source=event.target.value;state.visibleProjects=36;renderProjects();});
+$('#categoryFilter').addEventListener('change',(event)=>{state.category=event.target.value;state.visibleProjects=36;renderProjects();});
+$('#loadMore').addEventListener('click',()=>{state.visibleProjects+=36;renderProjects();});
+$('#globalSearch').addEventListener('input',(event)=>{
+  const q=event.target.value.trim(); if(!q)return;
+  state.projectQuery=q; $('#projectSearch').value=q; location.hash='#projetos'; renderProjects();
 });
-$('#sourceFilter').addEventListener('change', (event) => {
-  state.source = event.target.value;
-  state.visibleProjects = 36;
-  renderProjects();
-});
-$('#categoryFilter').addEventListener('change', (event) => {
-  state.category = event.target.value;
-  state.visibleProjects = 36;
-  renderProjects();
-});
-$('#loadMore').addEventListener('click', () => {
-  state.visibleProjects += 36;
-  renderProjects();
-});
-$('#globalSearch').addEventListener('input', (event) => {
-  const q = event.target.value.trim();
-  if (!q) return;
-  state.projectQuery = q;
-  $('#projectSearch').value = q;
-  location.hash = '#projetos';
-  renderProjects();
-});
-
-loadData().catch((error) => {
-  $('#projectMeta').textContent = error.message;
-  console.error(error);
-});
+loadData().catch((error)=>{$('#projectMeta').textContent=error.message;console.error(error);});

@@ -1,0 +1,107 @@
+[
+  {
+    "module": "00",
+    "title": "Como um computador executa um programa",
+    "description": "Processos, memória, instruções e syscalls.",
+    "path": "00-como-estudar/capitulos/01-como-um-computador-executa",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/00-como-estudar/capitulos/01-como-um-computador-executa"
+  },
+  {
+    "module": "02",
+    "title": "Bits, bytes e bases numéricas",
+    "description": "Representação, hexadecimal, bitwise e overflow.",
+    "path": "02-c-e-memoria/capitulos/01-bits-bytes-e-bases",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/capitulos/01-bits-bytes-e-bases"
+  },
+  {
+    "module": "02",
+    "title": "Ponteiros",
+    "description": "Endereços, dereference, lifetime, stack e heap.",
+    "path": "02-c-e-memoria/capitulos/04-ponteiros",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/02-c-e-memoria/capitulos/04-ponteiros"
+  },
+  {
+    "module": "04",
+    "title": "Hash tables",
+    "description": "Hashing, colisões, probing, tombstones e load factor.",
+    "path": "04-estruturas-de-dados/capitulos/04-hash-tables",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/04-estruturas-de-dados/capitulos/04-hash-tables"
+  },
+  {
+    "module": "05",
+    "title": "Análise assintótica",
+    "description": "O, Ω, Θ, logaritmos e análise amortizada.",
+    "path": "05-algoritmos/capitulos/01-analise-assintotica",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/05-algoritmos/capitulos/01-analise-assintotica"
+  },
+  {
+    "module": "06",
+    "title": "CPU: fetch, decode, execute",
+    "description": "ISA, registradores, ALU, memória e ciclo de instrução.",
+    "path": "06-arquitetura-de-computadores/capitulos/05-cpu",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/06-arquitetura-de-computadores/capitulos/05-cpu"
+  },
+  {
+    "module": "07",
+    "title": "Processos",
+    "description": "Espaço virtual, scheduling, fork/exec e contexto.",
+    "path": "07-sistemas-operacionais/capitulos/02-processos",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/07-sistemas-operacionais/capitulos/02-processos"
+  },
+  {
+    "module": "08",
+    "title": "TCP",
+    "description": "Sequência, ACK, retransmissão, fluxo e congestionamento.",
+    "path": "08-redes/capitulos/07-tcp",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/capitulos/07-tcp"
+  },
+  {
+    "module": "08",
+    "title": "HTTP",
+    "description": "Mensagens, framing, métodos, status e versões.",
+    "path": "08-redes/capitulos/09-http",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/08-redes/capitulos/09-http"
+  },
+  {
+    "module": "09",
+    "title": "Índices de banco de dados",
+    "description": "B+ Trees, páginas, range scans e custo de escrita.",
+    "path": "09-bancos-de-dados/capitulos/05-indices",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/09-bancos-de-dados/capitulos/05-indices"
+  },
+  {
+    "module": "10",
+    "title": "Parsing",
+    "description": "Tokens, gramáticas, precedência, AST e recursive descent.",
+    "path": "10-linguagens-e-compiladores/capitulos/03-parsing",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/10-linguagens-e-compiladores/capitulos/03-parsing"
+  },
+  {
+    "module": "12",
+    "title": "Locks e atomics",
+    "description": "Race conditions, invariantes, mutexes e memory ordering.",
+    "path": "12-concorrencia-e-paralelismo/capitulos/03-locks-e-atomics",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/12-concorrencia-e-paralelismo/capitulos/03-locks-e-atomics"
+  },
+  {
+    "module": "13",
+    "title": "Consenso distribuído",
+    "description": "Safety, liveness, quorum e modelo de Raft.",
+    "path": "13-sistemas-distribuidos/capitulos/08-consensus",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/13-sistemas-distribuidos/capitulos/08-consensus"
+  },
+  {
+    "module": "14",
+    "title": "Hashes, MAC e KDF",
+    "description": "Integridade, autenticidade, derivação e passwords.",
+    "path": "14-seguranca/capitulos/03-hashes-mac-kdf",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/14-seguranca/capitulos/03-hashes-mac-kdf"
+  },
+  {
+    "module": "16",
+    "title": "P, NP, NP-hard e NP-complete",
+    "description": "Classes de problemas, verificação e reduções.",
+    "path": "16-teoria-da-computacao/capitulos/08-classes-de-complexidade",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/16-teoria-da-computacao/capitulos/08-classes-de-complexidade"
+  }
+]

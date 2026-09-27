@@ -1,0 +1,280 @@
+{
+  "counts": {
+    "core": 5,
+    "community": 30,
+    "total": 35,
+    "skipped": 25
+  },
+  "sources": [
+    {
+      "repository": "TheAlgorithms/Python",
+      "license_spdx": "MIT",
+      "path": "vendor/thealgorithms-python",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/thealgorithms-python"
+    },
+    {
+      "repository": "TheAlgorithms/Algorithms-Explanation",
+      "license_spdx": "MIT",
+      "path": "vendor/algorithms-explanation",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/algorithms-explanation"
+    },
+    {
+      "repository": "practical-tutorials/project-based-learning",
+      "license_spdx": "MIT",
+      "path": "vendor/project-based-learning",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/project-based-learning"
+    },
+    {
+      "repository": "davecom/ComputerScienceFromScratch",
+      "license_spdx": "Apache-2.0",
+      "path": "vendor/computer-science-from-scratch",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/computer-science-from-scratch"
+    },
+    {
+      "repository": "jwasham/coding-interview-university",
+      "license_spdx": "CC-BY-SA-4.0",
+      "path": "vendor/coding-interview-university",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/coding-interview-university"
+    },
+    {
+      "repository": "antoaravinth/lets-build-express",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/antoaravinth__lets-build-express",
+      "license_spdx": "MIT",
+      "size_kb": 649,
+      "upstream_commit": "5a3ba64c6b2cef29eff483a0e14e2d7b12266f16",
+      "path": "vendor/community/antoaravinth__lets-build-express"
+    },
+    {
+      "repository": "buildthingsuseful/build-your-own-kafka",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/buildthingsuseful__build-your-own-kafka",
+      "license_spdx": "MIT",
+      "size_kb": 28,
+      "upstream_commit": "c14e4e8dc31a05d779c2fbf4097c3ffdcc87571e",
+      "path": "vendor/community/buildthingsuseful__build-your-own-kafka"
+    },
+    {
+      "repository": "cfenollosa/os-tutorial",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/cfenollosa__os-tutorial",
+      "license_spdx": "BSD-3-Clause",
+      "size_kb": 107,
+      "upstream_commit": "8002382ee56f876119f77217220b8a5034e9bac1",
+      "path": "vendor/community/cfenollosa__os-tutorial"
+    },
+    {
+      "repository": "cheery/json-algorithm",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/cheery__json-algorithm",
+      "license_spdx": "MIT",
+      "size_kb": 31,
+      "upstream_commit": "f04deb90a0e26a85cf2ea0929d361ae4c946e4af",
+      "path": "vendor/community/cheery__json-algorithm"
+    },
+    {
+      "repository": "conradoqg/naivecoin",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/conradoqg__naivecoin",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 509,
+      "upstream_commit": "f48d078f83c5818cc8f7a3a16b1f0aa87e583b2f",
+      "path": "vendor/community/conradoqg__naivecoin"
+    },
+    {
+      "repository": "DoctorWkt/acwj",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/DoctorWkt__acwj",
+      "license_spdx": "GPL-3.0",
+      "size_kb": 4062,
+      "upstream_commit": "84855ea20dcd2f300ba8e91951cf6aa1e7810225",
+      "path": "vendor/community/DoctorWkt__acwj"
+    },
+    {
+      "repository": "dwyl/javascript-todo-list-tutorial",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/dwyl__javascript-todo-list-tutorial",
+      "license_spdx": "GPL-2.0",
+      "size_kb": 1541,
+      "upstream_commit": "ec6a745b897d69d1ea98b4e444ea2d9cf4eb549b",
+      "path": "vendor/community/dwyl__javascript-todo-list-tutorial"
+    },
+    {
+      "repository": "EmilHernvall/dnsguide",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/EmilHernvall__dnsguide",
+      "license_spdx": "MIT",
+      "size_kb": 106,
+      "upstream_commit": "029d45011d4308ff9116e711ba47a43bb3d9d598",
+      "path": "vendor/community/EmilHernvall__dnsguide"
+    },
+    {
+      "repository": "Fewbytes/rubber-docker",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/Fewbytes__rubber-docker",
+      "license_spdx": "MIT",
+      "size_kb": 1349,
+      "upstream_commit": "2b3fca3ae4e6de1d3288edbdf3935399cb3c324c",
+      "path": "vendor/community/Fewbytes__rubber-docker"
+    },
+    {
+      "repository": "g-plane/tiny-package-manager",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/g-plane__tiny-package-manager",
+      "license_spdx": "MIT",
+      "size_kb": 143,
+      "upstream_commit": "643fe89cf76e497a03fa1124c6e5748275a1a698",
+      "path": "vendor/community/g-plane__tiny-package-manager"
+    },
+    {
+      "repository": "hazbo/the-super-tiny-compiler",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/hazbo__the-super-tiny-compiler",
+      "license_spdx": "CC-BY-4.0",
+      "size_kb": 23,
+      "upstream_commit": "d498e94d6dc4ea4d7089f8f032a780a9e882abad",
+      "path": "vendor/community/hazbo__the-super-tiny-compiler"
+    },
+    {
+      "repository": "jamesroutley/write-a-hash-table",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/jamesroutley__write-a-hash-table",
+      "license_spdx": "MIT",
+      "size_kb": 53,
+      "upstream_commit": "cfb49be7baf1a9286d41bebf697c561c062f4901",
+      "path": "vendor/community/jamesroutley__write-a-hash-table"
+    },
+    {
+      "repository": "jamiebuilds/the-super-tiny-compiler",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/jamiebuilds__the-super-tiny-compiler",
+      "license_spdx": "CC-BY-4.0",
+      "size_kb": 41,
+      "upstream_commit": "d8d40130459d1537f6117a927947cd46c83182b0",
+      "path": "vendor/community/jamiebuilds__the-super-tiny-compiler"
+    },
+    {
+      "repository": "kevmo314/codec-from-scratch",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/kevmo314__codec-from-scratch",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 30089,
+      "upstream_commit": "f70c5e948d57b93a9081161955056758e3a980f8",
+      "path": "vendor/community/kevmo314__codec-from-scratch"
+    },
+    {
+      "repository": "keyanzhang/the-super-tiny-interpreter",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/keyanzhang__the-super-tiny-interpreter",
+      "license_spdx": "MIT",
+      "size_kb": 39,
+      "upstream_commit": "e07804d1f5e855b778eeb4a935d1eb424c317d7a",
+      "path": "vendor/community/keyanzhang__the-super-tiny-interpreter"
+    },
+    {
+      "repository": "kezhenxu94/cache-lite",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/kezhenxu94__cache-lite",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 189,
+      "upstream_commit": "99d04f862285f8a079d2283ef0d090047d40189e",
+      "path": "vendor/community/kezhenxu94__cache-lite"
+    },
+    {
+      "repository": "leandromoreira/cdn-up-and-running",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/leandromoreira__cdn-up-and-running",
+      "license_spdx": "BSD-3-Clause",
+      "size_kb": 1612,
+      "upstream_commit": "cab10ba90833eac1831cde462f94187184bfc4cd",
+      "path": "vendor/community/leandromoreira__cdn-up-and-running"
+    },
+    {
+      "repository": "lotabout/write-a-C-interpreter",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/lotabout__write-a-C-interpreter",
+      "license_spdx": "GPL-2.0",
+      "size_kb": 160,
+      "upstream_commit": "afbeba6e8d5bdb229ebb25079f5e3060bd2c7065",
+      "path": "vendor/community/lotabout__write-a-C-interpreter"
+    },
+    {
+      "repository": "p8952/bocker",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/p8952__bocker",
+      "license_spdx": "GPL-3.0",
+      "size_kb": 373,
+      "upstream_commit": "000633061c6cfcb99c8d9eef5aa483a44318f3e6",
+      "path": "vendor/community/p8952__bocker"
+    },
+    {
+      "repository": "peiyuanix/build-your-own-zerotier",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/peiyuanix__build-your-own-zerotier",
+      "license_spdx": "MIT",
+      "size_kb": 14,
+      "upstream_commit": "8cff3440e953e6d54225db1cd78db65d0c45814e",
+      "path": "vendor/community/peiyuanix__build-your-own-zerotier"
+    },
+    {
+      "repository": "roiamiel1/Build-Deep-Learning-From-Scratch",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/roiamiel1__Build-Deep-Learning-From-Scratch",
+      "license_spdx": "Unlicense",
+      "size_kb": 514,
+      "upstream_commit": "044e9b17fe4e78f5919ff809d3c02da0d9bb8c7f",
+      "path": "vendor/community/roiamiel1__Build-Deep-Learning-From-Scratch"
+    },
+    {
+      "repository": "ronami/minipack",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/ronami__minipack",
+      "license_spdx": "MIT",
+      "size_kb": 26,
+      "upstream_commit": "a4d91ea1087fc23d96f63e8c893fdf16137ee4d4",
+      "path": "vendor/community/ronami__minipack"
+    },
+    {
+      "repository": "s-matyukevich/raspberry-pi-os",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/s-matyukevich__raspberry-pi-os",
+      "license_spdx": "MIT",
+      "size_kb": 2016,
+      "upstream_commit": "31fc1481f529ba1a72a8a6bc62dc488b84fc2cdb",
+      "path": "vendor/community/s-matyukevich__raspberry-pi-os"
+    },
+    {
+      "repository": "SavjeeTutorials/SavjeeCoin",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/SavjeeTutorials__SavjeeCoin",
+      "license_spdx": "MIT",
+      "size_kb": 347,
+      "upstream_commit": "3ccc0a6b7d95ff8702c7dceab3abac87b986c608",
+      "path": "vendor/community/SavjeeTutorials__SavjeeCoin"
+    },
+    {
+      "repository": "ssloy/tinyraycaster",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/ssloy__tinyraycaster",
+      "license_spdx": "WTFPL",
+      "size_kb": 27992,
+      "upstream_commit": "8dae70f8d8152b00d9197c37be6ef0e8869dc57f",
+      "path": "vendor/community/ssloy__tinyraycaster"
+    },
+    {
+      "repository": "TanayK07/networking-from-scratch",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/TanayK07__networking-from-scratch",
+      "license_spdx": "MIT",
+      "size_kb": 6851,
+      "upstream_commit": "d7f4c08a79d2496b6a6f67ed93652d4186a4577e",
+      "path": "vendor/community/TanayK07__networking-from-scratch"
+    },
+    {
+      "repository": "tonybaloney/mocker",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/tonybaloney__mocker",
+      "license_spdx": "Apache-2.0",
+      "size_kb": 54,
+      "upstream_commit": "bffd33fb0abcce358ffea3e330ac43a6fd72c174",
+      "path": "vendor/community/tonybaloney__mocker"
+    },
+    {
+      "repository": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/trekhleb__javascript-algorithms",
+      "license_spdx": "MIT",
+      "size_kb": 14964,
+      "upstream_commit": "85293e3e2b88f4d2ce330d956b139cf628aa1e82",
+      "path": "vendor/community/trekhleb__javascript-algorithms"
+    },
+    {
+      "repository": "xames3/slowtorch",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/xames3__slowtorch",
+      "license_spdx": "MIT",
+      "size_kb": 461,
+      "upstream_commit": "fa4bbe17f0926218d110b38b9b6f16ad4f3e8da9",
+      "path": "vendor/community/xames3__slowtorch"
+    },
+    {
+      "repository": "yukimotopress/programming-blockchains-step-by-step",
+      "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/vendor/community/yukimotopress__programming-blockchains-step-by-step",
+      "license_spdx": "CC0-1.0",
+      "size_kb": 553,
+      "upstream_commit": "e29f9d1186860ae0afdfc13995d27a6aff43d89a",
+      "path": "vendor/community/yukimotopress__programming-blockchains-step-by-step"
+    }
+  ]
+}
