@@ -1,0 +1,62 @@
+[
+  {
+    "id": "01",
+    "title": "Mini computador",
+    "description": "ISA de 16 bits, assembler, registradores, memória e CPU virtual.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/01-mini-computador"
+  },
+  {
+    "id": "02",
+    "title": "Mini sistema operacional",
+    "description": "Processos, Round Robin, bloqueio por I/O e trace de execução.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/02-mini-so"
+  },
+  {
+    "id": "03",
+    "title": "Banco de dados",
+    "description": "WAL, índice ordenado, transação, rollback e recovery.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/03-banco-de-dados"
+  },
+  {
+    "id": "04",
+    "title": "Redis-like",
+    "description": "GET/SET/DEL/INCR, TTL e codificação RESP.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/04-redis-like"
+  },
+  {
+    "id": "05",
+    "title": "Git-like",
+    "description": "Blobs, trees, commits, branches, HEAD e diff.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/05-git-like"
+  },
+  {
+    "id": "06",
+    "title": "Container runtime",
+    "description": "Namespaces Linux, /proc e limites de recursos.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/06-container-runtime"
+  },
+  {
+    "id": "07",
+    "title": "Linguagem + VM",
+    "description": "Lexer, parser, AST, compilador, bytecode e máquina virtual.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/07-linguagem"
+  },
+  {
+    "id": "08",
+    "title": "Distributed KV",
+    "description": "Replicação, quorum, node failure e read repair.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/08-distributed-kv"
+  },
+  {
+    "id": "09",
+    "title": "Search engine",
+    "description": "Inverted index, BM25, persistência e ranking.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/09-search-engine"
+  },
+  {
+    "id": "10",
+    "title": "Stack web completo",
+    "description": "SQLite, scrypt, sessões, autenticação, CRUD e routing.",
+    "url": "https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/18-projetos-finais/projetos/10-stack-web"
+  }
+]

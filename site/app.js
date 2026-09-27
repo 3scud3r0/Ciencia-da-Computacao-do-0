@@ -1,7 +1,7 @@
 'use strict';
 
 const state = {
-  curriculum: [], projects: [], lessons: [], vendors: [],
+  curriculum: [], projects: [], lessons: [], vendors: [], capstones: [],
   visibleProjects: 36, visibleLessons: 24, level: 'all', source: 'all', category: 'all', projectQuery: '', lessonQuery: '', lessonModule: 'all'
 };
 const $ = (selector) => document.querySelector(selector);
@@ -12,7 +12,8 @@ async function loadData() {
     fetch('./data/curriculum.json'),
     fetch('./data/projects.json'),
     fetch('./data/lessons.json'),
-    fetch('./data/vendor-summary.json')
+    fetch('./data/vendor-summary.json'),
+    fetch('./data/capstones.json')
   ]);
   if (responses.some((response) => !response.ok)) throw new Error('Falha ao carregar os dados do site.');
   state.curriculum = await responses[0].json();
@@ -21,12 +22,13 @@ async function loadData() {
   state.lessons = await responses[2].json();
   const vendorPayload = await responses[3].json();
   state.vendors = vendorPayload.sources;
+  state.capstones = await responses[4].json();
 
   $('#moduleCount').textContent = state.curriculum.length;
   $('#chapterCount').textContent = state.curriculum.reduce((sum, m) => sum + m.chapters.length, 0);
   $('#projectCount').textContent = projectPayload.counts.total;
 
-  renderSidebar(); populateLessonModules(); renderLessons(); renderCurriculum(); populateCategories(); renderProjects();
+  renderSidebar(); populateLessonModules(); renderLessons(); renderCurriculum(); renderCapstones(); populateCategories(); renderProjects();
   renderVendors(vendorPayload.counts); updateProgress();
 }
 
@@ -65,6 +67,15 @@ function renderLessons() {
   $('#lessonLoadMore').style.display = visible.length < filtered.length ? 'flex' : 'none';
 }
 
+function renderCapstones() {
+  $('#capstoneGrid').innerHTML = state.capstones.map((project) =>
+    '<a class="project-card" href="' + escapeAttribute(project.url) + '" target="_blank" rel="noreferrer">' +
+    '<span class="source">CAPSTONE ' + escapeHtml(project.id) + ' · TESTADO</span>' +
+    '<h3>' + escapeHtml(project.title) + '</h3>' +
+    '<p>' + escapeHtml(project.description) + ' ↗</p></a>'
+  ).join('');
+}
+
 function renderCurriculum() {
   const filtered = state.curriculum.filter((module) => state.level === 'all' || module.level === state.level);
   $('#curriculumGrid').innerHTML = filtered.map((module) => {
@@ -74,7 +85,8 @@ function renderCurriculum() {
       '<div class="top"><span class="module-num">MÓDULO ' + module.id + '</span><span class="level">' + escapeHtml(module.level) + '</span></div>' +
       '<h3>' + escapeHtml(module.title) + '</h3><p>' + module.chapters.length + ' capítulos · ' + escapeHtml(module.hours) + '</p>' +
       '<ul>' + sample + '</ul><div class="card-footer"><small>' + escapeHtml(module.projects.join(' · ')) + '</small>' +
-      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/blob/main/' + encodeURIComponent(module.slug) + '/AULAS.md" target="_blank" rel="noreferrer">Abrir aulas ↗</a>' +
+      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/blob/main/' + encodeURIComponent(module.slug) + '/AULAS.md" target="_blank" rel="noreferrer">Aulas ↗</a>' +
+      '<a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/blob/main/' + encodeURIComponent(module.slug) + '/LABORATORIOS.md" target="_blank" rel="noreferrer">Labs ↗</a>' +
       '<button class="complete-toggle ' + (done ? 'done' : '') + '" data-module="' + module.id + '">' + (done ? 'Concluído ✓' : 'Concluir') + '</button></span></div></article>';
   }).join('');
   $$('.complete-toggle').forEach((button) => button.addEventListener('click', () => {

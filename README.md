@@ -24,6 +24,18 @@ Este repositório não copia em massa código ou texto de outros projetos. Tutor
 - [x] Estrutura curricular
 - [x] Site inicial
 - [x] Catálogo de projetos externos
-- [ ] Capítulos completos
-- [ ] Laboratórios e testes
-- [ ] Projetos integradores completos
+- [x] Capítulos completos
+- [x] Laboratórios e testes
+- [x] Projetos integradores completos
+
+## O que significa "completo"
+
+O curso está completo **dentro do escopo educacional definido pela ementa**:
+
+- 184 aulas autorais, uma para cada capítulo;
+- 19 laboratórios principais, todos com implementação real e testes;
+- 10 projetos finais integradores executáveis;
+- CI que executa os projetos e valida a integridade curricular;
+- biblioteca externa licenciada + catálogo de 818 projetos/tutoriais.
+
+Os projetos são implementações educacionais completas dentro de seu escopo; não alegam equivalência operacional com Linux, Git, Redis, PostgreSQL, Docker ou outros sistemas de produção.
