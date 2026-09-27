@@ -84,7 +84,7 @@ jobs:
 
       - name: Commit snapshot
         run: |
-          if git diff --quiet -- vendor/; then
+          if [ -z "$(git status --porcelain -- vendor/)" ]; then
             echo "Snapshots já estão atualizados."
             exit 0
           fi
