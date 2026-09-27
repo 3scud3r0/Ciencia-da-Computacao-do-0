@@ -153,6 +153,12 @@ def build() -> int:
             "SOURCE": html.escape(REPO + quote(lesson["path"], safe="/"), quote=True),
             "PATH": html.escape(lesson["path"], quote=True),
         }
+        if lesson["path"] == "01-programacao/aulas/04-recursao.md":
+            values["ACTIVITY"] = (SITE / "activities/recursao.html").read_text(encoding="utf-8")
+            values["ACTIVITY_SCRIPT"] = '<script src="../../../activities/recursao.js" defer></script>'
+            values["HAS_EXERCISE"] = "true"
+        else:
+            values.update(ACTIVITY="", ACTIVITY_SCRIPT="", HAS_EXERCISE="false")
         page = template
         for key, value in values.items():
             page = page.replace("{{" + key + "}}", value)

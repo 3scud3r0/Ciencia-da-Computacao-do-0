@@ -1,0 +1,21 @@
+<section class="activity" aria-labelledby="activityTitle">
+  <span class="eyebrow">EXPERIMENTO INTERATIVO</span>
+  <h2 id="activityTitle">Veja a pilha de chamadas</h2>
+  <p>Escolha um inteiro de 0 a 12. O simulador usa a mesma regra da função Python e mostra a ordem das chamadas e dos retornos.</p>
+  <form id="recursionForm" class="activity-form">
+    <label for="recursionInput">Valor de n</label>
+    <input id="recursionInput" type="number" min="0" max="12" step="1" value="4" required>
+    <button class="btn ghost" type="submit">Executar soma(n)</button>
+  </form>
+  <div id="recursionResult" class="activity-result" role="status" aria-live="polite"></div>
+  <div class="activity-exercise">
+    <h3>Exercício de domínio</h3>
+    <p>Sem executar o simulador, qual valor <code>soma_recursiva(5)</code> devolve?</p>
+    <form id="recursionQuiz" class="activity-form">
+      <label for="quizAnswer">Sua resposta</label>
+      <input id="quizAnswer" type="number" step="1" required>
+      <button class="btn ghost" type="submit">Conferir</button>
+    </form>
+    <p id="quizFeedback" role="status" aria-live="polite"></p>
+  </div>
+</section>

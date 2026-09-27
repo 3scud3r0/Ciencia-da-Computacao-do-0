@@ -40,6 +40,8 @@ python -m http.server 8000 --directory site
 
 Abra `http://localhost:8000/`. O script usa apenas a biblioteca padrão do Python; `site/aulas/` é gerado novamente durante a publicação e não precisa ser versionado. O catálogo (`site/data/lessons.json`) define a ordem das aulas, e cada campo `path` aponta para o Markdown que serve de fonte. Os links relativos de arquivos dentro das aulas são resolvidos para o repositório original. O progresso fica no `localStorage` deste navegador e não é sincronizado entre aparelhos.
 
+A aula de recursão inclui um simulador e um exercício no próprio site. O simulador fica em `site/activities/recursao.js`; o gerador insere sua interface apenas nessa aula. Nas outras aulas, o botão de conclusão registra leitura sem exigir exercício.
+
 ## O que significa "completo"
 
 O curso está completo **dentro do escopo educacional definido pela ementa**:
