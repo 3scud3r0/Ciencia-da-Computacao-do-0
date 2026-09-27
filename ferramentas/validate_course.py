@@ -13,14 +13,18 @@ if expected!=184:errors.append(f"ementa esperava 184 capítulos, encontrou {expe
 if len(lessons)!=expected:errors.append(f"lessons.json tem {len(lessons)}, esperado {expected}")
 
 required_sections=[
-    "## Ideia central","## Modelo mental","## Código e laboratório",
-    "## Experimento guiado","## Perguntas de domínio","## Exercícios","## Critério de conclusão"
+    "## Ideia central","## Modelo mental","## Mecanismo passo a passo",
+    "## Código real do módulo","## Trade-offs","## Erros comuns",
+    "## Experimento guiado","## Conexões","## Perguntas de domínio",
+    "## Exercícios","## Critério de conclusão"
 ]
 
 for module in curriculum:
     base=ROOT/module["slug"]
     index=base/"AULAS.md"
+    labs=base/"LABORATORIOS.md"
     if not index.exists():errors.append(f"faltando {index.relative_to(ROOT)}")
+    if not labs.exists():errors.append(f"faltando {labs.relative_to(ROOT)}")
     module_lessons=[x for x in lessons if x["module"]==module["id"]]
     if len(module_lessons)!=len(module["chapters"]):
         errors.append(f"módulo {module['id']}: {len(module_lessons)} aulas para {len(module['chapters'])} capítulos")
@@ -32,7 +36,7 @@ for module in curriculum:
         for section in required_sections:
             if section not in text:errors.append(f"{item['path']}: faltando seção {section}")
         words=len(re.findall(r"\b\w+\b",text,flags=re.UNICODE))
-        if words<180:errors.append(f"{item['path']}: aula curta demais ({words} palavras)")
+        if words<300:errors.append(f"{item['path']}: aula curta demais ({words} palavras)")
 
 project_roots=[
 "00-como-estudar/projetos/mini-git","01-programacao/projetos/virtual-fs",
