@@ -275,9 +275,69 @@ def slugify(text):
     text=unicodedata.normalize("NFKD",text).encode("ascii","ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+","-",text).strip("-") or "aula"
 
-def lesson(module,index,chapter,focus):
+
+LAB_ENTRY={
+"00":"projetos/mini-git/minigit.py","01":"projetos/virtual-fs/virtual_fs.py","02":"projetos/vetor-dinamico/vector.c",
+"03":"projetos/discrete-lab/discrete_lab.py","04":"projetos/hashmap-python/hashmap.py","05":"projetos/roteador-dijkstra/dijkstra.py",
+"06":"projetos/alu16/alu.py","07":"projetos/scheduler-simulator/scheduler.py","08":"projetos/http-server/server.py",
+"09":"projetos/bplus-tree/bplus_tree.py","10":"projetos/mini-lang/interpreter.py","11":"projetos/instrumented-service/service.py",
+"12":"projetos/thread-pool/thread_pool.py","13":"projetos/consistent-hashing/consistent_hash.py","14":"projetos/password-store/password_store.py",
+"15":"projetos/mini-web/server.py","16":"projetos/automatos/automata.py","17":"projetos/raytracer/raytracer.py",
+"18":"projetos/01-mini-computador/computer.py"
+}
+
+RUN_COMMAND={"02":"make test"}
+
+TRADEOFFS={
+"00":"Ferramentas aumentam poder de inspeção, mas também introduzem estado e configuração. Prefira comandos reproduzíveis, builds determinísticos e automação versionada.",
+"01":"Abstração reduz carga mental, mas pode esconder custo e estado. A interface deve ser simples sem apagar invariantes importantes nem tornar efeitos colaterais imprevisíveis.",
+"02":"Controle manual entrega previsibilidade e desempenho, mas transfere ao programador responsabilidade por lifetime, bounds e ownership. Segurança e velocidade precisam ser medidas.",
+"03":"Formalização ganha generalidade e prova, mas exige hipóteses explícitas. Exemplos ajudam a descobrir conjecturas; não substituem demonstração.",
+"04":"Cada estrutura favorece operações específicas. Memória, localidade, ordem, mutabilidade e distribuição das entradas alteram a escolha.",
+"05":"Soluções assintoticamente melhores podem perder em entradas pequenas por constantes e cache. Primeiro prove correção e crescimento; depois meça.",
+"06":"Mais paralelismo interno e caches elevam throughput, mas tornam timing menos intuitivo. A ISA permanece estável enquanto a microarquitetura muda.",
+"07":"Isolamento do kernel simplifica aplicações, porém syscalls, context switches e page faults têm custo. Scheduling e memória equilibram objetivos conflitantes.",
+"08":"Camadas desacoplam protocolos, mas adicionam headers, buffers e estado. Confiabilidade, latência e throughput são distribuídos entre aplicação, transporte e rede.",
+"09":"Índices e redundância aceleram leitura, mas aumentam espaço e custo de escrita. Isolamento forte pode exigir mais coordenação.",
+"10":"Interpretação favorece simplicidade e dinamismo; compilação e bytecode podem melhorar desempenho e análise ao custo de pipeline mais complexo.",
+"11":"Mais camadas e serviços podem facilitar autonomia local e piorar o sistema global. Arquitetura deve minimizar complexidade acidental e tornar falhas observáveis.",
+"12":"Sincronização protege invariantes, mas pode serializar trabalho. Lock-free reduz certos bloqueios ao custo de prova e memory ordering mais difíceis.",
+"13":"Replicação aumenta disponibilidade, mas cria versões e coordenação. Garantias fortes durante falhas custam latência ou disponibilidade.",
+"14":"Controles de segurança adicionam custo operacional e devem proteger ameaça concreta. Criptografia correta não compensa autorização errada ou privilégio excessivo.",
+"15":"Frameworks aceleram desenvolvimento, mas escondem HTTP, browser e persistência. Entender a pilha permite depurar quando a abstração vaza.",
+"16":"Modelos formais simplificam detalhes para permitir prova. O ganho é clareza sobre poder e limites; custo real ainda depende da máquina e representação.",
+"17":"Técnicas avançadas combinam fundamentos em escalas diferentes. O melhor desenho depende de erro tolerável, volume, latência, memória e custo de desenvolvimento.",
+"18":"Capstones priorizam integração. Cada sistema define uma fronteira de MVP e extensões explícitas em vez de fingir equivalência com produção."
+}
+
+FAILURES={
+"00":"ambiente não reproduzível, comandos irreversíveis sem inspeção e pipelines que passam localmente mas falham no CI",
+"01":"estado oculto, mutação inesperada, caso base ausente, exceção engolida e interface que expõe detalhes internos",
+"02":"out-of-bounds, dangling pointer, double free, overflow, alinhamento incorreto e uso depois do lifetime",
+"03":"confundir evidência experimental com prova, trocar implicação por equivalência e contar casos sobrepostos como disjuntos",
+"04":"quebrar invariantes durante atualização, usar complexidade média como garantia e ignorar localidade",
+"05":"otimizar algoritmo incorreto, aplicar greedy sem prova, usar Dijkstra com peso negativo e esquecer casos extremos",
+"06":"confundir carry com signed overflow, assumir RAM uniforme, ignorar ABI e interpretar pipeline sequencialmente",
+"07":"race condition, deadlock, starvation, vazamento de descritor, page thrashing e confundir thread com processo",
+"08":"tratar TCP como mensagens, confiar em um único recv ou send, ignorar timeout, framing, MTU e certificado",
+"09":"consulta sem índice adequado, transação longa, estatística obsoleta, isolamento mal compreendido e recovery parcial",
+"10":"precedência errada, escopo dinâmico acidental, stack da VM inconsistente, diagnóstico sem posição e otimização sem prova",
+"11":"teste acoplado à implementação, logs sem contexto, benchmark não representativo e dependência não fixada",
+"12":"data race, lock order inconsistente, espera sem loop, bloquear event loop e supor operação composta atômica",
+"13":"split brain, réplica obsoleta sem contrato, relógio físico tratado como causal, quorum insuficiente e retry não idempotente",
+"14":"reutilizar nonce, armazenar senha com hash rápido, confiar em input e conceder privilégio excessivo",
+"15":"misturar regra de domínio com HTTP, cachear resposta privada, bloquear main thread e confiar em estado do cliente",
+"16":"confundir NFA com maior poder que DFA, achar que NP significa não polinomial e inverter a direção de redução",
+"17":"otimização sem baseline, modelo sem métrica, índice sem avaliação e compressão sem considerar CPU",
+"18":"integração sem testes de recuperação, estado sem persistência definida, protocolo sem framing e segurança apenas no fim"
+}
+
+def lesson(module,index,chapter,focus,previous_title=None,next_title=None):
     mid=module["id"];formula=FORMULAS.get((mid,chapter))
     fpart="" if not formula else "\n## Fórmula / propriedade central\n\n"+formula+"\n"
+    run=RUN_COMMAND.get(mid,"python -m unittest -v")
+    prev_text=previous_title or "início do módulo"
+    next_text=next_title or "projeto e fechamento do módulo"
     return f"""# {index:02d} — {chapter}
 
 Módulo {mid}: {module['title']} · Nível: {module['level']}
@@ -290,47 +350,80 @@ Módulo {mid}: {module['title']} · Nível: {module['level']}
 
 {MODULE_OVERVIEW[mid]}
 
-Neste capítulo identifique estado, invariante, operação e custo. Se houver uma abstração, pergunte qual problema ela resolve e o que acontece uma camada abaixo.
+Neste capítulo identifique estado, invariante, operação e custo. Se houver uma abstração, pergunte qual problema ela resolve, que garantias oferece e o que acontece uma camada abaixo.
 {fpart}
-## Código e laboratório
+## Mecanismo passo a passo
 
-O laboratório principal do módulo está em [{LABS[mid]}](../{LABS[mid]}). Execute os testes antes de alterar o código.
+1. Represente a entrada: quais objetos, bits, nós, mensagens, registros ou estados existem antes da operação.
+2. Aplique a regra de transição: qual informação é lida, qual condição é testada e qual estado é modificado.
+3. Preserve a invariante: qual propriedade precisa continuar verdadeira após cada passo.
+4. Produza uma observação: resultado, saída, novo estado, mensagem ou efeito persistido precisa ser verificável.
+5. Analise crescimento e falha: o que muda com escala, interrupção no meio e entrada adversa.
 
-Ciclo de investigação:
+Esse procedimento transforma a definição de {chapter} em uma máquina mental simulável, testável e depurável.
 
-1. execute a versão atual;
-2. formule uma hipótese;
-3. altere uma variável, estrutura ou entrada;
-4. observe teste, saída, tempo, memória ou estado;
-5. explique causalmente o resultado.
+## Código real do módulo
+
+Leia o arquivo principal [{LAB_ENTRY[mid]}](../{LAB_ENTRY[mid]}). Ele faz parte da suíte executável do curso.
+
+Para validar o laboratório:
+
+~~~bash
+cd {module['slug']}/{LABS[mid]}
+{run}
+~~~
+
+Faça uma leitura em três passagens: primeiro encontre entrada, saída e estado persistente; depois marque onde a invariante é criada e atualizada; por fim encontre o caminho de erro e um caso extremo coberto por teste.
+
+## Trade-offs
+
+{TRADEOFFS[mid]}
+
+Para {chapter}, separe custo assintótico de custo concreto. CPU, memória, I/O, coordenação e complexidade operacional são recursos diferentes; melhorar um pode piorar outro.
+
+## Erros comuns
+
+Procure ativamente por: {FAILURES[mid]}.
+
+Um bom teste não cobre apenas o caso feliz. Escreva ao menos um teste que viole uma pré-condição e outro que pressione um limite de tamanho, ordem, concorrência ou persistência.
 
 ## Experimento guiado
 
 1. Escolha uma entrada pequena simulável à mão.
-2. Registre o estado antes de cada passo.
-3. Execute e compare com sua previsão.
-4. Crie um caso extremo: vazio, limite, repetido, inválido ou grande.
-5. Reduza qualquer divergência até o primeiro passo inesperado.
+2. Registre o estado relevante antes de cada passo.
+3. Preveja o resultado e só então execute o laboratório.
+4. Instrumente uma variável, contador, endereço, fila, árvore ou mensagem.
+5. Crie um caso extremo: vazio, limite, repetido, inválido, desordenado ou grande.
+6. Reduza divergências até localizar a primeira transição inesperada.
+7. Transforme a descoberta em teste automatizado.
+
+## Conexões
+
+Este capítulo vem depois de {prev_text} e prepara {next_text}. Identifique qual conceito anterior fornece a representação usada aqui e qual conceito seguinte depende da garantia produzida por este mecanismo.
 
 ## Perguntas de domínio
 
 - Qual é a definição operacional de {chapter}?
 - Que invariante ou garantia é essencial?
+- Qual é a entrada e qual estado é modificado?
 - Que custo de tempo, espaço, coordenação ou I/O cresce com a entrada?
 - O que a abstração esconde da camada inferior?
 - Que falha aparece se uma hipótese central deixar de valer?
+- Como demonstrar a propriedade com teste e, quando necessário, com prova?
 
 ## Exercícios
 
 1. Explique o conceito em cinco frases sem consultar a aula.
 2. Crie um exemplo correto e um contraexemplo.
-3. Torne o conceito observável no laboratório do módulo.
-4. Justifique o resultado com vocabulário técnico.
-5. Conecte este capítulo ao anterior e ao próximo.
+3. Desenhe o estado antes e depois de uma operação.
+4. Torne o conceito observável no laboratório.
+5. Escreva um teste de caso extremo ainda inexistente.
+6. Compare duas alternativas e explicite qual recurso cada uma otimiza.
+7. Conecte este capítulo ao anterior e ao próximo.
 
 ## Critério de conclusão
 
-Você concluiu quando consegue prever um caso novo, explicar o mecanismo por baixo da API e justificar pelo menos um trade-off relevante.
+Você concluiu quando consegue prever um caso novo, explicar o mecanismo abaixo da API, localizar a invariante no código, escrever um teste que detecte sua quebra e justificar pelo menos um trade-off.
 """
 
 def main():
@@ -344,12 +437,42 @@ def main():
         lines=[f"# Aulas — Módulo {mid}: {module['title']}","",MODULE_OVERVIEW[mid],"",f"Laboratório principal: [{LABS[mid]}](./{LABS[mid]})","","## Sequência",""]
         for i,(chapter,note) in enumerate(zip(module["chapters"],focus),1):
             filename=f"{i:02d}-{slugify(chapter)}.md"
-            (adir/filename).write_text(lesson(module,i,chapter,note),encoding="utf-8")
+            previous_title=module["chapters"][i-2] if i>1 else None
+            next_title=module["chapters"][i] if i<len(module["chapters"]) else None
+            (adir/filename).write_text(lesson(module,i,chapter,note,previous_title,next_title),encoding="utf-8")
             lines.append(f"{i}. [{chapter}](./aulas/{filename})")
             path=f"{module['slug']}/aulas/{filename}"
             site.append({"module":mid,"moduleTitle":module["title"],"title":chapter,"description":note,"path":path,"url":REPO_BASE+path})
             total+=1
         (base/"AULAS.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
+        run=RUN_COMMAND.get(mid,"python -m unittest -v")
+        lab_text=f"""# Laboratórios — Módulo {mid}: {module['title']}
+
+## Laboratório principal
+
+[{LABS[mid]}](./{LABS[mid]})
+
+Arquivo principal: [{LAB_ENTRY[mid]}](./{LAB_ENTRY[mid]})
+
+~~~bash
+cd {module['slug']}/{LABS[mid]}
+{run}
+~~~
+
+## Protocolo de laboratório
+
+1. Execute a suíte sem alterações.
+2. Leia o teste antes da implementação.
+3. Transforme uma hipótese de uma aula em teste.
+4. Faça uma alteração deliberadamente incorreta e confirme que o teste falha.
+5. Restaure a invariante e confirme a suíte verde.
+6. Registre complexidade, limitações e extensão proposta.
+
+## Cobertura conceitual
+
+O laboratório é pequeno o suficiente para ser explicado linha por linha. As aulas usam esse código como base experimental; os demais projetos da ementa são extensões do mesmo núcleo.
+"""
+        (base/"LABORATORIOS.md").write_text(lab_text,encoding="utf-8")
     LESSONS_JSON.write_text(json.dumps(site,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     (ROOT/"AULAS_COMPLETAS.md").write_text(f"# Aulas completas\n\nForam geradas **{total} aulas**, cobrindo todos os capítulos da super ementa. Cada módulo possui AULAS.md e pasta aulas/, ligadas aos projetos executáveis.\n",encoding="utf-8")
     print(f"Geradas {total} aulas.")
