@@ -74,7 +74,7 @@ function renderCurriculum() {
       '<div class="top"><span class="module-num">MÓDULO ' + module.id + '</span><span class="level">' + escapeHtml(module.level) + '</span></div>' +
       '<h3>' + escapeHtml(module.title) + '</h3><p>' + module.chapters.length + ' capítulos · ' + escapeHtml(module.hours) + '</p>' +
       '<ul>' + sample + '</ul><div class="card-footer"><small>' + escapeHtml(module.projects.join(' · ')) + '</small>' +
-      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/tree/main/' + encodeURIComponent(module.slug) + '" target="_blank" rel="noreferrer">Abrir módulo ↗</a>' +
+      '<span><a class="module-open" href="https://github.com/3scud3r0/Ciencia-da-Computacao-do-0/blob/main/' + encodeURIComponent(module.slug) + '/AULAS.md" target="_blank" rel="noreferrer">Abrir aulas ↗</a>' +
       '<button class="complete-toggle ' + (done ? 'done' : '') + '" data-module="' + module.id + '">' + (done ? 'Concluído ✓' : 'Concluir') + '</button></span></div></article>';
   }).join('');
   $$('.complete-toggle').forEach((button) => button.addEventListener('click', () => {
