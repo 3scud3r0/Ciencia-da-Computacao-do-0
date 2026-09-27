@@ -2,7 +2,7 @@
 
 const state = {
   curriculum: [], projects: [], lessons: [], vendors: [],
-  visibleProjects: 36, level: 'all', source: 'all', category: 'all', projectQuery: ''
+  visibleProjects: 36, visibleLessons: 24, level: 'all', source: 'all', category: 'all', projectQuery: '', lessonQuery: '', lessonModule: 'all'
 };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -26,7 +26,7 @@ async function loadData() {
   $('#chapterCount').textContent = state.curriculum.reduce((sum, m) => sum + m.chapters.length, 0);
   $('#projectCount').textContent = projectPayload.counts.total;
 
-  renderSidebar(); renderLessons(); renderCurriculum(); populateCategories(); renderProjects();
+  renderSidebar(); populateLessonModules(); renderLessons(); renderCurriculum(); populateCategories(); renderProjects();
   renderVendors(vendorPayload.counts); updateProgress();
 }
 
@@ -36,13 +36,33 @@ function renderSidebar() {
   ).join('');
 }
 
+function populateLessonModules() {
+  $('#lessonModuleFilter').innerHTML = '<option value="all">Todos os módulos</option>' +
+    state.curriculum.map((module) =>
+      '<option value="' + module.id + '">Módulo ' + module.id + ' · ' + escapeHtml(module.title) + '</option>'
+    ).join('');
+}
+
+function filteredLessons() {
+  const q = state.lessonQuery.trim().toLowerCase();
+  return state.lessons.filter((lesson) => {
+    const haystack = (lesson.title + ' ' + lesson.description + ' ' + lesson.moduleTitle).toLowerCase();
+    return (state.lessonModule === 'all' || lesson.module === state.lessonModule) &&
+      (!q || haystack.includes(q));
+  });
+}
+
 function renderLessons() {
-  $('#lessonGrid').innerHTML = state.lessons.map((lesson) =>
+  const filtered = filteredLessons();
+  const visible = filtered.slice(0, state.visibleLessons);
+  $('#lessonMeta').textContent = filtered.length + ' aulas encontradas · exibindo ' + visible.length;
+  $('#lessonGrid').innerHTML = visible.map((lesson) =>
     '<a class="project-card" href="' + escapeAttribute(lesson.url) + '" target="_blank" rel="noreferrer">' +
     '<span class="source">MÓDULO ' + escapeHtml(lesson.module) + ' · AUTORAL</span>' +
     '<h3>' + escapeHtml(lesson.title) + '</h3>' +
     '<p>' + escapeHtml(lesson.description) + ' ↗</p></a>'
   ).join('');
+  $('#lessonLoadMore').style.display = visible.length < filtered.length ? 'flex' : 'none';
 }
 
 function renderCurriculum() {
@@ -114,6 +134,15 @@ $('#levelFilters').addEventListener('click',(event)=>{
   state.level=button.dataset.level;
   $$('#levelFilters .filter').forEach((item)=>item.classList.toggle('active',item===button));
   renderCurriculum();
+});
+$('#lessonSearch').addEventListener('input',(event)=>{
+  state.lessonQuery=event.target.value; state.visibleLessons=24; renderLessons();
+});
+$('#lessonModuleFilter').addEventListener('change',(event)=>{
+  state.lessonModule=event.target.value; state.visibleLessons=24; renderLessons();
+});
+$('#lessonLoadMore').addEventListener('click',()=>{
+  state.visibleLessons+=24; renderLessons();
 });
 $('#projectSearch').addEventListener('input',(event)=>{state.projectQuery=event.target.value;state.visibleProjects=36;renderProjects();});
 $('#sourceFilter').addEventListener('change',(event)=>{state.source=event.target.value;state.visibleProjects=36;renderProjects();});

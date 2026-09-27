@@ -53,3 +53,7 @@ footer{max-width:1220px;margin:0 auto;padding:32px 48px 56px;border-top:1px soli
 #aulas .project-card{min-height:145px}
 #biblioteca .project-card{min-height:125px}
 #biblioteca .load-more{width:max-content}
+
+.lesson-toolbar{grid-template-columns:minmax(0,1fr) 320px}
+#aulas .load-more{margin-top:18px}
+@media(max-width:700px){.lesson-toolbar{grid-template-columns:1fr}}

@@ -95,7 +95,15 @@ Sistemas Distribuídos</code></pre>
           <div><span class="eyebrow">AULAS AUTORAIS</span><h2>Comece pelos mecanismos centrais</h2></div>
           <p>Textos condensados que explicam as abstrações por dentro e apontam para laboratórios executáveis.</p>
         </div>
+        <div class="project-toolbar lesson-toolbar">
+          <input id="lessonSearch" type="search" placeholder="Buscar aula: ponteiros, TCP, consenso…">
+          <select id="lessonModuleFilter" aria-label="Filtrar aulas por módulo">
+            <option value="all">Todos os módulos</option>
+          </select>
+        </div>
+        <div class="project-meta"><span id="lessonMeta">Carregando aulas…</span></div>
         <div id="lessonGrid" class="project-grid"></div>
+        <button id="lessonLoadMore" class="btn ghost load-more" type="button">Mostrar mais aulas</button>
       </section>
 
       <section id="ementa" class="section">
